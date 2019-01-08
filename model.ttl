@@ -1,0 +1,38 @@
+# GeoSPARQL doesn’t declare inverse properties 
+geo:sfContains owl:inverseOf geo:sf:Within .
+
+# proportional overlap
+# if ex:A geo:sfContains ex:X and ex:B geo:sfContains :ex:X, 
+# using above we can interpret the second triple as ex:X geo:sfWithin :B 
+# then ex:A geo:sf:Overlaps ex:B with proportionally 
+# being contained in the relative areas of A, B & X 
+sp:transitiveSfOverlap
+  a owl:ObjectProperty;
+  rdfs:subPropertyOf geo:sfOverlap ;
+  rdfs:label "transitive Simple Features overlaps" ;
+  rdfs:comment "The domain object overlaps (geo:sfOverlap) the range object by virtue of both objects containing (geo:sfContains) an intermediary object." ;
+  rdfs:domain :SpatialObject ;  # as inherited
+  rdfs:range :SpatialObject ;  # as inherited
+  owl:propertyChainAxiom ( 
+    geo:sfContains
+    geo:sfWithin
+  ) .  
+
+# spatial resolution
+sp:hasResolution 
+  a owl:ObjectProperty;
+  rdfs:label "has resolution" ;
+  skos:altLabel "spatial resolution" ;  
+  rdfs:domain geo:Geometry ;
+  rdfs:range sp:Resolution ;
+  skos:definition "The spatial resolution of the Geometry object, expressed as a linear measurement." ;
+  skos:usageNote This is only to be used for geoGeometry objects. If you want to talk about the precision of things like area, that's regular QUDT business." .
+  
+sp:Resolution
+  a owl:Class ; ## TODO: some subclass of a QUDT thing?
+  rdfs:label "Resolution" ;
+  skos:altLabel "Spatial resolution" ;  
+  skos:definition "An object containing a numeric value and the units it is expressed in to communicate a spatial resolution as a linear measurement" ;
+  # qudt:numericValue -- required
+  # qudt:unit         -- required
+.  
