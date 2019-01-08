@@ -1,0 +1,5 @@
+# Protege
+catalog-*
+
+# JetBrains
+.idea/

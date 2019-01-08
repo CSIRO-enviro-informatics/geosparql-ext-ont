@@ -1,7 +1,7 @@
-# Spatial Properties Ontology
+# GeoSPARQL Extensions Ontology
 This is an OWL ontology that defined specialised versions of the Sensor, Observation, Sample, and Actuator (SOSA) Ontology's *ObservableProperty* class for spatial properties of spatial features, such as a *locality*'s *Area*.
 
-This ontology is produced to fill the gap left by the [GeoSPARQL](http://www.opengeospatial.org/standards/geosparql) and other spatial ontologies that allow for the linking of `Feautre` objects to `Geometries` but don't provide any way to indicate derivative properties of geometry, such as area.
+This ontology is produced to fill the gap left by the [GeoSPARQL](http://www.opengeospatial.org/standards/geosparql) and other spatial ontologies that allow for the linking of `Feature` objects to `Geometries` but don't provide any way to indicate derivative properties of geometry, such as area.
 
 
 ## Status
