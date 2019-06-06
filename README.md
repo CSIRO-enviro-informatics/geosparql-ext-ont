@@ -5,7 +5,7 @@ This extension is mostly built on GeoSPARQL but it also defined specialised vers
 
 
 ## Status
-As of early MArch, 2019, this ontology is at an early stage of development.
+As of June, 2019, this ontology is at an early stage of development.
 
 
 ## License
