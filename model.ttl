@@ -8,6 +8,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @base <http://linked.data.gov.au/def/geox> .
 
 <http://linked.data.gov.au/def/geox> rdf:type owl:Ontology ;
