@@ -9,6 +9,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix dct: <http://purl.org/dc/terms/> .
+@prefix sdo: <http://schema.org/>.
 @base <http://linked.data.gov.au/def/geox> .
 
 <http://linked.data.gov.au/def/geox> rdf:type owl:Ontology ;
@@ -100,7 +101,7 @@ geo:sfOverlaps rdf:type owl:IrreflexiveProperty .
     rdf:object owl:IrreflexiveProperty ;
     dct:contributor [
       sdo:name "Blake Regalia" ;
-      sdo:email <blake.regalia@gmail.com> .
+      sdo:email <blake.regalia@gmail.com> ;
     ] ;
    skos:scopeNote "geo:sfOverlaps is indicated to be of type owl:IrreflexiveProperty to prevent its use in linking to itself, such as <A> geo:sfOverlaps <A> which breaks rules for geo:sf:Equals. Such linking would otherwise happen with inferencing via geo:sfOverlaps’ use in property chain axioms such as that implemented by :transitiveSfOverlap."@en .
 
