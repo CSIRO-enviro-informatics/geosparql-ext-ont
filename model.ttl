@@ -91,7 +91,17 @@ geo:sfContains owl:inverseOf geo:sfWithin .
 
 
 ###  http://www.opengis.net/ont/geosparql#sfOverlap
-geo:sfOverlap rdf:type owl:ObjectProperty .
+geo:sfOverlaps rdf:type owl:IrreflexiveProperty ;
+    
+[] a rdf:Statement ;
+    rdf:statement geo:sfOverlaps ;
+    rdf:predicate rdf:type
+    rdf:object owl:IrreflexiveProperty
+    dct:contributor [
+      sdo:name "Blake Regalia" ;
+      sdo:email <blake.regalia@gmail.com> .
+    ] ;
+   skos:scopeNote "geo:sfOverlaps is indicated to be of type owl:IrreflexiveProperty to prevent its use in linking to itself, such as <A> geo:sfOverlaps <A> which breaks rules for geo:sf:Equals. Such linking would otherwise happen with inferencing via geo:sfOverlaps’ use in property chain axioms such as that implemented by :transitiveSfOverlap."@en .
 
 
 ###  http://www.opengis.net/ont/geosparql#sfWithin
