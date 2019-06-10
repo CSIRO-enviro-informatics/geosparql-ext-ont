@@ -95,8 +95,8 @@ geo:sfOverlaps rdf:type owl:IrreflexiveProperty .
     
 [] a rdf:Statement ;
     rdf:statement geo:sfOverlaps ;
-    rdf:predicate rdf:type
-    rdf:object owl:IrreflexiveProperty
+    rdf:predicate rdf:type ;
+    rdf:object owl:IrreflexiveProperty ;
     dct:contributor [
       sdo:name "Blake Regalia" ;
       sdo:email <blake.regalia@gmail.com> .
