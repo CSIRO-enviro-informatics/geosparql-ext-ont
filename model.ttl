@@ -91,7 +91,7 @@ geo:sfContains owl:inverseOf geo:sfWithin .
 
 
 ###  http://www.opengis.net/ont/geosparql#sfOverlap
-geo:sfOverlaps rdf:type owl:IrreflexiveProperty ;
+geo:sfOverlaps rdf:type owl:IrreflexiveProperty .
     
 [] a rdf:Statement ;
     rdf:statement geo:sfOverlaps ;
