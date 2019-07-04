@@ -73,8 +73,8 @@ sosa:ObservableProperty rdf:type owl:AnnotationProperty .
 ###  http://linked.data.gov.au/def/geox#transitiveSfOverlap
 :transitiveSfOverlap rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf geo:sfOverlap ;
-                     rdfs:domain :SpatialObject ;
-                     rdfs:range :SpatialObject ;
+                     rdfs:domain geo:SpatialObject ;
+                     rdfs:range geo:SpatialObject ;
                      owl:propertyChainAxiom ( geo:sfContains
                                               geo:sfWithin
                                             ) ;
@@ -143,10 +143,6 @@ qudt:numericValue rdf:type owl:DatatypeProperty .
             rdfs:label "Resolution" ;
             skos:altLabel "Spatial resolution" ;
             skos:definition "An object containing a numeric value and the units it is expressed in to communicate a spatial resolution as a linear measurement" .
-
-
-###  http://linked.data.gov.au/def/geox#SpatialObject
-:SpatialObject rdf:type owl:Class .
 
 
 ###  http://qudt.org/schema/qudt/Area
