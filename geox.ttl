@@ -29,15 +29,21 @@
 .
 <http://linked.data.gov.au/def/geox>
   a owl:Ontology ;
-  dc:contributor "Simon J D Cox" ;
-  dc:creator "Nicholas J. Car" ;
-  dc:publisher "CSIRO" ;
-  dct:contributor <http://orcid.org/0000-0002-3884-3420> ;
+  dct:contributor [
+      sdo:identifier <http://orcid.org/0000-0002-3884-3420> ;
+      sdo:name "Simon J D Cox" ;
+    ] ;
   dct:created "2019-01-08"^^xsd:date ;
-  dct:creator <http://orcid.org/0000-0002-8742-7730> ;
+  dct:creator [
+      sdo:identifier <http://orcid.org/0000-0002-8742-7730> ;
+      sdo:name "Nicholas J Car" ;
+    ] ;
   dct:modified "2019-07-05"^^xsd:date ;
-  dct:publisher <http://www.csiro.au> ;
-  rdfs:comment """An extensions ontology adding new properties, axiomes and classes to the [GeoSPARQL](http://www.opengeospatial.org/standards/geosparql) taking cues from the [SOSA ontology](https://www.w3.org/TR/vocab-ssn/) as to how to associate additional properties with Features.
+  dct:publisher [
+      sdo:identifier <http://catalogue.linked.data.gov.au/org/csiro> ;
+      sdo:name "CSIRO" ;
+    ] ;
+  rdfs:comment """An extensions ontology adding new properties, axioms and classes to the [GeoSPARQL](http://www.opengeospatial.org/standards/geosparql) taking cues from the [SOSA ontology](https://www.w3.org/TR/vocab-ssn/) as to how to associate additional properties with Features.
 
 This ontology allows for the representation of additional elements of feature geometry, such as Resolution, and also for the representation of additional spatial properties of features that are not contained within a geometry, such as Area.
 
