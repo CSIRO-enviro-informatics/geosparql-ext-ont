@@ -1,7 +1,7 @@
 # GeoSPARQL Extensions Ontology
-This is an extension to the [GeoSPARQL](http://www.opengeospatial.org/standards/geosparql) OWL ontology that includes details GeoSPARQL doesn't have for indicating spatial resolution, areas, proportional relations (area overlaps) and roles for multiple `Geometry` objects relating to a single `Feature`.
+This is an extension to the [GeoSPARQL](http://www.opengeospatial.org/standards/geosparql) OWL ontology that includes details GeoSPARQL doesn't have for indicating spatial resolution, areas, proportional relations (e.g. area overlaps) and roles for multiple `Geometry` objects relating to a single `Feature`.
 
-This extension is mostly built on GeoSPARQL but it also defined specialised versions of the Sensor, Observation, Sample, and Actuator (SOSA) Ontology's *ObservableProperty* class for spatial properties of spatial features, such as *Area*.
+This extension is mostly built on GeoSPARQL but it also uses elements from [QUDT](http://www.qudt.org/release2/qudt-catalog.html) and the [AGLDWG datatypes vocabulary](http://catalogue.linked.data.gov.au/resource/116).
 
 
 ## Status
@@ -18,4 +18,11 @@ Creator:
 *Senior Experimental Scientist*  
 CSIRO Land & Water, Brisbane, Australia    
 <nicholas.car@csiro.au>  
-<http://orcid.org/0000-0002-8742-7730>  
+<https://orcid.org/0000-0002-8742-7730>  
+
+Contributor:
+**Simon J D Cox**
+*Research Scientist*
+CSIRO Land & Water, Melbourne, Australia
+<simon.cox@csiro.au>
+<https://orcid.org/0000-0002-3884-3420>
