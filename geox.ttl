@@ -79,6 +79,11 @@ The specific elements of this ontology have been created to facilitate use cases
   skos:altLabel "Spatial resolution" ;
   skos:definition "An object containing a numeric value and the units it is expressed in to communicate a spatial resolution as a linear measurement" ;
 .
+:hasArea
+  a owl:ObjectProperty ;
+  rdfs:label "has area" ;
+  rdfs:range <http://linked.data.gov.au/def/datatype/QuantitativeMeasure> ;
+.
 :hasAreaM2
   a owl:ObjectProperty ;
   rdfs:label "has area in m2" ;
@@ -96,6 +101,7 @@ The specific elements of this ontology have been created to facilitate use cases
   a owl:ObjectProperty ;
   rdfs:domain geo:Geometry ;
   rdfs:label "has resolution" ;
+  rdfs:range <http://linked.data.gov.au/def/datatype/QuantitativeMeasure> ;
   rdfs:range :Resolution ;
   skos:altLabel "spatial resolution" ;
   skos:definition "The spatial resolution of the Geometry object, expressed as a linear measurement." ;
