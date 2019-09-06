@@ -21,8 +21,8 @@ CSIRO Land & Water, Brisbane, Australia
 <https://orcid.org/0000-0002-8742-7730>  
 
 Contributor:
-**Simon J D Cox**
-*Research Scientist*
-CSIRO Land & Water, Melbourne, Australia
-<simon.cox@csiro.au>
+**Simon J D Cox**  
+*Research Scientist*  
+CSIRO Land & Water, Melbourne, Australia  
+<simon.cox@csiro.au>  
 <https://orcid.org/0000-0002-3884-3420>
