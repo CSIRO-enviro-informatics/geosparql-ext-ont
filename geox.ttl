@@ -40,7 +40,7 @@
     ] ;
   dct:modified "2019-07-05"^^xsd:date ;
   dct:publisher [
-      sdo:identifier <http://catalogue.linked.data.gov.au/org/csiro> ;
+      sdo:identifier <http://catalogue.linked.data.gov.au/org/csiro> , <https://ror.org/03qn8fb07> ;
       sdo:name "CSIRO" ;
     ] ;
   rdfs:comment """An extensions ontology adding new properties, axioms and classes to the [GeoSPARQL](http://www.opengeospatial.org/standards/geosparql) taking cues from the [SOSA ontology](https://www.w3.org/TR/vocab-ssn/) as to how to associate additional properties with Features.
