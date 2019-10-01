@@ -3,6 +3,8 @@ This is an extension to the [GeoSPARQL](http://www.opengeospatial.org/standards/
 
 This extension is mostly built on GeoSPARQL but it also uses elements from [QUDT](http://www.qudt.org/release2/qudt-catalog.html) and the [AGLDWG datatypes vocabulary](http://catalogue.linked.data.gov.au/resource/116).
 
+![Summary of GEOX](https://raw.githubusercontent.com/CSIRO-enviro-informatics/geosparql-ext-ont/master/docs/summary.png)
+
 
 ## Status
 As of June, 2019, this ontology is at an early stage of development.
