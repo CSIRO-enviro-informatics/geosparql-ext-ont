@@ -87,6 +87,7 @@ This ontology allows for the representation of additional elements of feature ge
 .
 :hasArea
   a owl:ObjectProperty ;
+  rdfs:domain geo:SpatialObject ;
   rdfs:label "has area" ;
   rdfs:range data:QuantitativeMeasure ;
   skos:example """my:plot456
@@ -195,6 +196,7 @@ This ontology allows for the representation of additional elements of feature ge
 .
 :hasVolume
   a owl:ObjectProperty ;
+  rdfs:domain geo:SpatialObject ;
   rdfs:label "has volume" ;
   rdfs:range data:QuantitativeMeasure ;
   skos:example """my:swimmingPool99
