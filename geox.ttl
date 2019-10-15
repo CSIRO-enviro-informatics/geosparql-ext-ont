@@ -64,7 +64,6 @@ This ontology allows for the representation of additional elements of feature ge
       a doap:Project ;
       a prov:Activity ;
       doap:repository <https://github.com/CSIRO-enviro-informatics/geosparql-ext-ont> ;
-      rdfs:label "Loc-I project" ;
     ] ;
 .
 :Resolution
