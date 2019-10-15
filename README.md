@@ -1,6 +1,8 @@
 # GeoSPARQL Extensions Ontology
 This is an extension to the [GeoSPARQL](http://www.opengeospatial.org/standards/geosparql) OWL ontology that includes details GeoSPARQL doesn't have for indicating spatial resolution, areas, proportional relations (e.g. area overlaps) and roles for multiple `Geometry` objects relating to a single `Feature`.
 
+This ontology is online at its namespae location: **<http://linked.data.gov.au/def/geox>**.
+
 This extension is mostly built on GeoSPARQL but it also uses elements from [QUDT](http://www.qudt.org/release2/qudt-catalog.html) and the [AGLDWG datatypes vocabulary](http://catalogue.linked.data.gov.au/resource/116).
 
 ![Summary of GEOX](https://raw.githubusercontent.com/CSIRO-enviro-informatics/geosparql-ext-ont/master/docs/summary.png)
