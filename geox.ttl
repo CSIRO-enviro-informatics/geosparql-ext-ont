@@ -1,13 +1,15 @@
 # baseURI: http://linked.data.gov.au/def/geox
 # imports: http://linked.data.gov.au/def/datatype
+# imports: http://www.opengis.net/ont/geosparql
 # imports: http://www.opengis.net/ont/geosparql#
+# prefix: geox
 
-@prefix : <http://linked.data.gov.au/def/geox#> .
 @prefix data: <http://linked.data.gov.au/def/datatype/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix doap: <http://usefulinc.com/ns/doap#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix geox: <http://linked.data.gov.au/def/geox#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix qk: <http://qudt.org/vocab/quantitykind/> .
@@ -55,6 +57,7 @@ This ontology allows for the representation of additional elements of feature ge
   rdfs:label "GeoSPARQL Extensions Ontology"@en ;
   rdfs:seeAlso <https://github.com/CSIRO-enviro-informatics/geosparql-ext-ont> ;
   owl:imports <http://linked.data.gov.au/def/datatype> ;
+  owl:imports <http://www.opengis.net/ont/geosparql> ;
   owl:imports geo: ;
   owl:versionIRI <http://linked.data.gov.au/def/geox/1.0> ;
   owl:versionInfo "Alpha version"@en ;
@@ -66,7 +69,7 @@ This ontology allows for the representation of additional elements of feature ge
       doap:repository <https://github.com/CSIRO-enviro-informatics/geosparql-ext-ont> ;
     ] ;
 .
-:Resolution
+geox:Resolution
   a owl:Class ;
   rdfs:label "Resolution" ;
   rdfs:subClassOf [
@@ -84,7 +87,25 @@ This ontology allows for the representation of additional elements of feature ge
   skos:altLabel "Spatial resolution" ;
   skos:definition "An object containing a numeric value and the units it is expressed in to communicate a spatial resolution as a linear measurement" ;
 .
-:hasArea
+geox:asGeoJSON
+  a owl:DatatypeProperty ;
+  rdfs:comment "The GeoJSON serialization of a geometry"@en ;
+  rdfs:domain geo:Geometry ;
+  rdfs:label "asGeoJSON"@en ;
+  rdfs:range geo:gmlLiteral ;
+  rdfs:subPropertyOf geo:hasSerialization ;
+.
+geox:asGeometryObject
+  a owl:ObjectProperty ;
+  rdfs:domain geo:Geometry ;
+  rdfs:label "as Geometry object" ;
+.
+geox:geoJSONLiteral
+  a rdfs:Datatype ;
+  rdfs:comment "A GeoJSON serialization of a geometry object."@en ;
+  rdfs:label "GeoJSON Literal"@en ;
+.
+geox:hasArea
   a owl:ObjectProperty ;
   rdfs:domain geo:SpatialObject ;
   rdfs:label "has area" ;
@@ -97,7 +118,7 @@ This ontology allows for the representation of additional elements of feature ge
   ] ;
 .""" ;
 .
-:hasAreaM2
+geox:hasAreaM2
   a owl:ObjectProperty ;
   rdfs:label "has area in m2" ;
   rdfs:range [
@@ -109,14 +130,14 @@ This ontology allows for the representation of additional elements of feature ge
           owl:onProperty data:unit ;
         ] ;
     ] ;
-  rdfs:subPropertyOf :hasArea ;
+  rdfs:subPropertyOf geox:hasArea ;
   skos:example """my:plot456
   :hasAreaM2 [
     data:value 63.9 ;
   ] ;
 .""" ;
 .
-:hasLength
+geox:hasLength
   a owl:ObjectProperty ;
   rdfs:domain geo:SpatialObject ;
   rdfs:label "has length" ;
@@ -130,7 +151,7 @@ This ontology allows for the representation of additional elements of feature ge
   ] ;
 .""" ;
 .
-:hasLengthM
+geox:hasLengthM
   a owl:ObjectProperty ;
   rdfs:label "has length in m" ;
   rdfs:range [
@@ -142,21 +163,21 @@ This ontology allows for the representation of additional elements of feature ge
           owl:onProperty data:unit ;
         ] ;
     ] ;
-  rdfs:subPropertyOf :hasLength ;
+  rdfs:subPropertyOf geox:hasLength ;
   skos:example """my:road456
   :hasLengthM [
     data:value 234.0 ;
   ] ;
 .""" ;
 .
-:hasResolution
+geox:hasResolution
   a owl:ObjectProperty ;
   rdfs:domain geo:Geometry ;
   rdfs:label "has resolution" ;
   rdfs:range [
       a owl:Class ;
       owl:unionOf (
-          :Resolution
+          geox:Resolution
           data:QuantitativeMeasure
         ) ;
     ] ;
@@ -170,7 +191,7 @@ This ontology allows for the representation of additional elements of feature ge
 .""" ;
   skos:usageNote "This is only to be used for geoGeometry objects. If you want to talk about the precision of things like area, that's regular QUDT business." ;
 .
-:hasResolutionM
+geox:hasResolutionM
   a owl:ObjectProperty ;
   rdfs:domain geo:Geometry ;
   rdfs:label "has spatial resolution in metres" ;
@@ -183,7 +204,7 @@ This ontology allows for the representation of additional elements of feature ge
           owl:onProperty data:unit ;
         ] ;
     ] ;
-  rdfs:subPropertyOf :hasResolution ;
+  rdfs:subPropertyOf geox:hasResolution ;
   skos:altLabel "spatial resolution" ;
   skos:definition "The spatial resolution of the Geometry object, expressed as a linear distance in metres" ;
   skos:example """my:image456
@@ -193,7 +214,7 @@ This ontology allows for the representation of additional elements of feature ge
 .""" ;
   skos:usageNote "This is only to be used for geoGeometry objects. If you want to talk about the precision of things like area, that's regular QUDT or DQV business" ;
 .
-:hasVolume
+geox:hasVolume
   a owl:ObjectProperty ;
   rdfs:domain geo:SpatialObject ;
   rdfs:label "has volume" ;
@@ -205,7 +226,7 @@ This ontology allows for the representation of additional elements of feature ge
   ] ;
 .""" ;
 .
-:hasVolumeM3
+geox:hasVolumeM3
   a owl:ObjectProperty ;
   rdfs:label "has volume in m3" ;
   rdfs:range [
@@ -217,14 +238,14 @@ This ontology allows for the representation of additional elements of feature ge
           owl:onProperty data:unit ;
         ] ;
     ] ;
-  rdfs:subPropertyOf :hasVolume ;
+  rdfs:subPropertyOf geox:hasVolume ;
   skos:example """my:swimmingPool99
   :hasVolumeM3 [
     data:value 3050.0 ;
   ] ;
 .""" ;
 .
-:transitiveSfOverlap
+geox:transitiveSfOverlap
   a owl:DeprecatedProperty ;
   a owl:ObjectProperty ;
   rdfs:comment "The domain object overlaps (geo:sfOverlaps) the range object by virtue of both objects containing (geo:sfContains) an intermediary object." ;
