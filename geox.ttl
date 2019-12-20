@@ -240,6 +240,11 @@ geox:hasVolumeM3
   ] ;
 .""" ;
 .
+geox:isGeometryOf
+  a owl:ObjectProperty ;
+  rdfs:label "is geometry of" ;
+  owl:inverseOf geo:hasGeometry ;
+.
 geox:transitiveSfOverlap
   a owl:DeprecatedProperty ;
   a owl:ObjectProperty ;
