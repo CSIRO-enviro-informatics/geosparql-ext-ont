@@ -1,12 +1,11 @@
 # baseURI: http://linked.data.gov.au/def/geox
 # imports: http://linked.data.gov.au/def/datatype
 # imports: http://www.opengis.net/ont/geosparql
-# imports: http://www.opengis.net/ont/geosparql#
 # prefix: geox
 
 @prefix data: <http://linked.data.gov.au/def/datatype/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix doap: <http://usefulinc.com/ns/doap#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix geox: <http://linked.data.gov.au/def/geox#> .
@@ -23,34 +22,31 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://dbpedia.org/ontology/area>
-  a owl:AnnotationProperty ;
-  a owl:NamedIndividual ;
   a owl:ObjectProperty ;
-  a owl:objectProperty ;
   rdfs:label "area" ;
   rdfs:range qk:Area ;
   rdfs:subPropertyOf sosa:ObservableProperty ;
 .
 <http://linked.data.gov.au/def/geox>
   a owl:Ontology ;
-  dct:created "2019-01-08"^^xsd:date ;
-  dct:creator [
+  dcterms:created "2019-01-08"^^xsd:date ;
+  dcterms:creator [
       sdo:identifier <http://orcid.org/0000-0002-3884-3420> ;
       sdo:name "Simon J D Cox" ;
     ] ;
-  dct:creator [
+  dcterms:creator [
       sdo:identifier <http://orcid.org/0000-0002-8742-7730> ;
       sdo:name "Nicholas J Car" ;
     ] ;
-  dct:modified "2019-10-01"^^xsd:date ;
-  dct:publisher [
+  dcterms:modified "2019-12-20"^^xsd:date ;
+  dcterms:publisher [
       sdo:identifier <http://catalogue.linked.data.gov.au/org/csiro> ;
       sdo:identifier <https://ror.org/03qn8fb07> ;
       sdo:name "CSIRO" ;
     ] ;
-  dct:requires <http://linked.data.gov.au/def/datatype> ;
-  dct:requires <http://qudt.org/2.1/vocab/unit> ;
-  dct:requires <http://www.opengis.net/ont/geosparql> ;
+  dcterms:requires <http://linked.data.gov.au/def/datatype> ;
+  dcterms:requires <http://qudt.org/2.1/vocab/unit> ;
+  dcterms:requires <http://www.opengis.net/ont/geosparql> ;
   rdfs:comment """An extensions ontology adding new properties, axioms and classes to [GeoSPARQL](http://www.opengeospatial.org/standards/geosparql).
 
 This ontology allows for the representation of additional elements of feature geometry, such as spatial-resolution, length, area and volume. """ ;
@@ -58,7 +54,6 @@ This ontology allows for the representation of additional elements of feature ge
   rdfs:seeAlso <https://github.com/CSIRO-enviro-informatics/geosparql-ext-ont> ;
   owl:imports <http://linked.data.gov.au/def/datatype> ;
   owl:imports <http://www.opengis.net/ont/geosparql> ;
-  owl:imports geo: ;
   owl:versionIRI <http://linked.data.gov.au/def/geox/1.0> ;
   owl:versionInfo "Alpha version"@en ;
   skos:changeNote "This iteration uses the AGLDWG data-types vocabulary for quantities. " ;
@@ -253,12 +248,13 @@ geox:transitiveSfOverlap
   rdfs:prefLabel "transitive Simple Features overlaps" ;
   rdfs:range geo:SpatialObject ;
   rdfs:subPropertyOf geo:sfOverlaps ;
+  owl:deprecated true ;
   owl:propertyChainAxiom (
       geo:sfContains
       geo:sfWithin
     ) ;
   skos:altLabel "proportional overlap" ;
-  skos:editorialNote "This property is not needed - it is not a true sub-property, it is a rule to infer overlap from the existence of a common contained feature ... " ;
+  skos:editorialNote "This property is not needed - it is not a true sub-property, it is a rule to infer overlap from the existence of a common contained feature ... it is actually more like a record of the _provenance_ of an sfOverlaps property. That information would be better managed as part of a linking statement. " ;
   skos:usageNote "if ex:A geo:sfContains ex:X and ex:B geo:sfContains :ex:X, using the declaration of geo:sfWithin in this ontology with an owl:inverseOf to geo:sfOverlaps, we can interpret the second triple as ex:X geo:sfWithin :B and then ex:A geo:sf:Overlaps ex:B with proportionally, being contained in the relative areas of A, B & X" ;
 .
 qudt:Quantity
@@ -316,9 +312,6 @@ geo:sfWithin
 rdfs:prefLabel
   a owl:AnnotationProperty ;
 .
-owl:objectProperty
-  a owl:Class ;
-.
 skos:usageNote
   a owl:AnnotationProperty ;
 .
@@ -327,7 +320,7 @@ sosa:ObservableProperty
 .
 [
   a rdf:Statement ;
-  dct:contributor [
+  dcterms:contributor [
       sdo:email <http://linked.data.gov.au/def/blake.regalia@gmail.com> ;
       sdo:name "Blake Regalia" ;
     ] ;
