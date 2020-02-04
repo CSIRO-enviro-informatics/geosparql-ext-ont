@@ -35,7 +35,7 @@ Markdown documentation created by [pyLODE](http://github.com/rdflib/pyLODE)
 
 
 ## Overview
-
+![GeoSPARQL Extensions Ontology overview](./docs/geox.png)
 **Figure 1:** Ontology overview  
 ## Classes
 [Spatial measure](#Spatialmeasure),
