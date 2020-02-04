@@ -1,0 +1,136 @@
+# baseURI: http://linked.data.gov.au/def/geox-adds
+# imports: http://linked.data.gov.au/def/geox
+# prefix: geox-adds
+
+@prefix geox: <http://linked.data.gov.au/def/geox#> .
+@prefix geox-adds: <http://linked.data.gov.au/def/geox-adds#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://dbpedia.org/ontology/area>
+  a owl:ObjectProperty ;
+  rdfs:label "area" ;
+  rdfs:range <http://qudt.org/vocab/quantitykind/Area> ;
+  rdfs:subPropertyOf <http://www.w3.org/ns/sosa/ObservableProperty> ;
+.
+geox:Resolution
+  a owl:Class ;
+  rdfs:label "Resolution" ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass qudt:Unit ;
+      owl:onProperty qudt:unit ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onDataRange xsd:decimal ;
+      owl:onProperty qudt:numericValue ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  skos:altLabel "Spatial resolution" ;
+  skos:definition "An object containing a numeric value and the units it is expressed in to communicate a spatial resolution as a linear measurement" ;
+  owl:deprecated true ;
+.
+geox:asGeoJSON
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.opengis.net/ont/geosparql#Geometry> ;
+  rdfs:label "asGeoJSON"@en ;
+  rdfs:range geox:geoJSONLiteral ;
+  rdfs:subPropertyOf <http://www.opengis.net/ont/geosparql#hasSerialization> ;
+  skos:definition "The GeoJSON serialization of a geometry"@en ;
+.
+geox:asGeometryObject
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.opengis.net/ont/geosparql#Geometry> ;
+  rdfs:label "as Geometry object" ;
+  owl:deprecated true ;
+.
+geox:geoJSONLiteral
+  a rdfs:Datatype ;
+  rdfs:comment "A GeoJSON serialization of a geometry object."@en ;
+  rdfs:comment "specialization of rdf:JSON, which is a new literal type proposed for JSON-LD - see https://w3c.github.io/json-ld-syntax/#json-literals" ;
+  rdfs:label "GeoJSON Literal"@en ;
+  rdfs:subClassOf rdf:JSON ;
+  rdfs:subClassOf rdfs:Literal ;
+.
+geox:hasResolution
+  rdfs:range [
+      a owl:Class ;
+      owl:unionOf (
+          geox:Resolution
+          <http://linked.data.gov.au/def/datatype/QuantitativeMeasure>
+        ) ;
+    ] ;
+.
+geox:transitiveSfOverlap
+  a owl:DeprecatedProperty ;
+  a owl:ObjectProperty ;
+  rdfs:comment "The domain object overlaps (geo:sfOverlaps) the range object by virtue of both objects containing (geo:sfContains) an intermediary object." ;
+  rdfs:domain <http://www.opengis.net/ont/geosparql#SpatialObject> ;
+  rdfs:prefLabel "transitive Simple Features overlaps" ;
+  rdfs:range <http://www.opengis.net/ont/geosparql#SpatialObject> ;
+  rdfs:subPropertyOf <http://www.opengis.net/ont/geosparql#sfOverlaps> ;
+  owl:deprecated true ;
+  owl:propertyChainAxiom (
+      <http://www.opengis.net/ont/geosparql#sfContains>
+      <http://www.opengis.net/ont/geosparql#sfWithin>
+    ) ;
+  skos:altLabel "proportional overlap" ;
+  skos:editorialNote "This property is not needed - it is not a true sub-property, it is a rule to infer overlap from the existence of a common contained feature ... it is actually more like a record of the _provenance_ of an sfOverlaps property. That information would be better managed as part of a linking statement. " ;
+  skos:usageNote "if ex:A geo:sfContains ex:X and ex:B geo:sfContains :ex:X, using the declaration of geo:sfWithin in this ontology with an owl:inverseOf to geo:sfOverlaps, we can interpret the second triple as ex:X geo:sfWithin :B and then ex:A geo:sf:Overlaps ex:B with proportionally, being contained in the relative areas of A, B & X" ;
+.
+<http://linked.data.gov.au/def/geox-adds>
+  a owl:Ontology ;
+  owl:imports <http://linked.data.gov.au/def/geox> ;
+
+.
+qudt:Quantity
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+qudt:QuantityKind
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+qudt:Unit
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+qudt:numericValue
+  a owl:DatatypeProperty ;
+.
+qudt:unit
+  a owl:ObjectProperty ;
+.
+<http://qudt.org/vocab/quantitykind/Area>
+  a qudt:QuantityKind ;
+  rdfs:label "Area" ;
+  skos:exactMatch <http://dbpedia.org/resource/Area> ;
+  skos:historyNote "This class is taken as-is from the QUDT ontology."@en ;
+  skos:prefLabel "Area" ;
+.
+<http://qudt.org/vocab/quantitykind/Distance>
+  a qudt:QuantityKind ;
+  rdfs:label "Distance" ;
+  skos:prefLabel "Distance" ;
+.
+<http://qudt.org/vocab/quantitykind/Length>
+  a qudt:QuantityKind ;
+  rdfs:label "Length" ;
+  skos:exactMatch <http://dbpedia.org/resource/Length> ;
+  skos:prefLabel "Length" ;
+  prov:wasInfluencedBy <http://en.wikipedia.org/wiki/Length> ;
+.
+<http://qudt.org/vocab/quantitykind/Volume>
+  a qudt:QuantityKind ;
+  rdfs:label "Volume" ;
+  skos:exactMatch <http://dbpedia.org/resource/Volume> ;
+  skos:prefLabel "Volume" ;
+.
