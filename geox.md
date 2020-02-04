@@ -6,7 +6,7 @@ Markdown documentation created by [pyLODE](http://github.com/rdflib/pyLODE)
 * **IRI**
   * `http://linked.data.gov.au/def/geox`
 * **Publisher(s)**
-  * a href='http://catalogue.linked.data.gov.au/org/csiro'>CSIRO</a>
+  * <a href='http://catalogue.linked.data.gov.au/org/csiro'>CSIRO</a>
 * **Creators(s)**
   * <a href='https://orcid.org/0000-0002-3884-3420'>Simon J D Cox, CSIRO</a>
   * <a href='https://orcid.org/0000-0002-8742-7730'>Nicholas J Car, Surround Australia</a>
@@ -19,8 +19,8 @@ Markdown documentation created by [pyLODE](http://github.com/rdflib/pyLODE)
 * **Version IRI**
   * <a href="http://linked.data.gov.au/def/geox/1.1">http://linked.data.gov.au/def/geox/1.1</a>
 * **Imports**
-  * <a href="http://www.opengis.net/ont/geosparql">http://www.opengis.net/ont/geosparql</a>
   * <a href="http://linked.data.gov.au/def/datatype">http://linked.data.gov.au/def/datatype</a>
+  * <a href="http://www.opengis.net/ont/geosparql">http://www.opengis.net/ont/geosparql</a>
 * **Ontology Source**
   * <a href="geox.ttl">RDF (turtle)</a>
 * **Code Repository**
@@ -35,7 +35,7 @@ Markdown documentation created by [pyLODE](http://github.com/rdflib/pyLODE)
 
 
 ## Overview
-![Geox overview](./docs/geox.png)
+
 **Figure 1:** Ontology overview  
 ## Classes
 [Spatial measure](#Spatialmeasure),
@@ -47,14 +47,14 @@ Description | Spatial quantity computed or defined within a specified coordinate
 Super-classes |<a href="http://linked.data.gov.au/def/datatype/QuantitativeMeasure">data:QuantitativeMeasure</a><sup class="sup-c" title="class">c</sup><br />
 Restrictions |<a href="#InCoordinateReferenceSystem">geox:inCRS</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br />
 In domain of |<a href="#InCoordinateReferenceSystem">geox:inCRS</a><sup class="sup-op" title="object property">op</sup><br />
-In range of |<a href="#haslength">geox:hasLength</a><sup class="sup-op" title="object property">op</sup><br /><a href="#hasvolume">geox:hasVolume</a><sup class="sup-op" title="object property">op</sup><br /><a href="#hasarea">geox:hasArea</a><sup class="sup-op" title="object property">op</sup><br />
+In range of |<a href="#hasarea">geox:hasArea</a><sup class="sup-op" title="object property">op</sup><br /><a href="#haslength">geox:hasLength</a><sup class="sup-op" title="object property">op</sup><br /><a href="#hasvolume">geox:hasVolume</a><sup class="sup-op" title="object property">op</sup><br />
 
 ## Object Properties
 [has area](hasarea),
 [has area in m2](hasareainm2),
 [has length](haslength),
 [has length in m](haslengthinm),
-[has resolution](hasresolution),
+[has spatial resolution](hasspatialresolution),
 [has spatial resolution in metres](hasspatialresolutioninmetres),
 [has volume](hasvolume),
 [has volume in m3](hasvolumeinm3),
@@ -90,8 +90,8 @@ Property | Value
 IRI | `http://linked.data.gov.au/def/geox#hasLengthM`
 Description | The length of a spatial object in metres
 Super-properties |<a href="#haslength">geox:hasLength</a><sup class="sup-op" title="object property">op</sup><br />
-[](hasresolution)
-### has resolution <sup>op</sup>
+[](hasspatialresolution)
+### has spatial resolution <sup>op</sup>
 Property | Value
 --- | ---
 IRI | `http://linked.data.gov.au/def/geox#hasResolution`
@@ -104,7 +104,7 @@ Property | Value
 --- | ---
 IRI | `http://linked.data.gov.au/def/geox#hasResolutionM`
 Description | The spatial resolution of the Geometry object, expressed as a linear distance in metres
-Super-properties |<a href="#hasresolution">geox:hasResolution</a><sup class="sup-op" title="object property">op</sup><br />
+Super-properties |<a href="#hasspatialresolution">geox:hasResolution</a><sup class="sup-op" title="object property">op</sup><br />
 Domain(s) |<a href="http://www.opengis.net/ont/geosparql#Geometry">geo:Geometry</a><sup class="sup-c" title="class">c</sup><br />
 [](hasvolume)
 ### has volume <sup>op</sup>
