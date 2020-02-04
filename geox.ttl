@@ -16,7 +16,6 @@
 @prefix sdo: <http://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://linked.data.gov.au/def/geox>
@@ -25,7 +24,7 @@
   dcterms:creator "<a href='https://orcid.org/0000-0002-3884-3420'>Simon J D Cox, CSIRO</a>"^^rdf:HTML ;
   dcterms:creator "<a href='https://orcid.org/0000-0002-8742-7730'>Nicholas J Car, Surround Australia</a>"^^rdf:HTML ;
   dcterms:modified "2020-02-04"^^xsd:date ;
-  dcterms:publisher "a href='http://catalogue.linked.data.gov.au/org/csiro'>CSIRO</a>"^^rdf:HTML ;
+  dcterms:publisher "<a href='http://catalogue.linked.data.gov.au/org/csiro'>CSIRO</a>"^^rdf:HTML ;
   dcterms:requires <http://linked.data.gov.au/def/datatype> ;
   dcterms:requires <http://qudt.org/2.1/vocab/unit> ;
   dcterms:requires <http://www.opengis.net/ont/geosparql> ;
