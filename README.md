@@ -3,13 +3,13 @@ This is an extension to the [GeoSPARQL](http://www.opengeospatial.org/standards/
 
 This ontology is online at its namespae location: **<http://linked.data.gov.au/def/geox>**.
 
-This extension is mostly built on GeoSPARQL but it also uses elements from [QUDT](http://www.qudt.org/release2/qudt-catalog.html) and the [AGLDWG datatypes vocabulary](http://catalogue.linked.data.gov.au/resource/116).
+This extension is mostly built on GeoSPARQL but it also uses elements from the [AGLDWG datatypes vocabulary](http://catalogue.linked.data.gov.au/resource/116).
 
-![Summary of GEOX](https://raw.githubusercontent.com/CSIRO-enviro-informatics/geosparql-ext-ont/master/docs/summary.png)
+[GEOX documentation](geox.md)
 
 
 ## Status
-As of June, 2019, this ontology is at an early stage of development.
+As of Feb, 2020, this ontology is being used in Loc-I.
 
 
 ## License
@@ -19,9 +19,8 @@ This ontology and all other content in this repository are licensed under the [C
 ## Contacts
 Creator:  
 **Nicholas Car**  
-*Senior Experimental Scientist*  
-CSIRO Land & Water, Brisbane, Australia    
-<nicholas.car@csiro.au>  
+Surround Australia    
+<nicholas.car@surroundaustralia.com>  
 <https://orcid.org/0000-0002-8742-7730>  
 
 Contributor:  
