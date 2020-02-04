@@ -126,7 +126,7 @@ geox:hasLengthM
 geox:hasResolution
   a owl:ObjectProperty ;
   rdfs:domain geo:Geometry ;
-  rdfs:label "has resolution" ;
+  rdfs:label "has spatial resolution" ;
   rdfs:range data:QuantitativeMeasure ;
   skos:altLabel "spatial resolution" ;
   skos:definition "The spatial resolution of the Geometry object, expressed as a linear measurement." ;

@@ -1,0 +1,122 @@
+# baseURI: http://linked.data.gov.au/def/geox
+# imports: http://linked.data.gov.au/def/datatype
+# imports: http://www.opengis.net/ont/geosparql
+# prefix: geox
+
+<http://linked.data.gov.au/def/geox#hasArea> <http://www.w3.org/2004/02/skos/core#definition> "The area of a spatial object, expressed as a scaled number" .
+<http://linked.data.gov.au/def/geox#hasArea> <http://www.w3.org/2004/02/skos/core#example> "my:plot456\r\n  :hasArea [\r\n    data:uncertainty 0.5 ;\r\n    data:unit <http://qudt.org/vocab/unit/M2> ;\r\n    data:value 63.9 ;\r\n  ] ;\r\n." .
+<http://linked.data.gov.au/def/geox#hasArea> <http://www.w3.org/2000/01/rdf-schema#range> <http://linked.data.gov.au/def/geox#SpatialMeasure> .
+<http://linked.data.gov.au/def/geox#hasArea> <http://www.w3.org/2000/01/rdf-schema#label> "has area" .
+<http://linked.data.gov.au/def/geox#hasArea> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#SpatialObject> .
+<http://linked.data.gov.au/def/geox#hasArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://linked.data.gov.au/def/geox#SpatialMeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B509a09ec56e8def0228e815716a71443 .
+<http://linked.data.gov.au/def/geox#SpatialMeasure> <http://www.w3.org/2004/02/skos/core#definition> "Spatial quantity computed or defined within a specified coordinate reference system" .
+<http://linked.data.gov.au/def/geox#SpatialMeasure> <http://www.w3.org/2000/01/rdf-schema#label> "Spatial measure" .
+<http://linked.data.gov.au/def/geox#SpatialMeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linked.data.gov.au/def/datatype/QuantitativeMeasure> .
+<http://linked.data.gov.au/def/geox#SpatialMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://linked.data.gov.au/def/geox#hasResolutionM> <http://www.w3.org/2000/01/rdf-schema#range> _:B459d89f4eecc04a899dbdd55c9435d46 .
+<http://linked.data.gov.au/def/geox#hasResolutionM> <http://www.w3.org/2004/02/skos/core#example> "my:image456\r\n  :hasResolutionM [\r\n    data:value 30.0 ;\r\n  ] ;\r\n." .
+<http://linked.data.gov.au/def/geox#hasResolutionM> <http://www.w3.org/2004/02/skos/core#definition> "The spatial resolution of the Geometry object, expressed as a linear distance in metres" .
+<http://linked.data.gov.au/def/geox#hasResolutionM> <http://www.w3.org/2004/02/skos/core#altLabel> "spatial resolution" .
+<http://linked.data.gov.au/def/geox#hasResolutionM> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://linked.data.gov.au/def/geox#hasResolution> .
+<http://linked.data.gov.au/def/geox#hasResolutionM> <http://www.w3.org/2004/02/skos/core#usageNote> "This is only to be used for geoGeometry objects. If you want to talk about the precision of things like area, that's regular QUDT or DQV business" .
+<http://linked.data.gov.au/def/geox#hasResolutionM> <http://www.w3.org/2000/01/rdf-schema#label> "has spatial resolution in metres" .
+<http://linked.data.gov.au/def/geox#hasResolutionM> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#Geometry> .
+<http://linked.data.gov.au/def/geox#hasResolutionM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B13eacf5bb4f34d37b63c00f4fb2ed9fe <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bfc9c29595ebd2fdde3d7dde00bfdbb83 .
+_:B13eacf5bb4f34d37b63c00f4fb2ed9fe <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linked.data.gov.au/def/datatype/QuantitativeMeasure> .
+_:B13eacf5bb4f34d37b63c00f4fb2ed9fe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B982548cf1ca6315106061c04b19603dd <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B5a888402fbb2bc47f1bcef13d180fae0 .
+_:B982548cf1ca6315106061c04b19603dd <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linked.data.gov.au/def/datatype/QuantitativeMeasure> .
+_:B982548cf1ca6315106061c04b19603dd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://linked.data.gov.au/def/geox#inCRS> <http://www.w3.org/2004/02/skos/core#definition> "The measure is defined or computed using this CRS. \r\nThe CRS should be denoted by a URI Reference to a CRS definition, e.g. https://www.opengis.net/def/crs/EPSG/0/4326" .
+<http://linked.data.gov.au/def/geox#inCRS> <http://www.w3.org/2000/01/rdf-schema#domain> <http://linked.data.gov.au/def/geox#SpatialMeasure> .
+<http://linked.data.gov.au/def/geox#inCRS> <http://www.w3.org/2000/01/rdf-schema#label> "In Coordinate Reference System" .
+<http://linked.data.gov.au/def/geox#inCRS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Beaf65ba443a04da9c39f1bacfd8068ec <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/datatype/unit> .
+_:Beaf65ba443a04da9c39f1bacfd8068ec <http://www.w3.org/2002/07/owl#hasValue> <http://qudt.org/vocab/unit/M> .
+_:Beaf65ba443a04da9c39f1bacfd8068ec <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Bd029cd82e0b903411a4e9fd1c6ebe6ce <http://usefulinc.com/ns/doap#repository> <https://github.com/CSIRO-enviro-informatics/geosparql-ext-ont> .
+_:Bd029cd82e0b903411a4e9fd1c6ebe6ce <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+_:Bd029cd82e0b903411a4e9fd1c6ebe6ce <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://usefulinc.com/ns/doap#Project> .
+<http://linked.data.gov.au/def/geox#hasLength> <http://www.w3.org/2004/02/skos/core#example> "my:road456\r\n  :hasLength [\r\n    data:uncertainty 5.0 ;\r\n    data:unit <http://qudt.org/vocab/unit/M> ;\r\n    data:value 234.0 ;\r\n  ] ;\r\n." .
+<http://linked.data.gov.au/def/geox#hasLength> <http://www.w3.org/2004/02/skos/core#definition> "The length of a spatial object, expressed as a scaled number" .
+<http://linked.data.gov.au/def/geox#hasLength> <http://www.w3.org/2000/01/rdf-schema#range> <http://linked.data.gov.au/def/geox#SpatialMeasure> .
+<http://linked.data.gov.au/def/geox#hasLength> <http://www.w3.org/2000/01/rdf-schema#label> "has length" .
+<http://linked.data.gov.au/def/geox#hasLength> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#SpatialObject> .
+<http://linked.data.gov.au/def/geox#hasLength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B509a09ec56e8def0228e815716a71443 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/geox#inCRS> .
+_:B509a09ec56e8def0228e815716a71443 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:B509a09ec56e8def0228e815716a71443 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B5a888402fbb2bc47f1bcef13d180fae0 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/datatype/unit> .
+_:B5a888402fbb2bc47f1bcef13d180fae0 <http://www.w3.org/2002/07/owl#hasValue> <http://qudt.org/vocab/unit/M> .
+_:B5a888402fbb2bc47f1bcef13d180fae0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/geox#hasLengthM> <http://www.w3.org/2000/01/rdf-schema#range> _:B982548cf1ca6315106061c04b19603dd .
+<http://linked.data.gov.au/def/geox#hasLengthM> <http://www.w3.org/2004/02/skos/core#definition> "The length of a spatial object in metres" .
+<http://linked.data.gov.au/def/geox#hasLengthM> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://linked.data.gov.au/def/geox#hasLength> .
+<http://linked.data.gov.au/def/geox#hasLengthM> <http://www.w3.org/2004/02/skos/core#example> "my:road456\r\n  :hasLengthM [\r\n    data:value 234.0 ;\r\n  ] ;\r\n." .
+<http://linked.data.gov.au/def/geox#hasLengthM> <http://www.w3.org/2000/01/rdf-schema#label> "has length in m" .
+<http://linked.data.gov.au/def/geox#hasLengthM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://linked.data.gov.au/def/geox#isGeometryOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#Feature> .
+<http://linked.data.gov.au/def/geox#isGeometryOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#Geometry> .
+<http://linked.data.gov.au/def/geox#isGeometryOf> <http://www.w3.org/2004/02/skos/core#definition> "link from a geometry object to the feature(s) for which it is a geometry" .
+<http://linked.data.gov.au/def/geox#isGeometryOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.opengis.net/ont/geosparql#hasGeometry> .
+<http://linked.data.gov.au/def/geox#isGeometryOf> <http://www.w3.org/2000/01/rdf-schema#label> "is geometry of" .
+<http://linked.data.gov.au/def/geox#isGeometryOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://linked.data.gov.au/def/geox#hasVolume> <http://www.w3.org/2004/02/skos/core#definition> "The volume of a spatial object, expressed as a scaled number" .
+<http://linked.data.gov.au/def/geox#hasVolume> <http://www.w3.org/2004/02/skos/core#example> "my:swimmingPool99\r\n  :hasVolume [\r\n    data:unit <http://qudt.org/vocab/unit/M3> ;\r\n    data:value 3050.0 ;\r\n  ] ;\r\n." .
+<http://linked.data.gov.au/def/geox#hasVolume> <http://www.w3.org/2000/01/rdf-schema#range> <http://linked.data.gov.au/def/geox#SpatialMeasure> .
+<http://linked.data.gov.au/def/geox#hasVolume> <http://www.w3.org/2000/01/rdf-schema#label> "has volume" .
+<http://linked.data.gov.au/def/geox#hasVolume> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#SpatialObject> .
+<http://linked.data.gov.au/def/geox#hasVolume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://linked.data.gov.au/def/geox#hasResolution> <http://www.w3.org/2000/01/rdf-schema#label> "has spatial resolution" .
+<http://linked.data.gov.au/def/geox#hasResolution> <http://www.w3.org/2004/02/skos/core#example> "my:image456\r\n  :hasResolution [\r\n    data:unit <http://qudt.org/vocab/unit/M> ;\r\n    data:value 30.0 ;\r\n  ] ;\r\n." .
+<http://linked.data.gov.au/def/geox#hasResolution> <http://www.w3.org/2004/02/skos/core#definition> "The spatial resolution of the Geometry object, expressed as a linear measurement." .
+<http://linked.data.gov.au/def/geox#hasResolution> <http://www.w3.org/2004/02/skos/core#altLabel> "spatial resolution" .
+<http://linked.data.gov.au/def/geox#hasResolution> <http://www.w3.org/2004/02/skos/core#usageNote> "This is only to be used for geoGeometry objects. If you want to talk about the precision of things like area, that's regular QUDT business." .
+<http://linked.data.gov.au/def/geox#hasResolution> <http://www.w3.org/2000/01/rdf-schema#range> <http://linked.data.gov.au/def/datatype/QuantitativeMeasure> .
+<http://linked.data.gov.au/def/geox#hasResolution> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#Geometry> .
+<http://linked.data.gov.au/def/geox#hasResolution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://linked.data.gov.au/def/geox> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://github.com/CSIRO-enviro-informatics/geosparql-ext-ont> .
+<http://linked.data.gov.au/def/geox> <http://www.w3.org/2000/01/rdf-schema#label> "GeoSPARQL Extensions Ontology"@en .
+<http://linked.data.gov.au/def/geox> <http://www.w3.org/2002/07/owl#imports> <http://linked.data.gov.au/def/datatype> .
+<http://linked.data.gov.au/def/geox> <http://purl.org/dc/terms/modified> "2020-02-04"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://linked.data.gov.au/def/geox> <http://purl.org/dc/terms/publisher> "a href='http://catalogue.linked.data.gov.au/org/csiro'>CSIRO</a>"^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML> .
+<http://linked.data.gov.au/def/geox> <http://purl.org/dc/terms/requires> <http://linked.data.gov.au/def/datatype> .
+<http://linked.data.gov.au/def/geox> <http://www.w3.org/ns/prov#wasGeneratedBy> _:Bd029cd82e0b903411a4e9fd1c6ebe6ce .
+<http://linked.data.gov.au/def/geox> <http://www.w3.org/2002/07/owl#imports> <http://www.opengis.net/ont/geosparql> .
+<http://linked.data.gov.au/def/geox> <http://purl.org/dc/terms/creator> "<a href='https://orcid.org/0000-0002-3884-3420'>Simon J D Cox, CSIRO</a>"^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML> .
+<http://linked.data.gov.au/def/geox> <http://purl.org/dc/terms/created> "2019-01-08"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://linked.data.gov.au/def/geox> <http://purl.org/dc/terms/requires> <http://www.opengis.net/ont/geosparql> .
+<http://linked.data.gov.au/def/geox> <http://purl.org/dc/terms/requires> <http://qudt.org/2.1/vocab/unit> .
+<http://linked.data.gov.au/def/geox> <http://purl.org/dc/terms/creator> "<a href='https://orcid.org/0000-0002-8742-7730'>Nicholas J Car, Surround Australia</a>"^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML> .
+<http://linked.data.gov.au/def/geox> <http://www.w3.org/2000/01/rdf-schema#comment> "An extension to [GeoSPARQL](http://www.opengeospatial.org/standards/geosparql) with new features for the representation of additional elements of feature geometry, such as spatial-resolution, length, area and volume. " .
+<http://linked.data.gov.au/def/geox> <http://www.w3.org/2002/07/owl#versionInfo> "Alpha version"@en .
+<http://linked.data.gov.au/def/geox> <http://www.w3.org/2002/07/owl#versionIRI> <http://linked.data.gov.au/def/geox/1.1> .
+<http://linked.data.gov.au/def/geox> <http://www.w3.org/2004/02/skos/core#editorialNote> "The specific elements of this ontology have been created to facilitate use cases generated by the [LocI project](http://loci.cat).These elements will be submitted for consideration for future editions of the GeoSPARQL ontology." .
+<http://linked.data.gov.au/def/geox> <http://www.w3.org/2004/02/skos/core#changeNote> "This iteration uses the AGLDWG data-types vocabulary for quantities. " .
+<http://linked.data.gov.au/def/geox> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+_:B24645658b7b50eaacfdeb101bc675343 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/datatype/unit> .
+_:B24645658b7b50eaacfdeb101bc675343 <http://www.w3.org/2002/07/owl#hasValue> <http://qudt.org/vocab/unit/M3> .
+_:B24645658b7b50eaacfdeb101bc675343 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Bfc9c29595ebd2fdde3d7dde00bfdbb83 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/datatype/unit> .
+_:Bfc9c29595ebd2fdde3d7dde00bfdbb83 <http://www.w3.org/2002/07/owl#hasValue> <http://qudt.org/vocab/unit/M2> .
+_:Bfc9c29595ebd2fdde3d7dde00bfdbb83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Bc7b1b16e19a324d22360e52ea3e822d3 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B24645658b7b50eaacfdeb101bc675343 .
+_:Bc7b1b16e19a324d22360e52ea3e822d3 <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linked.data.gov.au/def/datatype/QuantitativeMeasure> .
+_:Bc7b1b16e19a324d22360e52ea3e822d3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://linked.data.gov.au/def/geox#hasAreaM2> <http://www.w3.org/2000/01/rdf-schema#range> _:B13eacf5bb4f34d37b63c00f4fb2ed9fe .
+<http://linked.data.gov.au/def/geox#hasAreaM2> <http://www.w3.org/2004/02/skos/core#definition> "The area of the spatial object in m^2" .
+<http://linked.data.gov.au/def/geox#hasAreaM2> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://linked.data.gov.au/def/geox#hasArea> .
+<http://linked.data.gov.au/def/geox#hasAreaM2> <http://www.w3.org/2004/02/skos/core#example> "my:plot456\r\n  :hasAreaM2 [\r\n    data:value 63.9 ;\r\n  ] ;\r\n." .
+<http://linked.data.gov.au/def/geox#hasAreaM2> <http://www.w3.org/2000/01/rdf-schema#label> "has area in m2" .
+<http://linked.data.gov.au/def/geox#hasAreaM2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://linked.data.gov.au/def/geox#hasVolumeM3> <http://www.w3.org/2000/01/rdf-schema#range> _:Bc7b1b16e19a324d22360e52ea3e822d3 .
+<http://linked.data.gov.au/def/geox#hasVolumeM3> <http://www.w3.org/2004/02/skos/core#definition> "The volume of a spatial object in cubic-metres" .
+<http://linked.data.gov.au/def/geox#hasVolumeM3> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://linked.data.gov.au/def/geox#hasVolume> .
+<http://linked.data.gov.au/def/geox#hasVolumeM3> <http://www.w3.org/2004/02/skos/core#example> "my:swimmingPool99\r\n  :hasVolumeM3 [\r\n    data:value 3050.0 ;\r\n  ] ;\r\n." .
+<http://linked.data.gov.au/def/geox#hasVolumeM3> <http://www.w3.org/2000/01/rdf-schema#label> "has volume in m3" .
+<http://linked.data.gov.au/def/geox#hasVolumeM3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B459d89f4eecc04a899dbdd55c9435d46 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Beaf65ba443a04da9c39f1bacfd8068ec .
+_:B459d89f4eecc04a899dbdd55c9435d46 <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linked.data.gov.au/def/datatype/QuantitativeMeasure> .
+_:B459d89f4eecc04a899dbdd55c9435d46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
