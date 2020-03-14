@@ -19,8 +19,8 @@ Markdown documentation created by [pyLODE](http://github.com/rdflib/pyLODE)
 * **Version IRI**
   * <a href="http://linked.data.gov.au/def/geox/1.1">http://linked.data.gov.au/def/geox/1.1</a>
 * **Imports**
-  * <a href="http://linked.data.gov.au/def/datatype">http://linked.data.gov.au/def/datatype</a>
   * <a href="http://www.opengis.net/ont/geosparql">http://www.opengis.net/ont/geosparql</a>
+  * <a href="http://linked.data.gov.au/def/datatype">http://linked.data.gov.au/def/datatype</a>
 * **Ontology Source**
   * <a href="geox.ttl">RDF (turtle)</a>
 * **Code Repository**
@@ -47,7 +47,7 @@ Description | Spatial quantity computed or defined within a specified coordinate
 Super-classes |<a href="http://linked.data.gov.au/def/datatype/QuantitativeMeasure">data:QuantitativeMeasure</a><sup class="sup-c" title="class">c</sup><br />
 Restrictions |<a href="#InCoordinateReferenceSystem">geox:inCRS</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br />
 In domain of |<a href="#InCoordinateReferenceSystem">geox:inCRS</a><sup class="sup-op" title="object property">op</sup><br />
-In range of |<a href="#hasarea">geox:hasArea</a><sup class="sup-op" title="object property">op</sup><br /><a href="#haslength">geox:hasLength</a><sup class="sup-op" title="object property">op</sup><br /><a href="#hasvolume">geox:hasVolume</a><sup class="sup-op" title="object property">op</sup><br />
+In range of |<a href="#haslength">geox:hasLength</a><sup class="sup-op" title="object property">op</sup><br /><a href="#hasarea">geox:hasArea</a><sup class="sup-op" title="object property">op</sup><br /><a href="#hasvolume">geox:hasVolume</a><sup class="sup-op" title="object property">op</sup><br />
 
 ## Object Properties
 [has area](hasarea),
@@ -66,6 +66,7 @@ Property | Value
 --- | ---
 IRI | `http://linked.data.gov.au/def/geox#hasArea`
 Description | The area of a spatial object, expressed as a scaled number
+Example | <pre>my:plot456<br />  :hasArea [<br />    data:uncertainty 0.5 ;<br />    data:unit &lt;http://qudt.org/vocab/unit/M2> ;<br />    data:value 63.9 ;<br />  ] ;<br />.</pre>
 Domain(s) |<a href="http://www.opengis.net/ont/geosparql#SpatialObject">geo:SpatialObject</a><sup class="sup-c" title="class">c</sup><br />
 Range(s) |<a href="#Spatialmeasure">geox:SpatialMeasure</a><sup class="sup-c" title="class">c</sup><br />
 [](hasareainm2)
@@ -74,6 +75,7 @@ Property | Value
 --- | ---
 IRI | `http://linked.data.gov.au/def/geox#hasAreaM2`
 Description | The area of the spatial object in m^2
+Example | <pre>my:plot456<br />  :hasAreaM2 [<br />    data:value 63.9 ;<br />  ] ;<br />.</pre>
 Super-properties |<a href="#hasarea">geox:hasArea</a><sup class="sup-op" title="object property">op</sup><br />
 [](haslength)
 ### has length <sup>op</sup>
@@ -81,6 +83,7 @@ Property | Value
 --- | ---
 IRI | `http://linked.data.gov.au/def/geox#hasLength`
 Description | The length of a spatial object, expressed as a scaled number
+Example | <pre>my:road456<br />  :hasLength [<br />    data:uncertainty 5.0 ;<br />    data:unit &lt;http://qudt.org/vocab/unit/M> ;<br />    data:value 234.0 ;<br />  ] ;<br />.</pre>
 Domain(s) |<a href="http://www.opengis.net/ont/geosparql#SpatialObject">geo:SpatialObject</a><sup class="sup-c" title="class">c</sup><br />
 Range(s) |<a href="#Spatialmeasure">geox:SpatialMeasure</a><sup class="sup-c" title="class">c</sup><br />
 [](haslengthinm)
@@ -89,6 +92,7 @@ Property | Value
 --- | ---
 IRI | `http://linked.data.gov.au/def/geox#hasLengthM`
 Description | The length of a spatial object in metres
+Example | <pre>my:road456<br />  :hasLengthM [<br />    data:value 234.0 ;<br />  ] ;<br />.</pre>
 Super-properties |<a href="#haslength">geox:hasLength</a><sup class="sup-op" title="object property">op</sup><br />
 [](hasspatialresolution)
 ### has spatial resolution <sup>op</sup>
@@ -96,6 +100,7 @@ Property | Value
 --- | ---
 IRI | `http://linked.data.gov.au/def/geox#hasResolution`
 Description | The spatial resolution of the Geometry object, expressed as a linear measurement.
+Example | <pre>my:image456<br />  :hasResolution [<br />    data:unit &lt;http://qudt.org/vocab/unit/M> ;<br />    data:value 30.0 ;<br />  ] ;<br />.</pre>
 Domain(s) |<a href="http://www.opengis.net/ont/geosparql#Geometry">geo:Geometry</a><sup class="sup-c" title="class">c</sup><br />
 Range(s) |<a href="http://linked.data.gov.au/def/datatype/QuantitativeMeasure">data:QuantitativeMeasure</a><sup class="sup-c" title="class">c</sup><br />
 [](hasspatialresolutioninmetres)
@@ -104,6 +109,7 @@ Property | Value
 --- | ---
 IRI | `http://linked.data.gov.au/def/geox#hasResolutionM`
 Description | The spatial resolution of the Geometry object, expressed as a linear distance in metres
+Example | <pre>my:image456<br />  :hasResolutionM [<br />    data:value 30.0 ;<br />  ] ;<br />.</pre>
 Super-properties |<a href="#hasspatialresolution">geox:hasResolution</a><sup class="sup-op" title="object property">op</sup><br />
 Domain(s) |<a href="http://www.opengis.net/ont/geosparql#Geometry">geo:Geometry</a><sup class="sup-c" title="class">c</sup><br />
 [](hasvolume)
@@ -112,6 +118,7 @@ Property | Value
 --- | ---
 IRI | `http://linked.data.gov.au/def/geox#hasVolume`
 Description | The volume of a spatial object, expressed as a scaled number
+Example | <pre>my:swimmingPool99<br />  :hasVolume [<br />    data:unit &lt;http://qudt.org/vocab/unit/M3> ;<br />    data:value 3050.0 ;<br />  ] ;<br />.</pre>
 Domain(s) |<a href="http://www.opengis.net/ont/geosparql#SpatialObject">geo:SpatialObject</a><sup class="sup-c" title="class">c</sup><br />
 Range(s) |<a href="#Spatialmeasure">geox:SpatialMeasure</a><sup class="sup-c" title="class">c</sup><br />
 [](hasvolumeinm3)
@@ -120,6 +127,7 @@ Property | Value
 --- | ---
 IRI | `http://linked.data.gov.au/def/geox#hasVolumeM3`
 Description | The volume of a spatial object in cubic-metres
+Example | <pre>my:swimmingPool99<br />  :hasVolumeM3 [<br />    data:value 3050.0 ;<br />  ] ;<br />.</pre>
 Super-properties |<a href="#hasvolume">geox:hasVolume</a><sup class="sup-op" title="object property">op</sup><br />
 [](InCoordinateReferenceSystem)
 ### In Coordinate Reference System <sup>op</sup>
