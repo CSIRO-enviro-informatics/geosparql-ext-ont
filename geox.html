@@ -218,8 +218,8 @@ code {
         <dd><a href="http://linked.data.gov.au/def/geox/1.1">http://linked.data.gov.au/def/geox/1.1</a></dd>
         <dt>Imports</dt>
         <dd>
-            <a href="http://linked.data.gov.au/def/datatype">http://linked.data.gov.au/def/datatype</a><br/>
             <a href="http://www.opengis.net/ont/geosparql">http://www.opengis.net/ont/geosparql</a><br/>
+            <a href="http://linked.data.gov.au/def/datatype">http://linked.data.gov.au/def/datatype</a><br/>
         </dd>
         <dt>Ontology Source</dt>
         <dd><a href="geox.ttl">RDF (turtle)</a></dd>
@@ -243,7 +243,7 @@ code {
 <section id="overview">
     <h2>Overview</h2>
     <div class="figure">
-        <div style="width:500px; height:500px; background-color: black;"><img height="500px" src="./docs/geox.png"/></div>
+        <img height="500px" src="./docs/geox.png" />
         <div class="caption"><strong>Figure 1:</strong> Ontology overview</div>
     </div>
 </section>
@@ -287,8 +287,8 @@ code {
                 <th>In range of</th>
                 <td>
                     <a href="#haslength">geox:hasLength</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hasvolume">geox:hasVolume</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#hasarea">geox:hasArea</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasvolume">geox:hasVolume</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -322,6 +322,12 @@ code {
                 </td>
             </tr>
             <tr>
+                <th>Example</th>
+                <td>
+                    <pre>my:plot456<br />  :hasArea [<br />    data:uncertainty 0.5 ;<br />    data:unit &lt;http://qudt.org/vocab/unit/M2> ;<br />    data:value 63.9 ;<br />  ] ;<br />.</pre>
+                </td>
+            </tr>
+            <tr>
                 <th>Domain(s)</th>
                 <td>
                     <a href="http://www.opengis.net/ont/geosparql#SpatialObject">geo:SpatialObject</a><sup class="sup-c" title="class">c</sup>
@@ -349,6 +355,12 @@ code {
                 </td>
             </tr>
             <tr>
+                <th>Example</th>
+                <td>
+                    <pre>my:plot456<br />  :hasAreaM2 [<br />    data:value 63.9 ;<br />  ] ;<br />.</pre>
+                </td>
+            </tr>
+            <tr>
                 <th>Super-properties</th>
                 <td>
                     <a href="#hasarea">geox:hasArea</a><sup class="sup-op" title="object property">op</sup>
@@ -367,6 +379,12 @@ code {
                 <th>Description</th>
                 <td>
                     The length of a spatial object, expressed as a scaled number
+                </td>
+            </tr>
+            <tr>
+                <th>Example</th>
+                <td>
+                    <pre>my:road456<br />  :hasLength [<br />    data:uncertainty 5.0 ;<br />    data:unit &lt;http://qudt.org/vocab/unit/M> ;<br />    data:value 234.0 ;<br />  ] ;<br />.</pre>
                 </td>
             </tr>
             <tr>
@@ -397,6 +415,12 @@ code {
                 </td>
             </tr>
             <tr>
+                <th>Example</th>
+                <td>
+                    <pre>my:road456<br />  :hasLengthM [<br />    data:value 234.0 ;<br />  ] ;<br />.</pre>
+                </td>
+            </tr>
+            <tr>
                 <th>Super-properties</th>
                 <td>
                     <a href="#haslength">geox:hasLength</a><sup class="sup-op" title="object property">op</sup>
@@ -415,6 +439,12 @@ code {
                 <th>Description</th>
                 <td>
                     The spatial resolution of the Geometry object, expressed as a linear measurement.
+                </td>
+            </tr>
+            <tr>
+                <th>Example</th>
+                <td>
+                    <pre>my:image456<br />  :hasResolution [<br />    data:unit &lt;http://qudt.org/vocab/unit/M> ;<br />    data:value 30.0 ;<br />  ] ;<br />.</pre>
                 </td>
             </tr>
             <tr>
@@ -445,6 +475,12 @@ code {
                 </td>
             </tr>
             <tr>
+                <th>Example</th>
+                <td>
+                    <pre>my:image456<br />  :hasResolutionM [<br />    data:value 30.0 ;<br />  ] ;<br />.</pre>
+                </td>
+            </tr>
+            <tr>
                 <th>Super-properties</th>
                 <td>
                     <a href="#hasspatialresolution">geox:hasResolution</a><sup class="sup-op" title="object property">op</sup>
@@ -472,6 +508,12 @@ code {
                 </td>
             </tr>
             <tr>
+                <th>Example</th>
+                <td>
+                    <pre>my:swimmingPool99<br />  :hasVolume [<br />    data:unit &lt;http://qudt.org/vocab/unit/M3> ;<br />    data:value 3050.0 ;<br />  ] ;<br />.</pre>
+                </td>
+            </tr>
+            <tr>
                 <th>Domain(s)</th>
                 <td>
                     <a href="http://www.opengis.net/ont/geosparql#SpatialObject">geo:SpatialObject</a><sup class="sup-c" title="class">c</sup>
@@ -496,6 +538,12 @@ code {
                 <th>Description</th>
                 <td>
                     The volume of a spatial object in cubic-metres
+                </td>
+            </tr>
+            <tr>
+                <th>Example</th>
+                <td>
+                    <pre>my:swimmingPool99<br />  :hasVolumeM3 [<br />    data:value 3050.0 ;<br />  ] ;<br />.</pre>
                 </td>
             </tr>
             <tr>
