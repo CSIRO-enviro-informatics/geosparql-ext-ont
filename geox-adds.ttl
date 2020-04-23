@@ -34,9 +34,9 @@ geox:Resolution
       owl:onProperty qudt:numericValue ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
+  owl:deprecated true ;
   skos:altLabel "Spatial resolution" ;
   skos:definition "An object containing a numeric value and the units it is expressed in to communicate a spatial resolution as a linear measurement" ;
-  owl:deprecated true ;
 .
 geox:asGeoJSON
   a owl:DatatypeProperty ;
@@ -69,27 +69,9 @@ geox:hasResolution
         ) ;
     ] ;
 .
-geox:transitiveSfOverlap
-  a owl:DeprecatedProperty ;
-  a owl:ObjectProperty ;
-  rdfs:comment "The domain object overlaps (geo:sfOverlaps) the range object by virtue of both objects containing (geo:sfContains) an intermediary object." ;
-  rdfs:domain <http://www.opengis.net/ont/geosparql#SpatialObject> ;
-  rdfs:prefLabel "transitive Simple Features overlaps" ;
-  rdfs:range <http://www.opengis.net/ont/geosparql#SpatialObject> ;
-  rdfs:subPropertyOf <http://www.opengis.net/ont/geosparql#sfOverlaps> ;
-  owl:deprecated true ;
-  owl:propertyChainAxiom (
-      <http://www.opengis.net/ont/geosparql#sfContains>
-      <http://www.opengis.net/ont/geosparql#sfWithin>
-    ) ;
-  skos:altLabel "proportional overlap" ;
-  skos:editorialNote "This property is not needed - it is not a true sub-property, it is a rule to infer overlap from the existence of a common contained feature ... it is actually more like a record of the _provenance_ of an sfOverlaps property. That information would be better managed as part of a linking statement. " ;
-  skos:usageNote "if ex:A geo:sfContains ex:X and ex:B geo:sfContains :ex:X, using the declaration of geo:sfWithin in this ontology with an owl:inverseOf to geo:sfOverlaps, we can interpret the second triple as ex:X geo:sfWithin :B and then ex:A geo:sf:Overlaps ex:B with proportionally, being contained in the relative areas of A, B & X" ;
-.
 <http://linked.data.gov.au/def/geox-adds>
   a owl:Ontology ;
   owl:imports <http://linked.data.gov.au/def/geox> ;
-
 .
 qudt:Quantity
   a owl:Class ;
