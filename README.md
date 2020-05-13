@@ -1,5 +1,5 @@
 # GeoSPARQL Extensions Ontology
-This is an extension to the [GeoSPARQL](http://www.opengeospatial.org/standards/geosparql) OWL ontology that includes details GeoSPARQL doesn't have for indicating spatial resolution, areas, proportional relations (e.g. area overlaps) and roles for multiple `Geometry` objects relating to a single `Feature`.
+This is an extension to the [GeoSPARQL](http://www.opengeospatial.org/standards/geosparql) OWL ontology that includes details required for indicating spatial resolution, lengths, areas, volumes, and some other details.
 
 This ontology is online at its namespae location: **<http://linked.data.gov.au/def/geox>**.
 
@@ -9,7 +9,7 @@ This extension is mostly built on GeoSPARQL but it also uses elements from the [
 
 
 ## Status
-As of Feb, 2020, this ontology is being used in Loc-I.
+This ontology is being used in Loc-I.
 
 
 ## License
@@ -23,7 +23,7 @@ Surround Australia
 <nicholas.car@surroundaustralia.com>  
 <https://orcid.org/0000-0002-8742-7730>  
 
-Contributor:  
+Creator:  
 **Simon J D Cox**  
 *Research Scientist*  
 CSIRO Land & Water, Melbourne, Australia  
