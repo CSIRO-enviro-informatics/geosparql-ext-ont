@@ -88,6 +88,12 @@ geox:hasAreaM2
   ] ;
 .""" ;
 .
+geox:hasCentroid
+  a owl:ObjectProperty ;
+  rdfs:comment "link to the geometric centroid, being the arithmetic mean position of all the points in the 2-D figure" ;
+  rdfs:label "has centroid" ;
+  rdfs:subPropertyOf geo:hasGeometry ;
+.
 geox:hasLength
   a owl:ObjectProperty ;
   rdfs:domain geo:SpatialObject ;
