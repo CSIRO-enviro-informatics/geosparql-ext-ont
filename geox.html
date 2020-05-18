@@ -195,7 +195,7 @@
     ],
     "https://schema.org/description": [
       {
-        "@value": "<p>An extensions ontology adding new properties, axioms and classes to <a href=\"http://www.opengeospatial.org/standards/geosparql\">GeoSPARQL</a>.</p>\n<p>This ontology allows for the representation of additional elements of feature geometry, such as spatial-resolution, length, area and volume. </p>"
+        "@value": "<p>An extension to <a href=\"http://www.opengeospatial.org/standards/geosparql\">GeoSPARQL</a> with new features for the representation of additional elements of feature geometry, such as spatial-resolution, length, area and volume. </p>"
       }
     ],
     "https://schema.org/name": [
@@ -276,7 +276,7 @@
         <dt>Version Information</dt>
         <dd>Alpha version</dd>
         <dt>Version IRI</dt>
-        <dd><a href="http://linked.data.gov.au/def/geox/1.0">http://linked.data.gov.au/def/geox/1.0</a></dd>
+        <dd><a href="http://linked.data.gov.au/def/geox/1.1">http://linked.data.gov.au/def/geox/1.1</a></dd>
         <dt>Imports</dt>
         <dd>
             <a href="http://linked.data.gov.au/def/datatype">http://linked.data.gov.au/def/datatype</a><br/>
@@ -289,8 +289,7 @@
     </dl>
     <h2>Description</h2>
     <div id="description">
-        <p>An extensions ontology adding new properties, axioms and classes to <a href="http://www.opengeospatial.org/standards/geosparql">GeoSPARQL</a>.</p>
-<p>This ontology allows for the representation of additional elements of feature geometry, such as spatial-resolution, length, area and volume. </p>
+        <p>An extension to <a href="http://www.opengeospatial.org/standards/geosparql">GeoSPARQL</a> with new features for the representation of additional elements of feature geometry, such as spatial-resolution, length, area and volume. </p>
     </div>
 </section>
 <section id="toc">
@@ -298,8 +297,6 @@
     <ol>
         <li><a href="#classes">Classes</a></li>
         <li><a href="#objectproperties">Object Properties</a></li>
-        <li><a href="#datatypeproperties">Datatype Properties</a></li>
-        <li><a href="#annotationproperties">Annotation Properties</a></li>
         <li><a href="#namedindividuals">Named Individuals</a></li>
         <li><a href="#namespaces">Namespaces</a></li>
         <li><a href="#legend">Legend</a></li>
@@ -308,119 +305,46 @@
 <section id="overview">
     <h2>Overview</h2>
     <div class="figure">
-        <img src="https://raw.githubusercontent.com/CSIRO-enviro-informatics/geosparql-ext-ont/master/docs/summary.png" alt="ontology overview image" />
+        <img height="500px" src="./docs/geox.png" />
         <div class="caption"><strong>Figure 1:</strong> Ontology overview</div>
     </div>
 </section>
 <section id="classes">
     <h2>Classes <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <ul class="hlist">
-        <li><a href="#Geometryrole">Geometry role</a></li>
-        <li><a href="#Quantity">Quantity</a></li>
-        <li><a href="#QuantityKind">QuantityKind</a></li>
-        <li><a href="#Resolution">Resolution</a></li>
-        <li><a href="#SpatialObject">SpatialObject</a></li>
-        <li><a href="#Unit">Unit</a></li>
+        <li><a href="#Spatialmeasure">Spatial measure</a></li>
     </ul>
-    <div class="entity class" id="Geometryrole">
-        <h3>Geometry role<sup title="class" class="sup-c">c</sup></h3>
+    <div class="entity class" id="Spatialmeasure">
+        <h3>Spatial measure<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geox#GeometryRole</code></td>
+                <td><code>http://linked.data.gov.au/def/geox#SpatialMeasure</code></td>
             </tr>
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>A Geometry Role is the function of a Geometry with respect to a Feature</p>
-                </td>
-            </tr>
-            <tr>
-                <th>Example</th>
-                <td>
-                    <pre>
-                      <Feature_X> geo:hasGeometry [ a geo:Geometry; geox:hasRole geox:BoundingBox ; geo:asWKT "..."^^geo:wktLiteral ] ;
-                    </pre>
+                    <p>Spatial quantity computed or defined within a specified coordinate reference system</p>
                 </td>
             </tr>
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity class" id="Resolution">
-        <h3>Resolution<sup title="class" class="sup-c">c</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geox#Resolution</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>An object containing a numeric value and the units it is expressed in to communicate a spatial resolution as a linear measurement</p>
+                    <a href="http://linked.data.gov.au/def/datatype/QuantitativeMeasure">data:QuantitativeMeasure</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="http://qudt.org/schema/qudt/unit">qudt:unit</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="http://qudt.org/schema/qudt/Unit">qudt:Unit</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://qudt.org/schema/qudt/numericValue">qudt:numericValue</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity class" id="Quantity">
-        <h3>Quantity<sup title="class" class="sup-c">c</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>http://qudt.org/schema/qudt/Quantity</code></td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity class" id="QuantityKind">
-        <h3>QuantityKind<sup title="class" class="sup-c">c</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>http://qudt.org/schema/qudt/QuantityKind</code></td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity class" id="Unit">
-        <h3>Unit<sup title="class" class="sup-c">c</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>http://qudt.org/schema/qudt/Unit</code></td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity class" id="SpatialObject">
-        <h3>SpatialObject<sup title="class" class="sup-c">c</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>http://www.opengis.net/ont/geosparql#SpatialObject</code></td>
-            </tr>
-            <tr>
-                <th>In domain of</th>
-                <td>
-                    <a href="#hasarea">geox:hasArea</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#transitiveSfOverlap">geox:transitiveSfOverlap</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hasvolume">geox:hasVolume</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#haslength">geox:hasLength</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#InCoordinateReferenceSystem">geox:inCRS</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="#transitiveSfOverlap">geox:transitiveSfOverlap</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasvolume">geox:hasVolume</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#haslength">geox:hasLength</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasarea">geox:hasArea</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -429,56 +353,19 @@
 <section id="objectproperties">
     <h2>Object Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <ul class="hlist">
-        <li><a href="#area">area</a></li>
-        <li><a href="#asGeometryobject">as Geometry object</a></li>
         <li><a href="#hasarea">has area</a></li>
         <li><a href="#hasareainm2">has area in m2</a></li>
+        <li><a href="#hascentroid">has centroid</a></li>
         <li><a href="#haslength">has length</a></li>
         <li><a href="#haslengthinm">has length in m</a></li>
-        <li><a href="#hasresolution">has resolution</a></li>
+        <li><a href="#hasspatialresolution">has spatial resolution</a></li>
         <li><a href="#hasspatialresolutioninmetres">has spatial resolution in metres</a></li>
         <li><a href="#hasvolume">has volume</a></li>
         <li><a href="#hasvolumeinm3">has volume in m3</a></li>
+        <li><a href="#InCoordinateReferenceSystem">In Coordinate Reference System</a></li>
         <li><a href="#isgeometryof">is geometry of</a></li>
         <li><a href="#transitiveSfOverlap">transitiveSfOverlap</a></li>
-        <li><a href="#unit">unit</a></li>
     </ul>
-    <div class="entity property" id="area">
-        <h3>area<sup title="object property" class="sup-op">op</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>http://dbpedia.org/ontology/area</code></td>
-            </tr>
-            <tr>
-                <th>Super-properties</th>
-                <td>
-                    <a href="http://www.w3.org/ns/sosa/ObservableProperty">sosa:ObservableProperty</a><sup class="sup-ap" title="annotation property">ap</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="http://qudt.org/vocab/quantitykind/Area">qk:Area</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="asGeometryobject">
-        <h3>as Geometry object<sup title="object property" class="sup-op">op</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geox#asGeometryObject</code></td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="http://www.opengis.net/ont/geosparql#Geometry">geo:Geometry</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
     <div class="entity property" id="hasarea">
         <h3>has area<sup title="object property" class="sup-op">op</sup></h3>
         <table>
@@ -509,7 +396,7 @@
             <tr>
                 <th>Range(s)</th>
                 <td>
-                    <a href="http://linked.data.gov.au/def/datatype/QuantitativeMeasure">data:QuantitativeMeasure</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Spatialmeasure">geox:SpatialMeasure</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -537,6 +424,27 @@
                 <th>Super-properties</th>
                 <td>
                     <a href="#hasarea">geox:hasArea</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hascentroid">
+        <h3>has centroid<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/geox#hasCentroid</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    link to the geometric centroid, being the arithmetic mean position of all the points in the 2-D figure
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.opengis.net/ont/geosparql#hasGeometry">geo:hasGeometry</a>
                 </td>
             </tr>
         </table>
@@ -571,7 +479,7 @@
             <tr>
                 <th>Range(s)</th>
                 <td>
-                    <a href="http://linked.data.gov.au/def/datatype/QuantitativeMeasure">data:QuantitativeMeasure</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Spatialmeasure">geox:SpatialMeasure</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -603,8 +511,8 @@
             </tr>
         </table>
     </div>
-    <div class="entity property" id="hasresolution">
-        <h3>has resolution<sup title="object property" class="sup-op">op</sup></h3>
+    <div class="entity property" id="hasspatialresolution">
+        <h3>has spatial resolution<sup title="object property" class="sup-op">op</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -632,7 +540,6 @@
             <tr>
                 <th>Range(s)</th>
                 <td>
-                    <a href="#Resolution">geox:Resolution</a><sup class="sup-c" title="class">c</sup>
                     <a href="http://linked.data.gov.au/def/datatype/QuantitativeMeasure">data:QuantitativeMeasure</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
@@ -660,7 +567,7 @@
             <tr>
                 <th>Super-properties</th>
                 <td>
-                    <a href="#hasresolution">geox:hasResolution</a><sup class="sup-op" title="object property">op</sup>
+                    <a href="#hasspatialresolution">geox:hasResolution</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
             <tr>
@@ -700,7 +607,7 @@
             <tr>
                 <th>Range(s)</th>
                 <td>
-                    <a href="http://linked.data.gov.au/def/datatype/QuantitativeMeasure">data:QuantitativeMeasure</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Spatialmeasure">geox:SpatialMeasure</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -732,6 +639,15 @@
             </tr>
         </table>
     </div>
+    <div class="entity property" id="InCoordinateReferenceSystem">
+        <h3>In Coordinate Reference System<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/geox#inCRS</code></td>
+            </tr>
+        </table>
+    </div>
     <div class="entity property" id="isgeometryof">
         <h3>is geometry of<sup title="object property" class="sup-op">op</sup></h3>
         <table>
@@ -743,6 +659,18 @@
                 <th>Inverse properties</th>
                 <td>
                     <a href="http://www.opengis.net/ont/geosparql#hasGeometry">geo:hasGeometry</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://www.opengis.net/ont/geosparql#Geometry">geo:Geometry</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.opengis.net/ont/geosparql#Feature">geo:Feature</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -777,101 +705,6 @@
                 <td>
                     <a href="http://www.opengis.net/ont/geosparql#SpatialObject">geo:SpatialObject</a><sup class="sup-c" title="class">c</sup>
                 </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="unit">
-        <h3>unit<sup title="object property" class="sup-op">op</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>http://qudt.org/schema/qudt/unit</code></td>
-            </tr>
-        </table>
-    </div>
-</section>
-
-<section id="datatypeproperties">
-    <h2>Datatype Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
-    <ul class="hlist">
-        <li><a href="#asGeoJSON">asGeoJSON</a></li>
-        <li><a href="#numericValue">numericValue</a></li>
-    </ul>
-    <div class="entity property" id="asGeoJSON">
-        <h3>asGeoJSON<sup title="datatype property" class="sup-dp">dp</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geox#asGeoJSON</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    The GeoJSON serialization of a geometry
-                </td>
-            </tr>
-            <tr>
-                <th>Super-properties</th>
-                <td>
-                    <a href="http://www.opengis.net/ont/geosparql#hasSerialization">geo:hasSerialization</a>
-                </td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="http://www.opengis.net/ont/geosparql#Geometry">geo:Geometry</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="http://www.opengis.net/ont/geosparql#gmlLiteral">geo:gmlLiteral</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="numericValue">
-        <h3>numericValue<sup title="datatype property" class="sup-dp">dp</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>http://qudt.org/schema/qudt/numericValue</code></td>
-            </tr>
-        </table>
-    </div>
-</section>
-
-<section id="annotationproperties">
-    <h2>Annotation Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
-    <ul class="hlist">
-        <li><a href="#prefLabel">prefLabel</a></li>
-        <li><a href="#usageNote">usageNote</a></li>
-        <li><a href="#ObservableProperty">ObservableProperty</a></li>
-    </ul>
-    <div class="entity property" id="prefLabel">
-        <h3>prefLabel<sup title="annotation property" class="sup-ap">ap</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>http://www.w3.org/2000/01/rdf-schema#prefLabel</code></td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="usageNote">
-        <h3>usageNote<sup title="annotation property" class="sup-ap">ap</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>http://www.w3.org/2004/02/skos/core#usageNote</code></td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="ObservableProperty">
-        <h3>ObservableProperty<sup title="annotation property" class="sup-ap">ap</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>http://www.w3.org/ns/sosa/ObservableProperty</code></td>
             </tr>
         </table>
     </div>
@@ -933,8 +766,6 @@
         <dd><code>http://purl.org/dc/elements/1.1/</code></dd>
         <dt>dcterms</dt>
         <dd><code>http://purl.org/dc/terms/</code></dd>
-        <dt>doap</dt>
-        <dd><code>http://usefulinc.com/ns/doap#</code></dd>
         <dt>geo</dt>
         <dd><code>http://www.opengis.net/ont/geosparql#</code></dd>
         <dt>geox</dt>
@@ -943,10 +774,6 @@
         <dd><code>http://www.w3.org/2002/07/owl#</code></dd>
         <dt>prov</dt>
         <dd><code>http://www.w3.org/ns/prov#</code></dd>
-        <dt>qk</dt>
-        <dd><code>http://qudt.org/vocab/quantitykind/</code></dd>
-        <dt>qudt</dt>
-        <dd><code>http://qudt.org/schema/qudt/</code></dd>
         <dt>rdf</dt>
         <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
         <dt>rdfs</dt>
