@@ -1,7 +1,7 @@
 # GeoSPARQL Extensions Ontology
 This is an extension to the [GeoSPARQL](http://www.opengeospatial.org/standards/geosparql) OWL ontology that includes details required for indicating spatial resolution, lengths, areas, volumes, and some other details.
 
-This ontology is online at its namespae location: **<http://linked.data.gov.au/def/geox>**.
+This ontology is online at its namespace location: **<http://linked.data.gov.au/def/geox>**.
 
 This extension is mostly built on GeoSPARQL but it also uses elements from the [AGLDWG datatypes vocabulary](http://catalogue.linked.data.gov.au/resource/116).
 
