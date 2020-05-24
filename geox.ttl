@@ -57,7 +57,8 @@ geox:hasArea
   rdfs:label "has area" ;
   rdfs:range geox:SpatialMeasure ;
   skos:definition "The area of a spatial object, expressed as a scaled number" ;
-  skos:example """my:plot456
+  skos:example """
+my:plot456
   :hasArea [
     data:uncertainty 0.5 ;
     data:unit <http://qudt.org/vocab/unit/M2> ;
@@ -79,7 +80,8 @@ geox:hasAreaM2
     ] ;
   rdfs:subPropertyOf geox:hasArea ;
   skos:definition "The area of the spatial object in m^2" ;
-  skos:example """my:plot456
+  skos:example """
+my:plot456
   :hasAreaM2 [
     data:value 63.9 ;
   ] ;
@@ -89,6 +91,13 @@ geox:hasCentroid
   a owl:ObjectProperty ;
   rdfs:comment "link to the geometric centroid, which is the arithmetic mean position of all the points in the 2-D figure" ;
   rdfs:label "has centroid" ;
+  rdfs:range [
+      a owl:Class ;
+      owl:unionOf (
+          <http://www.opengis.net/ont/sf#Point>
+          <http://www.opengis.net/ont/gml#Point>
+        ) ;
+    ] ;
   rdfs:subPropertyOf geo:hasGeometry ;
 .
 geox:hasLength
@@ -97,7 +106,8 @@ geox:hasLength
   rdfs:label "has length" ;
   rdfs:range geox:SpatialMeasure ;
   skos:definition "The length of a spatial object, expressed as a scaled number" ;
-  skos:example """my:road456
+  skos:example """
+my:road456
   :hasLength [
     data:uncertainty 5.0 ;
     data:unit <http://qudt.org/vocab/unit/M> ;
@@ -119,7 +129,8 @@ geox:hasLengthM
     ] ;
   rdfs:subPropertyOf geox:hasLength ;
   skos:definition "The length of a spatial object in metres" ;
-  skos:example """my:road456
+  skos:example """
+my:road456
   :hasLengthM [
     data:value 234.0 ;
   ] ;
@@ -132,7 +143,8 @@ geox:hasResolution
   rdfs:range data:QuantitativeMeasure ;
   skos:altLabel "spatial resolution" ;
   skos:definition "The spatial resolution of the Geometry object, expressed as a linear measurement." ;
-  skos:example """my:image456
+  skos:example """
+my:image456
   :hasResolution [
     data:unit <http://qudt.org/vocab/unit/M> ;
     data:value 30.0 ;
@@ -156,7 +168,8 @@ geox:hasResolutionM
   rdfs:subPropertyOf geox:hasResolution ;
   skos:altLabel "spatial resolution" ;
   skos:definition "The spatial resolution of the Geometry object, expressed as a linear distance in metres" ;
-  skos:example """my:image456
+  skos:example """
+my:image456
   :hasResolutionM [
     data:value 30.0 ;
   ] ;
@@ -169,7 +182,8 @@ geox:hasVolume
   rdfs:label "has volume" ;
   rdfs:range geox:SpatialMeasure ;
   skos:definition "The volume of a spatial object, expressed as a scaled number" ;
-  skos:example """my:swimmingPool99
+  skos:example """
+my:swimmingPool99
   :hasVolume [
     data:unit <http://qudt.org/vocab/unit/M3> ;
     data:value 3050.0 ;
@@ -190,7 +204,8 @@ geox:hasVolumeM3
     ] ;
   rdfs:subPropertyOf geox:hasVolume ;
   skos:definition "The volume of a spatial object in cubic-metres" ;
-  skos:example """my:swimmingPool99
+  skos:example """
+my:swimmingPool99
   :hasVolumeM3 [
     data:value 3050.0 ;
   ] ;
@@ -228,23 +243,23 @@ geox:transitiveSfOverlap
   skos:usageNote "if ex:A geo:sfContains ex:X and ex:B geo:sfContains :ex:X, using the declaration of geo:sfWithin in this ontology with an owl:inverseOf to geo:sfOverlaps, we can interpret the second triple as ex:X geo:sfWithin :B and then ex:A geo:sf:Overlaps ex:B with proportionally, being contained in the relative areas of A, B & X" ;
 .
 <https://orcid.org/0000-0002-3884-3420>
-  a owl:NamedIndividual ;
   a sdo:Person ;
+  a owl:NamedIndividual ;
   sdo:affiliation [
       sdo:identifier "http://catalogue.linked.data.gov.au/org/csiro"^^xsd:anyURI ;
       sdo:name "CSIRO" ;
     ] ;
   sdo:email <mailto:simon.cox@csiro.au> ;
   sdo:identifier "https://orcid.org/0000-0002-3884-3420"^^xsd:anyURI ;
-  sdo:name "Simon J D Cox"@en ;
+  sdo:name "Simon J D Cox" ;
   sdo:subjectOf <https://people.csiro.au/C/S/simon-cox> ;
 .
 <https://orcid.org/0000-0002-8742-7730>
-  a owl:NamedIndividual ;
   a sdo:Person ;
+  a owl:NamedIndividual ;
   sdo:affiliation [
-      sdo:name "Surround Australia" ;
       sdo:identifier "https://surroundaustralia.com/"^^xsd:anyURI ;
+      sdo:name "Surround Australia" ;
     ] ;
   sdo:email <mailto:nicholas.car@surroundaustralia.com> ;
   sdo:identifier "https://orcid.org/0000-0002-8742-7730"^^xsd:anyURI ;

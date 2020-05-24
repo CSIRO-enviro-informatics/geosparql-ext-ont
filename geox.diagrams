@@ -9,13 +9,13 @@
     <cd:nodes>
       <cd:URINode>
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >72</cd:height>
+        >75</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >281</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >19</cd:y>
+        >52</cd:y>
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >44</cd:x>
+        >46</cd:x>
         <cd:class rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
       </cd:URINode>
     </cd:nodes>
@@ -26,22 +26,22 @@
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >191</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >572</cd:y>
+        >498</cd:y>
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >368</cd:x>
+        >378</cd:x>
         <cd:class rdf:resource="http://linked.data.gov.au/def/geox#SpatialMeasure"/>
       </cd:URINode>
     </cd:nodes>
     <cd:nodes>
       <cd:URINode>
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >252</cd:height>
+        >204</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >337</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >196</cd:y>
+        >212</cd:y>
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >18</cd:x>
+        >105</cd:x>
         <cd:class rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
       </cd:URINode>
     </cd:nodes>
@@ -52,16 +52,16 @@
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >247</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >549</cd:y>
+        >478</cd:y>
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >58</cd:x>
+        >63</cd:x>
         <cd:class rdf:resource="http://linked.data.gov.au/def/datatype/QuantitativeMeasure"/>
       </cd:URINode>
     </cd:nodes>
     <cd:nodes>
       <cd:URINode>
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >632</cd:height>
+        >502</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >390</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
