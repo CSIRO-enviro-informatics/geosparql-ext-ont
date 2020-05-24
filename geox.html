@@ -5,163 +5,179 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     
     <style>
-#pylode {
-    position: fixed;
-    top: 80px;
-    left: -60px;
-    font-size: small;
-    transform: rotate(-90deg);
-    color: grey;
-}
-#pylode a {
-    font-size: 2em;
-    font-weight: bold;
-    text-decoration: none;
-    color: #005A9C;
-}
-#pylode a:hover {
-    color: #333;
-}
+        #pylode {
+            position: fixed;
+            top: 80px;
+            left: -60px;
+            font-size: small;
+            transform: rotate(-90deg);
+            color: grey;
+        }
+        #pylode a {
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+            color: #005A9C;
+        }
+        #pylode a:hover {
+            color: #333;
+        }
 
-.cardinality {
-    font-style: italic;
-    color: #aa00aa;
-}
+        .cardinality {
+            font-style: italic;
+            color: #aa00aa;
+        }
 
-dt {
-    font-weight: bold;
-    padding: 5px 0 5px 0;
-}
+        dt {
+            font-weight: bold;
+            padding: 5px 0 5px 0;
+        }
 
-ul.hlist {
-    list-style-type: none;
-    border: 1px solid navy;
-    padding:5px;
-    background-color: #F4FFFF;
-}
+        ul.hlist {
+            list-style-type: none;
+            border: 1px solid navy;
+            padding:5px;
+            background-color: #F4FFFF;
+        }
 
-
-ul.hlist li {
-    display: inline;
-    margin-right: 10px;
-}
-
-.entity {
-    border: 1px solid navy;
-    margin:5px 0 5px 0;
-    padding: 5px;
-}
-
-.entity th {
-    width: 150px;
-    vertical-align: top;
-}
-
-.entity th,
-.entity td {
-    padding-bottom: 20px;
-}
-
-.entity table th {
-    text-align: left;
-}
-
-section#overview img {
-    max-width: 1000px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    text-align: left
-}
-h1, h2, h3 {
-    color: #005A9C; background: white
-}
-h1 {
-    font: 170% sans-serif;
-    line-height: 110%;
-}
-h2 {
-    font: 140% sans-serif;
-    margin-top:40px;
-}
-h3 {
-    font: 120% sans-serif;
-    margin-top: 3px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid navy;
-}
-h4 { font: bold 100% sans-serif }
-h5 { font: italic 100% sans-serif }
-h6 { font: small-caps 100% sans-serif }
+        ul.hierarchy {
+            border: 1px solid navy;
+            padding: 5px 25px 5px 25px;
+            background-color: #F4FFFF;
+        }
 
 
-body {
-    padding: 2em 70px 2em 70px;
-    margin: 0;
-    font-family: sans-serif;
-    color: black;
-    background: white;
-    background-position: top left;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    text-align: justify;
-}
+        ul.hlist li {
+            display: inline;
+            margin-right: 10px;
+        }
 
-section {
-    max-width: 1500px;
-}
+        .entity {
+            border: 1px solid navy;
+            margin:5px 0 5px 0;
+            padding: 5px;
+        }
 
-.figure {
-    margin-bottom: 20px;
-}
+        .entity th {
+            width: 150px;
+            vertical-align: top;
+        }
 
-:link { color: #00C; background: transparent }
-:visited { color: #609; background: transparent }
-a:active { color: #C00; background: transparent }
+        .entity th,
+        .entity td {
+            padding-bottom: 20px;
+        }
 
-.sup-c,
-.sup-op,
-.sup-fp,
-.sup-dp,
-.sup-ap,
-.sup-p,
-.sup-ni {
-    cursor:help;
-    margin-left: 3px;
-}
+        .entity table th {
+            text-align: left;
+        }
 
-.sup-c {
-    color:orange;
-}
+        section#overview img {
+            max-width: 1000px;
+        }
 
-.sup-op {
-    color:navy;
-}
+        h1, h2, h3, h4, h5, h6 {
+            text-align: left
+        }
+        h1, h2, h3 {
+            color: #005A9C; background: white
+        }
+        h1 {
+            font: 170% sans-serif;
+            line-height: 110%;
+        }
+        h2 {
+            font: 140% sans-serif;
+            margin-top:40px;
+        }
+        h3 {
+            font: 120% sans-serif;
+            margin-top: 3px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid navy;
+        }
+        h4 { font: bold 100% sans-serif }
+        h5 { font: italic 100% sans-serif }
+        h6 { font: small-caps 100% sans-serif }
 
-.sup-fp {
-    color:lightskyblue;
-}
 
-.sup-dp {
-    color:green;
-}
+        body {
+            padding: 2em 70px 2em 70px;
+            margin: 0;
+            font-family: sans-serif;
+            color: black;
+            background: white;
+            background-position: top left;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            text-align: justify;
+        }
 
-.sup-ap {
-    color:darkred;
-}
+        section {
+            max-width: 1500px;
+        }
 
-.sup-p {
-    color:black;
-}
+        .figure {
+            margin-bottom: 20px;
+        }
 
-.sup-ni {
-    color:brown;
-}
+        :link { color: #00C; background: transparent }
+        :visited { color: #609; background: transparent }
+        a:active { color: #C00; background: transparent }
 
-code {
-    font-size: large;
-    color: darkred;
-}
+        .sup-c,
+        .sup-op,
+        .sup-fp,
+        .sup-dp,
+        .sup-ap,
+        .sup-p,
+        .sup-ni,
+        .sup-cp,
+        .sup-cl {
+            cursor:help;
+            margin-left: 3px;
+        }
+
+        .sup-c {
+            color:orange;
+        }
+
+        .sup-op {
+            color:navy;
+        }
+
+        .sup-fp {
+            color:lightskyblue;
+        }
+
+        .sup-dp {
+            color:green;
+        }
+
+        .sup-ap {
+            color:darkred;
+        }
+
+        .sup-p {
+            color:black;
+        }
+
+        .sup-ni {
+            color:brown;
+        }
+
+        .sup-cp {
+            color:orange;
+        }
+
+        .sup-cl {
+            color:darkred;
+        }
+
+        code {
+            font-size: large;
+            color: darkred;
+        }
 
     </style>
     
@@ -171,11 +187,6 @@ code {
     "@id": "http://linked.data.gov.au/def/geox",
     "@type": [
       "https://schema.org/DefinedTermSet"
-    ],
-    "https://schema.org/codeRepository": [
-      {
-        "@id": "https://github.com/CSIRO-enviro-informatics/geosparql-ext-ont"
-      }
     ],
     "https://schema.org/description": [
       {
@@ -192,7 +203,7 @@ code {
     </script>
 </head>
 <body>
-<div id="pylode">made by <a href="http://github.com/rdflib/pyLODE">pyLODE</a></div>
+<div id="pylode">made by <a href="http://github.com/rdflib/pyLODE"><span style="color:#329545;">p</span><span style="color:#f9cb33;">y</span>LODE</a></div>
 <h1>GeoSPARQL Extensions Ontology</h1>
 <section id="metadata">
     <h2 style="display:none;">Metadata</h2>
@@ -201,30 +212,73 @@ code {
         <dd><code>http://linked.data.gov.au/def/geox</code></dd>
         <dt>Publisher(s)</dt>
         <dd>
-            <a href='http://catalogue.linked.data.gov.au/org/csiro'>CSIRO</a><br/>
+            
+    <a href="https://ror.org/03qn8fb07">None</a><br/>
         </dd>
         <dt>Creator(s)</dt>
         <dd>
-            <a href='https://orcid.org/0000-0002-3884-3420'>Simon J D Cox, CSIRO</a><br/>
-            <a href='https://orcid.org/0000-0002-8742-7730'>Nicholas J Car, Surround Australia</a><br/>
-        </dd>
-        <dt>Created</dt>
+            
+            <a href="https://orcid.org/0000-0002-3884-3420">Simon J D Cox</a>
+            <a href="https://orcid.org/0000-0002-3884-3420"><svg width="15px" height="15px" viewBox="0 0 72 72" version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>Orcid logo</title>
+            <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="hero" transform="translate(-924.000000, -72.000000)" fill-rule="nonzero">
+                    <g id="Group-4">
+                        <g id="vector_iD_icon" transform="translate(924.000000, 72.000000)">
+                            <path d="M72,36 C72,55.884375 55.884375,72 36,72 C16.115625,72 0,55.884375 0,36 C0,16.115625 16.115625,0 36,0 C55.884375,0 72,16.115625 72,36 Z" id="Path" fill="#A6CE39"></path>
+                            <g id="Group" transform="translate(18.868966, 12.910345)" fill="#FFFFFF">
+                                <polygon id="Path" points="5.03734929 39.1250878 0.695429861 39.1250878 0.695429861 9.14431787 5.03734929 9.14431787 5.03734929 22.6930505 5.03734929 39.1250878"></polygon>
+                                <path d="M11.409257,9.14431787 L23.1380784,9.14431787 C34.303014,9.14431787 39.2088191,17.0664074 39.2088191,24.1486995 C39.2088191,31.846843 33.1470485,39.1530811 23.1944669,39.1530811 L11.409257,39.1530811 L11.409257,9.14431787 Z M15.7511765,35.2620194 L22.6587756,35.2620194 C32.49858,35.2620194 34.7541226,27.8438084 34.7541226,24.1486995 C34.7541226,18.1301509 30.8915059,13.0353795 22.4332213,13.0353795 L15.7511765,13.0353795 L15.7511765,35.2620194 Z" id="Shape"></path>
+                                <path d="M5.71401206,2.90182329 C5.71401206,4.441452 4.44526937,5.72914146 2.86638958,5.72914146 C1.28750978,5.72914146 0.0187670918,4.441452 0.0187670918,2.90182329 C0.0187670918,1.33420133 1.28750978,0.0745051096 2.86638958,0.0745051096 C4.44526937,0.0745051096 5.71401206,1.36219458 5.71401206,2.90182329 Z" id="Path"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </svg></a>
+            (<a href="mailto:simon.cox@csiro.au">simon.cox@csiro.au</a>) of 
+            <a href="http://catalogue.linked.data.gov.au/org/csiro">CSIRO</a><br/>
+                    
+            <a href="https://orcid.org/0000-0002-8742-7730">Nicholas Car</a>
+            <a href="https://orcid.org/0000-0002-8742-7730"><svg width="15px" height="15px" viewBox="0 0 72 72" version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>Orcid logo</title>
+            <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="hero" transform="translate(-924.000000, -72.000000)" fill-rule="nonzero">
+                    <g id="Group-4">
+                        <g id="vector_iD_icon" transform="translate(924.000000, 72.000000)">
+                            <path d="M72,36 C72,55.884375 55.884375,72 36,72 C16.115625,72 0,55.884375 0,36 C0,16.115625 16.115625,0 36,0 C55.884375,0 72,16.115625 72,36 Z" id="Path" fill="#A6CE39"></path>
+                            <g id="Group" transform="translate(18.868966, 12.910345)" fill="#FFFFFF">
+                                <polygon id="Path" points="5.03734929 39.1250878 0.695429861 39.1250878 0.695429861 9.14431787 5.03734929 9.14431787 5.03734929 22.6930505 5.03734929 39.1250878"></polygon>
+                                <path d="M11.409257,9.14431787 L23.1380784,9.14431787 C34.303014,9.14431787 39.2088191,17.0664074 39.2088191,24.1486995 C39.2088191,31.846843 33.1470485,39.1530811 23.1944669,39.1530811 L11.409257,39.1530811 L11.409257,9.14431787 Z M15.7511765,35.2620194 L22.6587756,35.2620194 C32.49858,35.2620194 34.7541226,27.8438084 34.7541226,24.1486995 C34.7541226,18.1301509 30.8915059,13.0353795 22.4332213,13.0353795 L15.7511765,13.0353795 L15.7511765,35.2620194 Z" id="Shape"></path>
+                                <path d="M5.71401206,2.90182329 C5.71401206,4.441452 4.44526937,5.72914146 2.86638958,5.72914146 C1.28750978,5.72914146 0.0187670918,4.441452 0.0187670918,2.90182329 C0.0187670918,1.33420133 1.28750978,0.0745051096 2.86638958,0.0745051096 C4.44526937,0.0745051096 5.71401206,1.36219458 5.71401206,2.90182329 Z" id="Path"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </svg></a>
+            (<a href="mailto:nicholas.car@surroundaustralia.com">nicholas.car@surroundaustralia.com</a>) of 
+            Surround Australia<br/>
+                </dd>
+                <dt>Created</dt>
         <dd>2019-01-08</dd>
         <dt>Modified</dt>
-        <dd>2020-02-04</dd>
+        <dd>2020-05-18</dd>
         <dt>Version Information</dt>
         <dd>Alpha version</dd>
         <dt>Version IRI</dt>
         <dd><a href="http://linked.data.gov.au/def/geox/1.1">http://linked.data.gov.au/def/geox/1.1</a></dd>
         <dt>Imports</dt>
         <dd>
-            <a href="http://www.opengis.net/ont/geosparql">http://www.opengis.net/ont/geosparql</a><br/>
             <a href="http://linked.data.gov.au/def/datatype">http://linked.data.gov.au/def/datatype</a><br/>
+            <a href="http://www.opengis.net/ont/geosparql">http://www.opengis.net/ont/geosparql</a><br/>
         </dd>
-        <dt>Ontology Source</dt>
+        <dt>Ontology RDF</dt>
         <dd><a href="geox.ttl">RDF (turtle)</a></dd>
-        <dt>Code Repository</dt>
-        <dd><a href="https://github.com/CSIRO-enviro-informatics/geosparql-ext-ont">https://github.com/CSIRO-enviro-informatics/geosparql-ext-ont</a></dd>
     </dl>
     <h2>Description</h2>
     <div id="description">
@@ -236,6 +290,7 @@ code {
     <ol>
         <li><a href="#classes">Classes</a></li>
         <li><a href="#objectproperties">Object Properties</a></li>
+        <li><a href="#namedindividuals">Named Individuals</a></li>
         <li><a href="#namespaces">Namespaces</a></li>
         <li><a href="#legend">Legend</a></li>
     </ol>
@@ -243,7 +298,7 @@ code {
 <section id="overview">
     <h2>Overview</h2>
     <div class="figure">
-        <img height="500px" src="./docs/geox.png" />
+        <div style="text-align:center;"><img src='./docs/geox.png' /></div>
         <div class="caption"><strong>Figure 1:</strong> Ontology overview</div>
     </div>
 </section>
@@ -262,7 +317,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    Spatial quantity computed or defined within a specified coordinate reference system
+                    <p>Scalar quantity computed or defined within a specified coordinate reference system</p>
                 </td>
             </tr>
             <tr>
@@ -278,17 +333,11 @@ code {
                 </td>
             </tr>
             <tr>
-                <th>In domain of</th>
-                <td>
-                    <a href="#InCoordinateReferenceSystem">geox:inCRS</a><sup class="sup-op" title="object property">op</sup><br/>
-                </td>
-            </tr>
-            <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="#haslength">geox:hasLength</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#hasarea">geox:hasArea</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#hasvolume">geox:hasVolume</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#haslength">geox:hasLength</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -299,6 +348,7 @@ code {
     <ul class="hlist">
         <li><a href="#hasarea">has area</a></li>
         <li><a href="#hasareainm2">has area in m2</a></li>
+        <li><a href="#hascentroid">has centroid</a></li>
         <li><a href="#haslength">has length</a></li>
         <li><a href="#haslengthinm">has length in m</a></li>
         <li><a href="#hasspatialresolution">has spatial resolution</a></li>
@@ -307,6 +357,7 @@ code {
         <li><a href="#hasvolumeinm3">has volume in m3</a></li>
         <li><a href="#InCoordinateReferenceSystem">In Coordinate Reference System</a></li>
         <li><a href="#isgeometryof">is geometry of</a></li>
+        <li><a href="#transitiveSfOverlap">transitiveSfOverlap</a></li>
     </ul>
     <div class="entity property" id="hasarea">
         <h3>has area<sup title="object property" class="sup-op">op</sup></h3>
@@ -316,15 +367,23 @@ code {
                 <td><code>http://linked.data.gov.au/def/geox#hasArea</code></td>
             </tr>
             <tr>
-                <th>Description</th>
-                <td>
-                    The area of a spatial object, expressed as a scaled number
-                </td>
-            </tr>
-            <tr>
                 <th>Example</th>
                 <td>
-                    <pre>my:plot456<br />  :hasArea [<br />    data:uncertainty 0.5 ;<br />    data:unit &lt;http://qudt.org/vocab/unit/M2> ;<br />    data:value 63.9 ;<br />  ] ;<br />.</pre>
+                    <pre>
+                      my:plot456
+
+  :hasArea [
+
+    data:uncertainty 0.5 ;
+
+    data:unit <http://qudt.org/vocab/unit/M2> ;
+
+    data:value 63.9 ;
+
+  ] ;
+
+.
+                    </pre>
                 </td>
             </tr>
             <tr>
@@ -349,21 +408,46 @@ code {
                 <td><code>http://linked.data.gov.au/def/geox#hasAreaM2</code></td>
             </tr>
             <tr>
-                <th>Description</th>
-                <td>
-                    The area of the spatial object in m^2
-                </td>
-            </tr>
-            <tr>
                 <th>Example</th>
                 <td>
-                    <pre>my:plot456<br />  :hasAreaM2 [<br />    data:value 63.9 ;<br />  ] ;<br />.</pre>
+                    <pre>
+                      my:plot456
+
+  :hasAreaM2 [
+
+    data:value 63.9 ;
+
+  ] ;
+
+.
+                    </pre>
                 </td>
             </tr>
             <tr>
                 <th>Super-properties</th>
                 <td>
                     <a href="#hasarea">geox:hasArea</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hascentroid">
+        <h3>has centroid<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/geox#hasCentroid</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    link to the geometric centroid, which is the arithmetic mean position of all the points in the 2-D figure
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.opengis.net/ont/geosparql#hasGeometry">geo:hasGeometry</a>
                 </td>
             </tr>
         </table>
@@ -376,15 +460,23 @@ code {
                 <td><code>http://linked.data.gov.au/def/geox#hasLength</code></td>
             </tr>
             <tr>
-                <th>Description</th>
-                <td>
-                    The length of a spatial object, expressed as a scaled number
-                </td>
-            </tr>
-            <tr>
                 <th>Example</th>
                 <td>
-                    <pre>my:road456<br />  :hasLength [<br />    data:uncertainty 5.0 ;<br />    data:unit &lt;http://qudt.org/vocab/unit/M> ;<br />    data:value 234.0 ;<br />  ] ;<br />.</pre>
+                    <pre>
+                      my:road456
+
+  :hasLength [
+
+    data:uncertainty 5.0 ;
+
+    data:unit <http://qudt.org/vocab/unit/M> ;
+
+    data:value 234.0 ;
+
+  ] ;
+
+.
+                    </pre>
                 </td>
             </tr>
             <tr>
@@ -409,15 +501,19 @@ code {
                 <td><code>http://linked.data.gov.au/def/geox#hasLengthM</code></td>
             </tr>
             <tr>
-                <th>Description</th>
-                <td>
-                    The length of a spatial object in metres
-                </td>
-            </tr>
-            <tr>
                 <th>Example</th>
                 <td>
-                    <pre>my:road456<br />  :hasLengthM [<br />    data:value 234.0 ;<br />  ] ;<br />.</pre>
+                    <pre>
+                      my:road456
+
+  :hasLengthM [
+
+    data:value 234.0 ;
+
+  ] ;
+
+.
+                    </pre>
                 </td>
             </tr>
             <tr>
@@ -436,15 +532,21 @@ code {
                 <td><code>http://linked.data.gov.au/def/geox#hasResolution</code></td>
             </tr>
             <tr>
-                <th>Description</th>
-                <td>
-                    The spatial resolution of the Geometry object, expressed as a linear measurement.
-                </td>
-            </tr>
-            <tr>
                 <th>Example</th>
                 <td>
-                    <pre>my:image456<br />  :hasResolution [<br />    data:unit &lt;http://qudt.org/vocab/unit/M> ;<br />    data:value 30.0 ;<br />  ] ;<br />.</pre>
+                    <pre>
+                      my:image456
+
+  :hasResolution [
+
+    data:unit <http://qudt.org/vocab/unit/M> ;
+
+    data:value 30.0 ;
+
+  ] ;
+
+.
+                    </pre>
                 </td>
             </tr>
             <tr>
@@ -469,15 +571,19 @@ code {
                 <td><code>http://linked.data.gov.au/def/geox#hasResolutionM</code></td>
             </tr>
             <tr>
-                <th>Description</th>
-                <td>
-                    The spatial resolution of the Geometry object, expressed as a linear distance in metres
-                </td>
-            </tr>
-            <tr>
                 <th>Example</th>
                 <td>
-                    <pre>my:image456<br />  :hasResolutionM [<br />    data:value 30.0 ;<br />  ] ;<br />.</pre>
+                    <pre>
+                      my:image456
+
+  :hasResolutionM [
+
+    data:value 30.0 ;
+
+  ] ;
+
+.
+                    </pre>
                 </td>
             </tr>
             <tr>
@@ -502,15 +608,21 @@ code {
                 <td><code>http://linked.data.gov.au/def/geox#hasVolume</code></td>
             </tr>
             <tr>
-                <th>Description</th>
-                <td>
-                    The volume of a spatial object, expressed as a scaled number
-                </td>
-            </tr>
-            <tr>
                 <th>Example</th>
                 <td>
-                    <pre>my:swimmingPool99<br />  :hasVolume [<br />    data:unit &lt;http://qudt.org/vocab/unit/M3> ;<br />    data:value 3050.0 ;<br />  ] ;<br />.</pre>
+                    <pre>
+                      my:swimmingPool99
+
+  :hasVolume [
+
+    data:unit <http://qudt.org/vocab/unit/M3> ;
+
+    data:value 3050.0 ;
+
+  ] ;
+
+.
+                    </pre>
                 </td>
             </tr>
             <tr>
@@ -535,15 +647,19 @@ code {
                 <td><code>http://linked.data.gov.au/def/geox#hasVolumeM3</code></td>
             </tr>
             <tr>
-                <th>Description</th>
-                <td>
-                    The volume of a spatial object in cubic-metres
-                </td>
-            </tr>
-            <tr>
                 <th>Example</th>
                 <td>
-                    <pre>my:swimmingPool99<br />  :hasVolumeM3 [<br />    data:value 3050.0 ;<br />  ] ;<br />.</pre>
+                    <pre>
+                      my:swimmingPool99
+
+  :hasVolumeM3 [
+
+    data:value 3050.0 ;
+
+  ] ;
+
+.
+                    </pre>
                 </td>
             </tr>
             <tr>
@@ -561,19 +677,6 @@ code {
                 <th>IRI</th>
                 <td><code>http://linked.data.gov.au/def/geox#inCRS</code></td>
             </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    The measure is defined or computed using this CRS. 
-The CRS should be denoted by a URI Reference to a CRS definition, e.g. https://www.opengis.net/def/crs/EPSG/0/4326
-                </td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="#Spatialmeasure">geox:SpatialMeasure</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
         </table>
     </div>
     <div class="entity property" id="isgeometryof">
@@ -584,9 +687,9 @@ The CRS should be denoted by a URI Reference to a CRS definition, e.g. https://w
                 <td><code>http://linked.data.gov.au/def/geox#isGeometryOf</code></td>
             </tr>
             <tr>
-                <th>Description</th>
+                <th>Inverse properties</th>
                 <td>
-                    link from a geometry object to the feature(s) for which it is a geometry
+                    <a href="http://www.opengis.net/ont/geosparql#hasGeometry">geo:hasGeometry</a>
                 </td>
             </tr>
             <tr>
@@ -601,6 +704,84 @@ The CRS should be denoted by a URI Reference to a CRS definition, e.g. https://w
                     <a href="http://www.opengis.net/ont/geosparql#Feature">geo:Feature</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
+        </table>
+    </div>
+    <div class="entity property" id="transitiveSfOverlap">
+        <h3>transitiveSfOverlap<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/geox#transitiveSfOverlap</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The domain object overlaps (geo:sfOverlaps) the range object by virtue of both objects containing (geo:sfContains) an intermediary object.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.opengis.net/ont/geosparql#sfOverlaps">geo:sfOverlaps</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://www.opengis.net/ont/geosparql#SpatialObject">geo:SpatialObject</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.opengis.net/ont/geosparql#SpatialObject">geo:SpatialObject</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+
+<section id="namedindividuals">
+    <h2>Named Individuals <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#0000-0002-3884-3420">0000-0002-3884-3420</a></li>
+        <li><a href="#0000-0002-8742-7730">0000-0002-8742-7730</a></li>
+    </ul>
+    <div class="entity named_individual" id="0000-0002-3884-3420">
+        <h3>0000-0002-3884-3420<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://orcid.org/0000-0002-3884-3420
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="http://schema.org/Person">sdo:Person</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="0000-0002-8742-7730">
+        <h3>0000-0002-8742-7730<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://orcid.org/0000-0002-8742-7730
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="http://schema.org/Person">sdo:Person</a><br/>
+            </dd>
         </table>
     </div>
 </section>
@@ -632,6 +813,8 @@ The CRS should be denoted by a URI Reference to a CRS definition, e.g. https://w
         <dd><code>http://www.w3.org/2000/01/rdf-schema#</code></dd>
         <dt>sdo</dt>
         <dd><code>http://schema.org/</code></dd>
+        <dt>sdo1</dt>
+        <dd><code>https://schema.org/</code></dd>
         <dt>skos</dt>
         <dd><code>http://www.w3.org/2004/02/skos/core#</code></dd>
         <dt>sosa</dt>
