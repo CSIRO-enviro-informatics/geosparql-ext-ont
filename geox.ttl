@@ -15,6 +15,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sdo: <http://schema.org/> .
+@prefix sf: <http://www.opengis.net/ont/sf#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -50,6 +51,15 @@ geox:SpatialMeasure
       owl:onProperty geox:inCRS ;
     ] ;
   skos:definition "Scalar quantity computed or defined within a specified coordinate reference system" ;
+  skos:example """auspix:R7430551
+  rdf:type geo:Feature ;
+  geox:hasArea [
+       rdf:type geox:SpatialMeasure ;
+       data:uncertainty 1.5 ;
+       data:unit <http://qudt.org/vocab/unit/M2> ;
+       data:value 17793623.0 ;
+     ] ;
+.""" ;
 .
 geox:asDGGS
   a owl:DatatypeProperty ;
@@ -69,6 +79,12 @@ geox:dggsLiteral
   dc:date "2020-05-27"^^xsd:date ;
   dc:description "A DGGS serialization of a geometry object."@en ;
   rdfs:label "DGGS Literal"@en ;
+  owl:onDatatype xsd:string ;
+  owl:withRestrictions (
+      [
+        xsd:pattern "[N-S][0-8]+" ;
+      ]
+    ) ;
   skos:example """
 ex:G99 a geo:Geometry ;
   geox:asDGGS \"R7430550 R7430551 R7430552\"^^dggsLiteral ;
@@ -82,13 +98,16 @@ geox:hasArea
   skos:definition "The area of a spatial object, expressed as a scaled number" ;
   skos:example """
 auspix:R7430551
-  rdf:type geo:Geometry ;
+  rdf:type geo:Feature ;
   geox:hasArea [
       data:uncertainty 1.5 ;
       data:unit <http://qudt.org/vocab/unit/M2> ;
       data:value 17793623.0 ;
     ] ;
-  geo:asWKT \"POLYGON((131.02880658436214 -25.331112553792963 , 131.06995884773661 -25.331112553792963  , 131.06995884773661 -25.36980468021464 , 131.02880658436214 -25.36980468021464 , 131.02880658436214 -25.331112553792963))\"^^geo:wktLiteral ;
+  geo:hasGeometry [
+    rdf:type sf:Polygon ;
+    geo:asWKT \"POLYGON((131.02880658436214 -25.331112553792963 , 131.06995884773661 -25.331112553792963  , 131.06995884773661 -25.36980468021464 , 131.02880658436214 -25.36980468021464 , 131.02880658436214 -25.331112553792963))\"^^geo:wktLiteral ;
+    ] ;
   rdfs:seeAlso <http://ec2-52-63-73-113.ap-southeast-2.compute.amazonaws.com/AusPIX-DGGS-dataset/ausPIX/R7430551> ;
 .""" ;
 .
@@ -108,7 +127,7 @@ geox:hasAreaM2
   skos:definition "The area of the spatial object in m^2" ;
   skos:example """
 auspix:R7430551
-  rdf:type geo:Geometry ;
+  rdf:type geo:Feature ;
   geox:hasAreaM2 [
       data:value 17793623.0 ;
     ] ;
@@ -123,15 +142,21 @@ geox:hasCentroid
   rdfs:range [
       a owl:Class ;
       owl:unionOf (
-          <http://www.opengis.net/ont/sf#Point>
+          sf:Point
           <http://www.opengis.net/ont/gml#Point>
         ) ;
     ] ;
   rdfs:subPropertyOf geo:hasGeometry ;
   skos:example """
-auspix:R7430551 a geo:Geometry ;
-  geo:asWKT \"POLYGON((131.02880658436214 -25.331112553792963 , 131.06995884773661 -25.331112553792963  , 131.06995884773661 -25.36980468021464 , 131.02880658436214 -25.36980468021464 , 131.02880658436214 -25.331112553792963))\"^^wktLiteral ;
-  geox:hasCentroid \"POINT(131.0493827160494, -25.350457086495783)\"^^geo:wktLiteral ;
+auspix:R7430551 a geo:Feature ;
+  geox:hasCentroid [
+      rdf:type sf:Point ;
+      geo:asWKT \"POINT(131.0493827160494, -25.350457086495783)\"^^geo:wktLiteral ;
+    ] ;
+  geo:hasGeometry [
+    rdf:type sf:Polygon ;
+    geo:asWKT \"POLYGON((131.02880658436214 -25.331112553792963 , 131.06995884773661 -25.331112553792963  , 131.06995884773661 -25.36980468021464 , 131.02880658436214 -25.36980468021464 , 131.02880658436214 -25.331112553792963))\"^^geo:wktLiteral ;
+    ] ;
   rdfs:seeAlso <http://ec2-52-63-73-113.ap-southeast-2.compute.amazonaws.com/AusPIX-DGGS-dataset/ausPIX/R7430551> ;
 .""" ;
 .
@@ -251,6 +276,17 @@ geox:inCRS
   rdfs:label "In Coordinate Reference System" ;
   skos:definition """Geometry, position or measure is defined or computed using this CRS. 
 The CRS should be denoted by a URI Reference to a CRS definition, e.g. https://www.opengis.net/def/crs/EPSG/0/4326""" ;
+  skos:example """
+auspix:R7430551
+  rdf:type geo:Feature ;
+  geox:hasArea [
+      rdf:type geox:SpatialMeasure ;
+      data:uncertainty 1.5 ;
+      data:unit <http://qudt.org/vocab/unit/M2> ;
+      data:value 17793623.0 ;
+      geox:inCRS <https://epsg.io/7844> ;
+    ] ;
+.""" ;
 .
 geox:isGeometryOf
   a owl:ObjectProperty ;
@@ -259,6 +295,14 @@ geox:isGeometryOf
   rdfs:range geo:Feature ;
   owl:inverseOf geo:hasGeometry ;
   skos:definition "link from a geometry object to the feature(s) for which it is a geometry" ;
+  skos:example """
+ex:PR7430551
+      rdf:type sf:Polygon ;
+      geo:asWKT \"POLYGON((131.02880658436214 -25.331112553792963 , 131.06995884773661 -25.331112553792963  , 131.06995884773661 -25.36980468021464 , 131.02880658436214 -25.36980468021464 , 131.02880658436214 -25.331112553792963))\"^^geo:wktLiteral ;
+	  geox:isGeometryOf auspix:R7430551 ;
+      rdfs:seeAlso <http://ec2-52-63-73-113.ap-southeast-2.compute.amazonaws.com/AusPIX-DGGS-dataset/ausPIX/R7430551> ;
+.
+""" ;
 .
 geox:transitiveSfOverlap
   a owl:DeprecatedProperty ;
@@ -278,7 +322,7 @@ geox:transitiveSfOverlap
   skos:usageNote "if ex:A geo:sfContains ex:X and ex:B geo:sfContains :ex:X, using the declaration of geo:sfWithin in this ontology with an owl:inverseOf to geo:sfOverlaps, we can interpret the second triple as ex:X geo:sfWithin :B and then ex:A geo:sf:Overlaps ex:B with proportionally, being contained in the relative areas of A, B & X" ;
 .
 auspix:R7430551
-  a geo:Geometry ;
+  a geo:Feature ;
   geox:asDGGS "R7430551"^^geox:dggsLiteral ;
   geox:hasArea [
       data:unit <http://qudt.org/vocab/unit/M2> ;
@@ -287,8 +331,14 @@ auspix:R7430551
   geox:hasAreaM2 [
       data:value 17793623.0 ;
     ] ;
-  geox:hasCentroid "POINT(131.0493827160494, -25.350457086495783)"^^geo:wktLiteral ;
-  geo:asWKT "POLYGON((131.02880658436214 -25.331112553792963 , 131.06995884773661 -25.331112553792963  , 131.06995884773661 -25.36980468021464 , 131.02880658436214 -25.36980468021464 , 131.02880658436214 -25.331112553792963))"^^geo:wktLiteral ;
+  geox:hasCentroid [
+      a sf:Point ;
+      geo:asWKT "POINT(131.0493827160494, -25.350457086495783)"^^geo:wktLiteral ;
+    ] ;
+  geo:hasGeometry [
+      a sf:Polygon ;
+      geo:asWKT "POLYGON((131.02880658436214 -25.331112553792963 , 131.06995884773661 -25.331112553792963  , 131.06995884773661 -25.36980468021464 , 131.02880658436214 -25.36980468021464 , 131.02880658436214 -25.331112553792963))"^^geo:wktLiteral ;
+    ] ;
   geo:sfContains auspix:R74305510 ;
   geo:sfContains auspix:R74305511 ;
   geo:sfContains auspix:R74305512 ;
