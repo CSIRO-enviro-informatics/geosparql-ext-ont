@@ -77,14 +77,17 @@ ex:G99 a geo:Geometry ;
 geox:dggsLiteral
   a rdfs:Datatype ;
   dc:date "2020-05-27"^^xsd:date ;
-  dc:description "A DGGS serialization of a geometry object."@en ;
+  dc:description "A serialization of a geometry object, as a list of rHealPIX cell identifiers."@en ;
   rdfs:label "DGGS Literal"@en ;
-  owl:onDatatype xsd:string ;
-  owl:withRestrictions (
-      [
-        xsd:pattern "[N-S][0-8]+" ;
-      ]
-    ) ;
+  owl:equivalentClass [
+      a rdfs:Datatype ;
+      owl:onDatatype xsd:string ;
+      owl:withRestrictions (
+          [
+            xsd:pattern "([N-S][0-8]+)( ([N-S][0-8]+))*" ;
+          ]
+        ) ;
+    ] ;
   skos:example """
 ex:G99 a geo:Geometry ;
   geox:asDGGS \"R7430550 R7430551 R7430552\"^^dggsLiteral ;
