@@ -264,12 +264,10 @@
             (<a href="mailto:nicholas.car@surroundaustralia.com">nicholas.car@surroundaustralia.com</a>) of 
             Surround Australia<br/>
                 </dd>
-                <dt>Created</dt>
+        <dt>Created</dt>
         <dd>2019-01-08</dd>
         <dt>Modified</dt>
-        <dd>2020-05-18</dd>
-        <dt>Version Information</dt>
-        <dd>Alpha version</dd>
+        <dd>2020-05-27</dd>
         <dt>Version IRI</dt>
         <dd><a href="http://linked.data.gov.au/def/geox/1.1">http://linked.data.gov.au/def/geox/1.1</a></dd>
         <dt>Imports</dt>
@@ -290,6 +288,7 @@
     <ol>
         <li><a href="#classes">Classes</a></li>
         <li><a href="#objectproperties">Object Properties</a></li>
+        <li><a href="#datatypeproperties">Datatype Properties</a></li>
         <li><a href="#namedindividuals">Named Individuals</a></li>
         <li><a href="#namespaces">Namespaces</a></li>
         <li><a href="#legend">Legend</a></li>
@@ -321,6 +320,22 @@
                 </td>
             </tr>
             <tr>
+                <th>Example</th>
+                <td>
+                    <pre>
+auspix:R7430551
+  rdf:type geo:Feature ;
+  geox:hasArea [
+       rdf:type geox:SpatialMeasure ;
+       data:uncertainty 1.5 ;
+       data:unit &lt;http://qudt.org/vocab/unit/M2&gt; ;
+       data:value 17793623.0 ;
+     ] ;
+.
+                    </pre>
+                </td>
+            </tr>
+            <tr>
                 <th>Super-classes</th>
                 <td>
                     <a href="http://linked.data.gov.au/def/datatype/QuantitativeMeasure">data:QuantitativeMeasure</a><sup class="sup-c" title="class">c</sup><br/>
@@ -336,8 +351,8 @@
                 <th>In range of</th>
                 <td>
                     <a href="#hasarea">geox:hasArea</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hasvolume">geox:hasVolume</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#haslength">geox:hasLength</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasvolume">geox:hasVolume</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -370,18 +385,18 @@
                 <th>Example</th>
                 <td>
                     <pre>
-                      my:plot456
-
-  :hasArea [
-
-    data:uncertainty 0.5 ;
-
-    data:unit <http://qudt.org/vocab/unit/M2> ;
-
-    data:value 63.9 ;
-
-  ] ;
-
+auspix:R7430551
+  rdf:type geo:Feature ;
+  geox:hasArea [
+      data:uncertainty 1.5 ;
+      data:unit &lt;http://qudt.org/vocab/unit/M2&gt; ;
+      data:value 17793623.0 ;
+    ] ;
+  geo:hasGeometry [
+    rdf:type sf:Polygon ;
+    geo:asWKT "POLYGON((131.02880658436214 -25.331112553792963 , 131.06995884773661 -25.331112553792963  , 131.06995884773661 -25.36980468021464 , 131.02880658436214 -25.36980468021464 , 131.02880658436214 -25.331112553792963))"^^geo:wktLiteral ;
+    ] ;
+  rdfs:seeAlso &lt;http://ec2-52-63-73-113.ap-southeast-2.compute.amazonaws.com/AusPIX-DGGS-dataset/ausPIX/R7430551&gt; ;
 .
                     </pre>
                 </td>
@@ -411,14 +426,13 @@
                 <th>Example</th>
                 <td>
                     <pre>
-                      my:plot456
-
-  :hasAreaM2 [
-
-    data:value 63.9 ;
-
-  ] ;
-
+auspix:R7430551
+  rdf:type geo:Feature ;
+  geox:hasAreaM2 [
+      data:value 17793623.0 ;
+    ] ;
+  geo:asWKT "POLYGON((131.02880658436214 -25.331112553792963 , 131.06995884773661 -25.331112553792963  , 131.06995884773661 -25.36980468021464 , 131.02880658436214 -25.36980468021464 , 131.02880658436214 -25.331112553792963))"^^geo:wktLiteral ;
+  rdfs:seeAlso &lt;http://ec2-52-63-73-113.ap-southeast-2.compute.amazonaws.com/AusPIX-DGGS-dataset/ausPIX/R7430551&gt; ;
 .
                     </pre>
                 </td>
@@ -445,9 +459,34 @@
                 </td>
             </tr>
             <tr>
+                <th>Example</th>
+                <td>
+                    <pre>
+auspix:R7430551 a geo:Feature ;
+  geox:hasCentroid [
+      rdf:type sf:Point ;
+      geo:asWKT "POINT(131.0493827160494, -25.350457086495783)"^^geo:wktLiteral ;
+    ] ;
+  geo:hasGeometry [
+    rdf:type sf:Polygon ;
+    geo:asWKT "POLYGON((131.02880658436214 -25.331112553792963 , 131.06995884773661 -25.331112553792963  , 131.06995884773661 -25.36980468021464 , 131.02880658436214 -25.36980468021464 , 131.02880658436214 -25.331112553792963))"^^geo:wktLiteral ;
+    ] ;
+  rdfs:seeAlso &lt;http://ec2-52-63-73-113.ap-southeast-2.compute.amazonaws.com/AusPIX-DGGS-dataset/ausPIX/R7430551&gt; ;
+.
+                    </pre>
+                </td>
+            </tr>
+            <tr>
                 <th>Super-properties</th>
                 <td>
                     <a href="http://www.opengis.net/ont/geosparql#hasGeometry">geo:hasGeometry</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.opengis.net/ont/sf#Point">sf:Point</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.opengis.net/ont/gml#Point">http://www.opengis.net/ont/gml#Point</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -463,18 +502,12 @@
                 <th>Example</th>
                 <td>
                     <pre>
-                      my:road456
-
+my:road456
   :hasLength [
-
     data:uncertainty 5.0 ;
-
-    data:unit <http://qudt.org/vocab/unit/M> ;
-
+    data:unit &lt;http://qudt.org/vocab/unit/M&gt; ;
     data:value 234.0 ;
-
   ] ;
-
 .
                     </pre>
                 </td>
@@ -504,14 +537,10 @@
                 <th>Example</th>
                 <td>
                     <pre>
-                      my:road456
-
+my:road456
   :hasLengthM [
-
     data:value 234.0 ;
-
   ] ;
-
 .
                     </pre>
                 </td>
@@ -535,16 +564,11 @@
                 <th>Example</th>
                 <td>
                     <pre>
-                      my:image456
-
+my:image456
   :hasResolution [
-
-    data:unit <http://qudt.org/vocab/unit/M> ;
-
+    data:unit &lt;http://qudt.org/vocab/unit/M&gt; ;
     data:value 30.0 ;
-
   ] ;
-
 .
                     </pre>
                 </td>
@@ -574,14 +598,10 @@
                 <th>Example</th>
                 <td>
                     <pre>
-                      my:image456
-
+my:image456
   :hasResolutionM [
-
     data:value 30.0 ;
-
   ] ;
-
 .
                     </pre>
                 </td>
@@ -611,16 +631,11 @@
                 <th>Example</th>
                 <td>
                     <pre>
-                      my:swimmingPool99
-
+my:swimmingPool99
   :hasVolume [
-
-    data:unit <http://qudt.org/vocab/unit/M3> ;
-
+    data:unit &lt;http://qudt.org/vocab/unit/M3&gt; ;
     data:value 3050.0 ;
-
   ] ;
-
 .
                     </pre>
                 </td>
@@ -650,14 +665,10 @@
                 <th>Example</th>
                 <td>
                     <pre>
-                      my:swimmingPool99
-
+my:swimmingPool99
   :hasVolumeM3 [
-
     data:value 3050.0 ;
-
   ] ;
-
 .
                     </pre>
                 </td>
@@ -677,6 +688,23 @@
                 <th>IRI</th>
                 <td><code>http://linked.data.gov.au/def/geox#inCRS</code></td>
             </tr>
+            <tr>
+                <th>Example</th>
+                <td>
+                    <pre>
+auspix:R7430551
+  rdf:type geo:Feature ;
+  geox:hasArea [
+      rdf:type geox:SpatialMeasure ;
+      data:uncertainty 1.5 ;
+      data:unit &lt;http://qudt.org/vocab/unit/M2&gt; ;
+      data:value 17793623.0 ;
+      geox:inCRS &lt;https://epsg.io/7844&gt; ;
+    ] ;
+.
+                    </pre>
+                </td>
+            </tr>
         </table>
     </div>
     <div class="entity property" id="isgeometryof">
@@ -685,6 +713,19 @@
             <tr>
                 <th>IRI</th>
                 <td><code>http://linked.data.gov.au/def/geox#isGeometryOf</code></td>
+            </tr>
+            <tr>
+                <th>Example</th>
+                <td>
+                    <pre>
+ex:PR7430551
+      rdf:type sf:Polygon ;
+      geo:asWKT "POLYGON((131.02880658436214 -25.331112553792963 , 131.06995884773661 -25.331112553792963  , 131.06995884773661 -25.36980468021464 , 131.02880658436214 -25.36980468021464 , 131.02880658436214 -25.331112553792963))"^^geo:wktLiteral ;
+	  geox:isGeometryOf auspix:R7430551 ;
+      rdfs:seeAlso &lt;http://ec2-52-63-73-113.ap-southeast-2.compute.amazonaws.com/AusPIX-DGGS-dataset/ausPIX/R7430551&gt; ;
+.
+                    </pre>
+                </td>
             </tr>
             <tr>
                 <th>Inverse properties</th>
@@ -741,6 +782,50 @@
     </div>
 </section>
 
+<section id="datatypeproperties">
+    <h2>Datatype Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#asDGGS">asDGGS</a></li>
+    </ul>
+    <div class="entity property" id="asDGGS">
+        <h3>asDGGS<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/geox#asDGGS</code></td>
+            </tr>
+            <tr>
+                <th>Example</th>
+                <td>
+                    <pre>
+ex:G99 a geo:Geometry ;
+  geox:asDGGS "R7430550 R7430551 R7430552"^^geox:dggsLiteral ;
+.
+                    </pre>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.opengis.net/ont/geosparql#hasSerialization">geo:hasSerialization</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://www.opengis.net/ont/geosparql#Geometry">geo:Geometry</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://linked.data.gov.au/def/geox#dggsLiteral">geox:dggsLiteral</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
 
 <section id="namedindividuals">
     <h2>Named Individuals <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
@@ -791,6 +876,8 @@
     <dl>
         <dt><em>default (:)</em></dt>
         <dd><code>http://linked.data.gov.au/def/geox#</code></dd>
+        <dt>auspix</dt>
+        <dd><code>http://pid.geoscience.gov.au/dggs/ausPIX/</code></dd>
         <dt>data</dt>
         <dd><code>http://linked.data.gov.au/def/datatype/</code></dd>
         <dt>dc</dt>
@@ -815,6 +902,8 @@
         <dd><code>http://schema.org/</code></dd>
         <dt>sdo1</dt>
         <dd><code>https://schema.org/</code></dd>
+        <dt>sf</dt>
+        <dd><code>http://www.opengis.net/ont/sf#</code></dd>
         <dt>skos</dt>
         <dd><code>http://www.w3.org/2004/02/skos/core#</code></dd>
         <dt>sosa</dt>

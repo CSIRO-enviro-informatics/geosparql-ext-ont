@@ -35,7 +35,7 @@
     <cd:nodes>
       <cd:URINode>
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >204</cd:height>
+        >214</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >337</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
