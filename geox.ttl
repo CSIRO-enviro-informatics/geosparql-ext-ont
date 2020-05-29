@@ -134,7 +134,10 @@ auspix:R7430551
   geox:hasAreaM2 [
       data:value 17793623.0 ;
     ] ;
-  geo:asWKT \"POLYGON((131.02880658436214 -25.331112553792963 , 131.06995884773661 -25.331112553792963  , 131.06995884773661 -25.36980468021464 , 131.02880658436214 -25.36980468021464 , 131.02880658436214 -25.331112553792963))\"^^geo:wktLiteral ;
+  geo:hasGeometry [
+    rdf:type sf:Polygon ;
+    geo:asWKT \"POLYGON((131.02880658436214 -25.331112553792963 , 131.06995884773661 -25.331112553792963  , 131.06995884773661 -25.36980468021464 , 131.02880658436214 -25.36980468021464 , 131.02880658436214 -25.331112553792963))\"^^geo:wktLiteral ;
+    ] ;
   rdfs:seeAlso <http://ec2-52-63-73-113.ap-southeast-2.compute.amazonaws.com/AusPIX-DGGS-dataset/ausPIX/R7430551> ;
 .""" ;
 .
@@ -300,10 +303,10 @@ geox:isGeometryOf
   skos:definition "link from a geometry object to the feature(s) for which it is a geometry" ;
   skos:example """
 ex:PR7430551
-      rdf:type sf:Polygon ;
-      geo:asWKT \"POLYGON((131.02880658436214 -25.331112553792963 , 131.06995884773661 -25.331112553792963  , 131.06995884773661 -25.36980468021464 , 131.02880658436214 -25.36980468021464 , 131.02880658436214 -25.331112553792963))\"^^geo:wktLiteral ;
-	  geox:isGeometryOf auspix:R7430551 ;
-      rdfs:seeAlso <http://ec2-52-63-73-113.ap-southeast-2.compute.amazonaws.com/AusPIX-DGGS-dataset/ausPIX/R7430551> ;
+  rdf:type sf:Polygon ;
+  geo:asWKT \"POLYGON((131.02880658436214 -25.331112553792963 , 131.06995884773661 -25.331112553792963  , 131.06995884773661 -25.36980468021464 , 131.02880658436214 -25.36980468021464 , 131.02880658436214 -25.331112553792963))\"^^geo:wktLiteral ;
+	geox:isGeometryOf auspix:R7430551 ;
+  rdfs:seeAlso <http://ec2-52-63-73-113.ap-southeast-2.compute.amazonaws.com/AusPIX-DGGS-dataset/ausPIX/R7430551> ;
 .
 """ ;
 .
