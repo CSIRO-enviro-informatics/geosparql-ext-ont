@@ -327,43 +327,10 @@ geox:transitiveSfOverlap
   skos:editorialNote "This property is not needed - it is not a true sub-property, it is a rule to infer overlap from the existence of a common contained feature ... it is actually more like a record of the _provenance_ of an sfOverlaps property. That information would be better managed as part of a linking statement. " ;
   skos:usageNote "if ex:A geo:sfContains ex:X and ex:B geo:sfContains :ex:X, using the declaration of geo:sfWithin in this ontology with an owl:inverseOf to geo:sfOverlaps, we can interpret the second triple as ex:X geo:sfWithin :B and then ex:A geo:sf:Overlaps ex:B with proportionally, being contained in the relative areas of A, B & X" ;
 .
-auspix:R7430551
-  a geo:Feature ;
-  geox:asDGGS "R7430551"^^geox:dggsLiteral ;
-  geox:hasArea [
-      data:unit <http://qudt.org/vocab/unit/M2> ;
-      data:value 17793623.0 ;
-    ] ;
-  geox:hasAreaM2 [
-      data:value 17793623.0 ;
-    ] ;
-  geox:hasCentroid [
-      a sf:Point ;
-      geo:asWKT "POINT(131.0493827160494, -25.350457086495783)"^^geo:wktLiteral ;
-    ] ;
-  geo:hasGeometry [
-      a sf:Polygon ;
-      geo:asWKT "POLYGON((131.02880658436214 -25.331112553792963 , 131.06995884773661 -25.331112553792963  , 131.06995884773661 -25.36980468021464 , 131.02880658436214 -25.36980468021464 , 131.02880658436214 -25.331112553792963))"^^geo:wktLiteral ;
-    ] ;
-  geo:sfContains auspix:R74305510 ;
-  geo:sfContains auspix:R74305511 ;
-  geo:sfContains auspix:R74305512 ;
-  geo:sfContains auspix:R74305513 ;
-  geo:sfContains auspix:R74305514 ;
-  geo:sfContains auspix:R74305515 ;
-  geo:sfContains auspix:R74305516 ;
-  geo:sfContains auspix:R74305517 ;
-  geo:sfContains auspix:R74305518 ;
-  geo:sfWithin auspix:R743055 ;
-  rdfs:seeAlso <http://ec2-52-63-73-113.ap-southeast-2.compute.amazonaws.com/AusPIX-DGGS-dataset/ausPIX/R7430551> ;
-.
 <https://orcid.org/0000-0002-3884-3420>
   a sdo:Person ;
   a owl:NamedIndividual ;
-  sdo:affiliation [
-      sdo:identifier "http://catalogue.linked.data.gov.au/org/csiro"^^xsd:anyURI ;
-      sdo:name "CSIRO" ;
-    ] ;
+  sdo:affiliation <https://ror.org/03qn8fb07> ;
   sdo:email <mailto:simon.cox@csiro.au> ;
   sdo:identifier "https://orcid.org/0000-0002-3884-3420"^^xsd:anyURI ;
   sdo:name "Simon J D Cox" ;
@@ -373,15 +340,16 @@ auspix:R7430551
   a sdo:Person ;
   a owl:NamedIndividual ;
   sdo:affiliation [
-      sdo:identifier "https://surroundaustralia.com/"^^xsd:anyURI ;
+      sdo:url <https://surroundaustralia.com/> ;
       sdo:name "Surround Australia" ;
     ] ;
   sdo:email <mailto:nicholas.car@surroundaustralia.com> ;
-  sdo:identifier "https://orcid.org/0000-0002-8742-7730"^^xsd:anyURI ;
+  sdo:url <https://orcid.org/0000-0002-8742-7730> ;
   sdo:name "Nicholas J Car" ;
 .
 <https://ror.org/03qn8fb07>
   a sdo:Organization ;
+  a owl:NamedIndividual ;
   sdo:name "CSIRO" ;
   sdo:url <https://www.csiro.au> ;
 .
