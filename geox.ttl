@@ -125,6 +125,30 @@ auspix:R7430551
   rdfs:seeAlso <http://ec2-52-63-73-113.ap-southeast-2.compute.amazonaws.com/AusPIX-DGGS-dataset/ausPIX/R7430551> ;
 .""" ;
 .
+geox:hasBBox
+  a owl:ObjectProperty ;
+  rdfs:comment "the bounding box or envelope of the feature" ;
+  rdfs:label "has bounding box" ;
+  rdfs:range geox:BBox ;
+  rdfs:subPropertyOf geo:hasGeometry ;
+  skos:example """
+auspix:R7430551 a geo:Feature ;
+  geox:hasBBox [
+      rdf:type geox:BBox ;
+      geox:lowerLeft \"<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(131.02880658436214 -25.36980468021464)\"^^geo:wktLiteral ;
+      geox:upperRight \"<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(131.06995884773661 -25.331112553792963)\"^^geo:wktLiteral ;
+    ] ;
+  geox:hasCentroid [
+      rdf:type sf:Point ;
+      geo:asWKT \"POINT(131.0493827160494, -25.350457086495783)\"^^geo:wktLiteral ;
+    ] ;
+  geo:hasGeometry [
+    rdf:type sf:Polygon ;
+    geo:asWKT \"POLYGON((131.02880658436214 -25.331112553792963 , 131.06995884773661 -25.331112553792963  , 131.06995884773661 -25.36980468021464 , 131.02880658436214 -25.36980468021464 , 131.02880658436214 -25.331112553792963))\"^^geo:wktLiteral ;
+    ] ;
+  rdfs:seeAlso <http://ec2-52-63-73-113.ap-southeast-2.compute.amazonaws.com/AusPIX-DGGS-dataset/ausPIX/R7430551> ;
+.""" ;
+.
 geox:hasCentroid
   a owl:ObjectProperty ;
   rdfs:comment "link to the geometric centroid, which is the arithmetic mean position of all the points in the 2-D figure" ;
