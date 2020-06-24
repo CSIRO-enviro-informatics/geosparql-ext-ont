@@ -37,7 +37,7 @@
 .
 geox:BBox
   a owl:Class ;
-  rdfs:comment """The two corners shodul be specified using the same CRS. 
+  rdfs:comment """The two corners should be specified using the same CRS. 
 
 The edges/faces of the box align with the axes of the CRS used for the corners.""" ;
   rdfs:label "Bounding box" ;
@@ -85,10 +85,10 @@ ex:Area20858M2
 .
 geox:hasArea
   a owl:ObjectProperty ;
+  rdfs:comment "The area of a spatial object, expressed as a scaled number" ;
   rdfs:domain geo:SpatialObject ;
   rdfs:label "has area" ;
   rdfs:range geox:SpatialMeasure ;
-  skos:definition "The area of a spatial object, expressed as a scaled number" ;
   skos:example """
 auspix:R7430551
   rdf:type geo:Feature ;
@@ -106,6 +106,7 @@ auspix:R7430551
 .
 geox:hasAreaM2
   a owl:ObjectProperty ;
+  rdfs:comment "The area of the spatial object in m^2" ;
   rdfs:label "has area in m2" ;
   rdfs:range [
       a owl:Class ;
@@ -117,7 +118,6 @@ geox:hasAreaM2
         ] ;
     ] ;
   rdfs:subPropertyOf geox:hasArea ;
-  skos:definition "The area of the spatial object in m^2" ;
   skos:example """
 auspix:R7430551
   rdf:type geo:Feature ;
@@ -182,10 +182,10 @@ auspix:R7430551 a geo:Feature ;
 .
 geox:hasLength
   a owl:ObjectProperty ;
+  rdfs:comment "The length of a spatial object, expressed as a scaled number" ;
   rdfs:domain geo:SpatialObject ;
   rdfs:label "has length" ;
   rdfs:range geox:SpatialMeasure ;
-  skos:definition "The length of a spatial object, expressed as a scaled number" ;
   skos:example """
 my:road456
   :hasLength [
@@ -197,6 +197,7 @@ my:road456
 .
 geox:hasLengthM
   a owl:ObjectProperty ;
+  rdfs:comment "The length of a spatial object in metres" ;
   rdfs:label "has length in m" ;
   rdfs:range [
       a owl:Class ;
@@ -208,7 +209,6 @@ geox:hasLengthM
         ] ;
     ] ;
   rdfs:subPropertyOf geox:hasLength ;
-  skos:definition "The length of a spatial object in metres" ;
   skos:example """
 my:road456
   :hasLengthM [
@@ -218,11 +218,11 @@ my:road456
 .
 geox:hasResolution
   a owl:ObjectProperty ;
+  rdfs:comment "The spatial resolution of the Geometry object, expressed as a linear measurement." ;
   rdfs:domain geo:Geometry ;
   rdfs:label "has spatial resolution" ;
   rdfs:range data:QuantitativeMeasure ;
   skos:altLabel "spatial resolution" ;
-  skos:definition "The spatial resolution of the Geometry object, expressed as a linear measurement." ;
   skos:example """
 my:image456
   :hasResolution [
@@ -234,6 +234,7 @@ my:image456
 .
 geox:hasResolutionM
   a owl:ObjectProperty ;
+  rdfs:comment "The spatial resolution of the Geometry object, expressed as a linear distance in metres" ;
   rdfs:domain geo:Geometry ;
   rdfs:label "has spatial resolution in metres" ;
   rdfs:range [
@@ -247,7 +248,6 @@ geox:hasResolutionM
     ] ;
   rdfs:subPropertyOf geox:hasResolution ;
   skos:altLabel "spatial resolution" ;
-  skos:definition "The spatial resolution of the Geometry object, expressed as a linear distance in metres" ;
   skos:example """
 my:image456
   :hasResolutionM [
@@ -258,10 +258,10 @@ my:image456
 .
 geox:hasVolume
   a owl:ObjectProperty ;
+  rdfs:comment "The volume of a spatial object, expressed as a scaled number" ;
   rdfs:domain geo:SpatialObject ;
   rdfs:label "has volume" ;
   rdfs:range geox:SpatialMeasure ;
-  skos:definition "The volume of a spatial object, expressed as a scaled number" ;
   skos:example """
 my:swimmingPool99
   :hasVolume [
@@ -272,6 +272,7 @@ my:swimmingPool99
 .
 geox:hasVolumeM3
   a owl:ObjectProperty ;
+  rdfs:comment "The volume of a spatial object in cubic-metres" ;
   rdfs:label "has volume in m3" ;
   rdfs:range [
       a owl:Class ;
@@ -283,7 +284,6 @@ geox:hasVolumeM3
         ] ;
     ] ;
   rdfs:subPropertyOf geox:hasVolume ;
-  skos:definition "The volume of a spatial object in cubic-metres" ;
   skos:example """
 my:swimmingPool99
   :hasVolumeM3 [
@@ -293,17 +293,17 @@ my:swimmingPool99
 .
 geox:inCRS
   a owl:ObjectProperty ;
-  rdfs:label "In Coordinate Reference System" ;
-  skos:definition """Geometry, position or measure is defined or computed using this CRS. 
+  rdfs:comment """Geometry, position or measure is defined or computed using this CRS. 
 The CRS should be denoted by a URI Reference to a CRS definition, e.g. https://www.opengis.net/def/crs/EPSG/0/4326""" ;
+  rdfs:label "In Coordinate Reference System" ;
 .
 geox:isGeometryOf
   a owl:ObjectProperty ;
+  rdfs:comment "link from a geometry object to the feature(s) for which it is a geometry" ;
   rdfs:domain geo:Geometry ;
   rdfs:label "is geometry of" ;
   rdfs:range geo:Feature ;
   owl:inverseOf geo:hasGeometry ;
-  skos:definition "link from a geometry object to the feature(s) for which it is a geometry" ;
 .
 geox:lowerLeft
   a owl:DatatypeProperty ;
