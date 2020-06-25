@@ -7,7 +7,7 @@
     <style>
         #pylode {
             position: fixed;
-            top: 130px;
+            top: 80px;
             left: -60px;
             font-size: small;
             transform: rotate(-90deg);
@@ -22,48 +22,60 @@
         #pylode a:hover {
             color: #333;
         }
+
         .cardinality {
             font-style: italic;
             color: #aa00aa;
         }
+
         dt {
             font-weight: bold;
             padding: 5px 0 5px 0;
         }
+
         ul.hlist {
             list-style-type: none;
             border: 1px solid navy;
             padding:5px;
             background-color: #F4FFFF;
         }
+
         ul.hierarchy {
             border: 1px solid navy;
             padding: 5px 25px 5px 25px;
             background-color: #F4FFFF;
         }
+
+
         ul.hlist li {
             display: inline;
             margin-right: 10px;
         }
+
         .entity {
             border: 1px solid navy;
             margin:5px 0 5px 0;
             padding: 5px;
         }
+
         .entity th {
             width: 150px;
             vertical-align: top;
         }
+
         .entity th,
         .entity td {
             padding-bottom: 20px;
         }
+
         .entity table th {
             text-align: left;
         }
+
         section#overview img {
             max-width: 1000px;
         }
+
         h1, h2, h3, h4, h5, h6 {
             text-align: left
         }
@@ -87,6 +99,8 @@
         h4 { font: bold 100% sans-serif }
         h5 { font: italic 100% sans-serif }
         h6 { font: small-caps 100% sans-serif }
+
+
         body {
             padding: 2em 70px 2em 70px;
             margin: 0;
@@ -98,15 +112,19 @@
             background-repeat: no-repeat;
             text-align: justify;
         }
+
         section {
             max-width: 1500px;
         }
+
         .figure {
             margin-bottom: 20px;
         }
+
         :link { color: #00C; background: transparent }
         :visited { color: #609; background: transparent }
         a:active { color: #C00; background: transparent }
+
         .sup-c,
         .sup-op,
         .sup-fp,
@@ -119,37 +137,48 @@
             cursor:help;
             margin-left: 3px;
         }
+
         .sup-c {
             color:orange;
         }
+
         .sup-op {
             color:navy;
         }
+
         .sup-fp {
             color:lightskyblue;
         }
+
         .sup-dp {
             color:green;
         }
+
         .sup-ap {
             color:darkred;
         }
+
         .sup-p {
             color:black;
         }
+
         .sup-ni {
             color:brown;
         }
+
         .sup-cp {
             color:orange;
         }
+
         .sup-cl {
             color:darkred;
         }
+
         code {
             font-size: large;
             color: darkred;
         }
+
     </style>
     
     <script type="application/ld+json">
@@ -158,11 +187,6 @@
     "@id": "http://linked.data.gov.au/def/geox",
     "@type": [
       "https://schema.org/DefinedTermSet"
-    ],
-    "https://schema.org/codeRepository": [
-      {
-        "@id": "https://github.com/CSIRO-enviro-informatics/geosparql-ext-ont"
-      }
     ],
     "https://schema.org/description": [
       {
@@ -179,11 +203,8 @@
     </script>
 </head>
 <body>
-  <div id="pylode">made by <a href="http://github.com/rdflib/pyLODE">
-    <span style="color:#329545;">p</span><span style="color:#f9cb33;">y</span>LODE</a>
-    <span style="font-size:smaller;">2.4</span>
-  </div>
-  <h1>GeoSPARQL Extensions Ontology</h1>
+<div id="pylode">made by <a href="http://github.com/rdflib/pyLODE"><span style="color:#329545;">p</span><span style="color:#f9cb33;">y</span>LODE</a></div>
+<h1>GeoSPARQL Extensions Ontology</h1>
 <section id="metadata">
     <h2 style="display:none;">Metadata</h2>
     <dl>
@@ -192,57 +213,57 @@
         <dt>Publisher(s)</dt>
         <dd>
             
-    <a href="https://ror.org/03qn8fb07">CSIRO</a><br/>
+    <a href="https://ror.org/03qn8fb07">Commonwealth Scientific and Industrial Research Organisation</a><br/>
         </dd>
         <dt>Creator(s)</dt>
         <dd>
             
-    <a href="https://orcid.org/0000-0002-3884-3420">Simon J D Cox</a>
-    <a href="https://orcid.org/0000-0002-3884-3420"><svg width="15px" height="15px" viewBox="0 0 72 72" version="1.1"
-    xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>Orcid logo</title>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="hero" transform="translate(-924.000000, -72.000000)" fill-rule="nonzero">
-            <g id="Group-4">
-                <g id="vector_iD_icon" transform="translate(924.000000, 72.000000)">
-                    <path d="M72,36 C72,55.884375 55.884375,72 36,72 C16.115625,72 0,55.884375 0,36 C0,16.115625 16.115625,0 36,0 C55.884375,0 72,16.115625 72,36 Z" id="Path" fill="#A6CE39"></path>
-                    <g id="Group" transform="translate(18.868966, 12.910345)" fill="#FFFFFF">
-                        <polygon id="Path" points="5.03734929 39.1250878 0.695429861 39.1250878 0.695429861 9.14431787 5.03734929 9.14431787 5.03734929 22.6930505 5.03734929 39.1250878"></polygon>
-                        <path d="M11.409257,9.14431787 L23.1380784,9.14431787 C34.303014,9.14431787 39.2088191,17.0664074 39.2088191,24.1486995 C39.2088191,31.846843 33.1470485,39.1530811 23.1944669,39.1530811 L11.409257,39.1530811 L11.409257,9.14431787 Z M15.7511765,35.2620194 L22.6587756,35.2620194 C32.49858,35.2620194 34.7541226,27.8438084 34.7541226,24.1486995 C34.7541226,18.1301509 30.8915059,13.0353795 22.4332213,13.0353795 L15.7511765,13.0353795 L15.7511765,35.2620194 Z" id="Shape"></path>
-                        <path d="M5.71401206,2.90182329 C5.71401206,4.441452 4.44526937,5.72914146 2.86638958,5.72914146 C1.28750978,5.72914146 0.0187670918,4.441452 0.0187670918,2.90182329 C0.0187670918,1.33420133 1.28750978,0.0745051096 2.86638958,0.0745051096 C4.44526937,0.0745051096 5.71401206,1.36219458 5.71401206,2.90182329 Z" id="Path"></path>
+            <a href="https://orcid.org/0000-0002-3884-3420">Simon J D Cox</a>
+            <a href="https://orcid.org/0000-0002-3884-3420"><svg width="15px" height="15px" viewBox="0 0 72 72" version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>Orcid logo</title>
+            <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="hero" transform="translate(-924.000000, -72.000000)" fill-rule="nonzero">
+                    <g id="Group-4">
+                        <g id="vector_iD_icon" transform="translate(924.000000, 72.000000)">
+                            <path d="M72,36 C72,55.884375 55.884375,72 36,72 C16.115625,72 0,55.884375 0,36 C0,16.115625 16.115625,0 36,0 C55.884375,0 72,16.115625 72,36 Z" id="Path" fill="#A6CE39"></path>
+                            <g id="Group" transform="translate(18.868966, 12.910345)" fill="#FFFFFF">
+                                <polygon id="Path" points="5.03734929 39.1250878 0.695429861 39.1250878 0.695429861 9.14431787 5.03734929 9.14431787 5.03734929 22.6930505 5.03734929 39.1250878"></polygon>
+                                <path d="M11.409257,9.14431787 L23.1380784,9.14431787 C34.303014,9.14431787 39.2088191,17.0664074 39.2088191,24.1486995 C39.2088191,31.846843 33.1470485,39.1530811 23.1944669,39.1530811 L11.409257,39.1530811 L11.409257,9.14431787 Z M15.7511765,35.2620194 L22.6587756,35.2620194 C32.49858,35.2620194 34.7541226,27.8438084 34.7541226,24.1486995 C34.7541226,18.1301509 30.8915059,13.0353795 22.4332213,13.0353795 L15.7511765,13.0353795 L15.7511765,35.2620194 Z" id="Shape"></path>
+                                <path d="M5.71401206,2.90182329 C5.71401206,4.441452 4.44526937,5.72914146 2.86638958,5.72914146 C1.28750978,5.72914146 0.0187670918,4.441452 0.0187670918,2.90182329 C0.0187670918,1.33420133 1.28750978,0.0745051096 2.86638958,0.0745051096 C4.44526937,0.0745051096 5.71401206,1.36219458 5.71401206,2.90182329 Z" id="Path"></path>
+                            </g>
+                        </g>
                     </g>
                 </g>
             </g>
-        </g>
-    </g>
-</svg></a>
-    (<a href="mailto:simon.cox@csiro.au">simon.cox@csiro.au</a>) of 
-    <a href="http://catalogue.linked.data.gov.au/org/csiro">CSIRO</a><br/>
-            
-    <a href="https://orcid.org/0000-0002-8742-7730">Nicholas J Car</a>
-    <a href="https://orcid.org/0000-0002-8742-7730"><svg width="15px" height="15px" viewBox="0 0 72 72" version="1.1"
-    xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>Orcid logo</title>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="hero" transform="translate(-924.000000, -72.000000)" fill-rule="nonzero">
-            <g id="Group-4">
-                <g id="vector_iD_icon" transform="translate(924.000000, 72.000000)">
-                    <path d="M72,36 C72,55.884375 55.884375,72 36,72 C16.115625,72 0,55.884375 0,36 C0,16.115625 16.115625,0 36,0 C55.884375,0 72,16.115625 72,36 Z" id="Path" fill="#A6CE39"></path>
-                    <g id="Group" transform="translate(18.868966, 12.910345)" fill="#FFFFFF">
-                        <polygon id="Path" points="5.03734929 39.1250878 0.695429861 39.1250878 0.695429861 9.14431787 5.03734929 9.14431787 5.03734929 22.6930505 5.03734929 39.1250878"></polygon>
-                        <path d="M11.409257,9.14431787 L23.1380784,9.14431787 C34.303014,9.14431787 39.2088191,17.0664074 39.2088191,24.1486995 C39.2088191,31.846843 33.1470485,39.1530811 23.1944669,39.1530811 L11.409257,39.1530811 L11.409257,9.14431787 Z M15.7511765,35.2620194 L22.6587756,35.2620194 C32.49858,35.2620194 34.7541226,27.8438084 34.7541226,24.1486995 C34.7541226,18.1301509 30.8915059,13.0353795 22.4332213,13.0353795 L15.7511765,13.0353795 L15.7511765,35.2620194 Z" id="Shape"></path>
-                        <path d="M5.71401206,2.90182329 C5.71401206,4.441452 4.44526937,5.72914146 2.86638958,5.72914146 C1.28750978,5.72914146 0.0187670918,4.441452 0.0187670918,2.90182329 C0.0187670918,1.33420133 1.28750978,0.0745051096 2.86638958,0.0745051096 C4.44526937,0.0745051096 5.71401206,1.36219458 5.71401206,2.90182329 Z" id="Path"></path>
+        </svg></a>
+            (<a href="mailto:simon.cox@csiro.au">simon.cox@csiro.au</a>) of 
+            <a href="http://catalogue.linked.data.gov.au/org/csiro">CSIRO</a><br/>
+                    
+            <a href="https://orcid.org/0000-0002-8742-7730">Nicholas Car</a>
+            <a href="https://orcid.org/0000-0002-8742-7730"><svg width="15px" height="15px" viewBox="0 0 72 72" version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>Orcid logo</title>
+            <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="hero" transform="translate(-924.000000, -72.000000)" fill-rule="nonzero">
+                    <g id="Group-4">
+                        <g id="vector_iD_icon" transform="translate(924.000000, 72.000000)">
+                            <path d="M72,36 C72,55.884375 55.884375,72 36,72 C16.115625,72 0,55.884375 0,36 C0,16.115625 16.115625,0 36,0 C55.884375,0 72,16.115625 72,36 Z" id="Path" fill="#A6CE39"></path>
+                            <g id="Group" transform="translate(18.868966, 12.910345)" fill="#FFFFFF">
+                                <polygon id="Path" points="5.03734929 39.1250878 0.695429861 39.1250878 0.695429861 9.14431787 5.03734929 9.14431787 5.03734929 22.6930505 5.03734929 39.1250878"></polygon>
+                                <path d="M11.409257,9.14431787 L23.1380784,9.14431787 C34.303014,9.14431787 39.2088191,17.0664074 39.2088191,24.1486995 C39.2088191,31.846843 33.1470485,39.1530811 23.1944669,39.1530811 L11.409257,39.1530811 L11.409257,9.14431787 Z M15.7511765,35.2620194 L22.6587756,35.2620194 C32.49858,35.2620194 34.7541226,27.8438084 34.7541226,24.1486995 C34.7541226,18.1301509 30.8915059,13.0353795 22.4332213,13.0353795 L15.7511765,13.0353795 L15.7511765,35.2620194 Z" id="Shape"></path>
+                                <path d="M5.71401206,2.90182329 C5.71401206,4.441452 4.44526937,5.72914146 2.86638958,5.72914146 C1.28750978,5.72914146 0.0187670918,4.441452 0.0187670918,2.90182329 C0.0187670918,1.33420133 1.28750978,0.0745051096 2.86638958,0.0745051096 C4.44526937,0.0745051096 5.71401206,1.36219458 5.71401206,2.90182329 Z" id="Path"></path>
+                            </g>
+                        </g>
                     </g>
                 </g>
             </g>
-        </g>
-    </g>
-</svg></a>
-    (<a href="mailto:nicholas.car@surroundaustralia.com">nicholas.car@surroundaustralia.com</a>) of 
-    <a href="https://surroundaustralia.com/">Surround Australia</a><br/>
-        </dd>
+        </svg></a>
+            (<a href="mailto:nicholas.car@surroundaustralia.com">nicholas.car@surroundaustralia.com</a>) of 
+            Surround Australia<br/>
+                </dd>
         <dt>Created</dt>
         <dd>2019-01-08</dd>
         <dt>Modified</dt>
@@ -256,8 +277,6 @@
         </dd>
         <dt>Ontology RDF</dt>
         <dd><a href="geox.ttl">RDF (turtle)</a></dd>
-        <dt>Code Repository</dt>
-        <dd><a href="https://github.com/CSIRO-enviro-informatics/geosparql-ext-ont">https://github.com/CSIRO-enviro-informatics/geosparql-ext-ont</a></dd>
     </dl>
     <h2>Description</h2>
     <div id="description">
@@ -282,10 +301,9 @@
         <div class="caption"><strong>Figure 1:</strong> Ontology overview</div>
     </div>
 </section>
-  <section id="classes">
+<section id="classes">
     <h2>Classes <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <ul class="hlist">
-        <li><a href="#Boundingbox">Bounding box</a></li>
         <li><a href="#Spatialmeasure">Spatial measure</a></li>
     </ul>
     <div class="entity class" id="Boundingbox">
@@ -365,11 +383,14 @@ ex:BB88
                 <th>Example</th>
                 <td>
                     <pre>
-                      
-ex:Area20858M2 
-      rdf:type geox:SpatialMeasure ;
-      data:value 4185791.9328826475 ;
-      geox:inCRS &lt;http://www.opengis.net/def/crs/EPSG/0/3857&gt; ;
+auspix:R7430551
+  rdf:type geo:Feature ;
+  geox:hasArea [
+       rdf:type geox:SpatialMeasure ;
+       data:uncertainty 1.5 ;
+       data:unit &lt;http://qudt.org/vocab/unit/M2&gt; ;
+       data:value 17793623.0 ;
+     ] ;
 .
                     </pre>
                 </td>
@@ -389,9 +410,9 @@ ex:Area20858M2
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="#hasvolume">geox:hasVolume</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#haslength">geox:hasLength</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#hasarea">geox:hasArea</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#haslength">geox:hasLength</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasvolume">geox:hasVolume</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -402,7 +423,6 @@ ex:Area20858M2
     <ul class="hlist">
         <li><a href="#hasarea">has area</a></li>
         <li><a href="#hasareainm2">has area in m2</a></li>
-        <li><a href="#hasboundingbox">has bounding box</a></li>
         <li><a href="#hascentroid">has centroid</a></li>
         <li><a href="#haslength">has length</a></li>
         <li><a href="#haslengthinm">has length in m</a></li>
@@ -431,19 +451,18 @@ ex:Area20858M2
                 <th>Example</th>
                 <td>
                     <pre>
-                      
 auspix:R7430551
   rdf:type geo:Feature ;
   geox:hasArea [
       data:uncertainty 1.5 ;
-      data:unit <http://qudt.org/vocab/unit/M2> ;
+      data:unit &lt;http://qudt.org/vocab/unit/M2&gt; ;
       data:value 17793623.0 ;
     ] ;
   geo:hasGeometry [
     rdf:type sf:Polygon ;
     geo:asWKT "POLYGON((131.02880658436214 -25.331112553792963 , 131.06995884773661 -25.331112553792963  , 131.06995884773661 -25.36980468021464 , 131.02880658436214 -25.36980468021464 , 131.02880658436214 -25.331112553792963))"^^geo:wktLiteral ;
     ] ;
-  rdfs:seeAlso <http://ec2-52-63-73-113.ap-southeast-2.compute.amazonaws.com/AusPIX-DGGS-dataset/ausPIX/R7430551> ;
+  rdfs:seeAlso &lt;http://ec2-52-63-73-113.ap-southeast-2.compute.amazonaws.com/AusPIX-DGGS-dataset/ausPIX/R7430551&gt; ;
 .
                     </pre>
                 </td>
@@ -479,17 +498,13 @@ auspix:R7430551
                 <th>Example</th>
                 <td>
                     <pre>
-                      
 auspix:R7430551
   rdf:type geo:Feature ;
   geox:hasAreaM2 [
       data:value 17793623.0 ;
     ] ;
-  geo:hasGeometry [
-    rdf:type sf:Polygon ;
-    geo:asWKT "POLYGON((131.02880658436214 -25.331112553792963 , 131.06995884773661 -25.331112553792963  , 131.06995884773661 -25.36980468021464 , 131.02880658436214 -25.36980468021464 , 131.02880658436214 -25.331112553792963))"^^geo:wktLiteral ;
-  ] ;
-  rdfs:seeAlso <http://ec2-52-63-73-113.ap-southeast-2.compute.amazonaws.com/AusPIX-DGGS-dataset/ausPIX/R7430551> ;
+  geo:asWKT "POLYGON((131.02880658436214 -25.331112553792963 , 131.06995884773661 -25.331112553792963  , 131.06995884773661 -25.36980468021464 , 131.02880658436214 -25.36980468021464 , 131.02880658436214 -25.331112553792963))"^^geo:wktLiteral ;
+  rdfs:seeAlso &lt;http://ec2-52-63-73-113.ap-southeast-2.compute.amazonaws.com/AusPIX-DGGS-dataset/ausPIX/R7430551&gt; ;
 .
                     </pre>
                 </td>
@@ -498,57 +513,6 @@ auspix:R7430551
                 <th>Super-properties</th>
                 <td>
                     <a href="#hasarea">geox:hasArea</a><sup class="sup-op" title="object property">op</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="hasboundingbox">
-        <h3>has bounding box<sup title="object property" class="sup-op">op</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geox#hasBBox</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    the bounding box or envelope of the feature
-                </td>
-            </tr>
-            <tr>
-                <th>Example</th>
-                <td>
-                    <pre>
-                      
-auspix:R7430551 a geo:Feature ;
-  geox:hasBBox [
-      rdf:type geox:BBox ;
-      geox:lowerLeft "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(131.02880658436214 -25.36980468021464)"^^geo:wktLiteral ;
-      geox:upperRight "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(131.06995884773661 -25.331112553792963)"^^geo:wktLiteral ;
-    ] ;
-  geox:hasCentroid [
-      rdf:type sf:Point ;
-      geo:asWKT "POINT(131.0493827160494, -25.350457086495783)"^^geo:wktLiteral ;
-    ] ;
-  geo:hasGeometry [
-    rdf:type sf:Polygon ;
-    geo:asWKT "POLYGON((131.02880658436214 -25.331112553792963 , 131.06995884773661 -25.331112553792963  , 131.06995884773661 -25.36980468021464 , 131.02880658436214 -25.36980468021464 , 131.02880658436214 -25.331112553792963))"^^geo:wktLiteral ;
-    ] ;
-  rdfs:seeAlso <http://ec2-52-63-73-113.ap-southeast-2.compute.amazonaws.com/AusPIX-DGGS-dataset/ausPIX/R7430551> ;
-.
-                    </pre>
-                </td>
-            </tr>
-            <tr>
-                <th>Super-properties</th>
-                <td>
-                    <a href="http://www.opengis.net/ont/geosparql#hasGeometry">geo:hasGeometry</a>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="#Boundingbox">geox:BBox</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -570,7 +534,6 @@ auspix:R7430551 a geo:Feature ;
                 <th>Example</th>
                 <td>
                     <pre>
-                      
 auspix:R7430551 a geo:Feature ;
   geox:hasCentroid [
       rdf:type sf:Point ;
@@ -580,7 +543,7 @@ auspix:R7430551 a geo:Feature ;
     rdf:type sf:Polygon ;
     geo:asWKT "POLYGON((131.02880658436214 -25.331112553792963 , 131.06995884773661 -25.331112553792963  , 131.06995884773661 -25.36980468021464 , 131.02880658436214 -25.36980468021464 , 131.02880658436214 -25.331112553792963))"^^geo:wktLiteral ;
     ] ;
-  rdfs:seeAlso <http://ec2-52-63-73-113.ap-southeast-2.compute.amazonaws.com/AusPIX-DGGS-dataset/ausPIX/R7430551> ;
+  rdfs:seeAlso &lt;http://ec2-52-63-73-113.ap-southeast-2.compute.amazonaws.com/AusPIX-DGGS-dataset/ausPIX/R7430551&gt; ;
 .
                     </pre>
                 </td>
@@ -589,6 +552,13 @@ auspix:R7430551 a geo:Feature ;
                 <th>Super-properties</th>
                 <td>
                     <a href="http://www.opengis.net/ont/geosparql#hasGeometry">geo:hasGeometry</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.opengis.net/ont/sf#Point">sf:Point</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.opengis.net/ont/gml#Point">http://www.opengis.net/ont/gml#Point</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -617,11 +587,10 @@ auspix:R7430551 a geo:Feature ;
                 <th>Example</th>
                 <td>
                     <pre>
-                      
 my:road456
   :hasLength [
     data:uncertainty 5.0 ;
-    data:unit <http://qudt.org/vocab/unit/M> ;
+    data:unit &lt;http://qudt.org/vocab/unit/M&gt; ;
     data:value 234.0 ;
   ] ;
 .
@@ -659,7 +628,6 @@ my:road456
                 <th>Example</th>
                 <td>
                     <pre>
-                      
 my:road456
   :hasLengthM [
     data:value 234.0 ;
@@ -693,10 +661,9 @@ my:road456
                 <th>Example</th>
                 <td>
                     <pre>
-                      
 my:image456
   :hasResolution [
-    data:unit <http://qudt.org/vocab/unit/M> ;
+    data:unit &lt;http://qudt.org/vocab/unit/M&gt; ;
     data:value 30.0 ;
   ] ;
 .
@@ -734,7 +701,6 @@ my:image456
                 <th>Example</th>
                 <td>
                     <pre>
-                      
 my:image456
   :hasResolutionM [
     data:value 30.0 ;
@@ -774,10 +740,9 @@ my:image456
                 <th>Example</th>
                 <td>
                     <pre>
-                      
 my:swimmingPool99
   :hasVolume [
-    data:unit <http://qudt.org/vocab/unit/M3> ;
+    data:unit &lt;http://qudt.org/vocab/unit/M3&gt; ;
     data:value 3050.0 ;
   ] ;
 .
@@ -815,7 +780,6 @@ my:swimmingPool99
                 <th>Example</th>
                 <td>
                     <pre>
-                      
 my:swimmingPool99
   :hasVolumeM3 [
     data:value 3050.0 ;
@@ -840,6 +804,20 @@ my:swimmingPool99
                 <td><code>http://linked.data.gov.au/def/geox#inCRS</code></td>
             </tr>
             <tr>
+                <th>Example</th>
+                <td>
+                    <pre>
+auspix:R7430551
+  rdf:type geo:Feature ;
+  geox:hasArea [
+      rdf:type geox:SpatialMeasure ;
+      data:uncertainty 1.5 ;
+      data:unit &lt;http://qudt.org/vocab/unit/M2&gt; ;
+      data:value 17793623.0 ;
+      geox:inCRS &lt;https://epsg.io/7844&gt; ;
+    ] ;
+.
+                    </pre>
                 <th>Description</th>
                 <td>
                     Geometry, position or measure is defined or computed using this CRS. 
@@ -856,6 +834,16 @@ The CRS should be denoted by a URI Reference to a CRS definition, e.g. https://w
                 <td><code>http://linked.data.gov.au/def/geox#isGeometryOf</code></td>
             </tr>
             <tr>
+                <th>Example</th>
+                <td>
+                    <pre>
+ex:PR7430551
+      rdf:type sf:Polygon ;
+      geo:asWKT "POLYGON((131.02880658436214 -25.331112553792963 , 131.06995884773661 -25.331112553792963  , 131.06995884773661 -25.36980468021464 , 131.02880658436214 -25.36980468021464 , 131.02880658436214 -25.331112553792963))"^^geo:wktLiteral ;
+	  geox:isGeometryOf auspix:R7430551 ;
+      rdfs:seeAlso &lt;http://ec2-52-63-73-113.ap-southeast-2.compute.amazonaws.com/AusPIX-DGGS-dataset/ausPIX/R7430551&gt; ;
+.
+                    </pre>
                 <th>Description</th>
                 <td>
                     link from a geometry object to the feature(s) for which it is a geometry
@@ -915,89 +903,53 @@ The CRS should be denoted by a URI Reference to a CRS definition, e.g. https://w
         </table>
     </div>
 </section>
+
 <section id="datatypeproperties">
     <h2>Datatype Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <ul class="hlist">
-        <li><a href="#lower-left">lower-left</a></li>
-        <li><a href="#upper-right">upper-right</a></li>
+        <li><a href="#asDGGS">asDGGS</a></li>
     </ul>
-    <div class="entity property" id="lower-left">
-        <h3>lower-left<sup title="datatype property" class="sup-dp">dp</sup></h3>
+    <div class="entity property" id="asDGGS">
+        <h3>asDGGS<sup title="datatype property" class="sup-dp">dp</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geox#lowerLeft</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    position of lower-left corner of box, expressed as a POINT. 
-                </td>
+                <td><code>http://linked.data.gov.au/def/geox#asDGGS</code></td>
             </tr>
             <tr>
                 <th>Example</th>
                 <td>
                     <pre>
-                      
- <>  geox:lowerLeft "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(138 -29.5)"^^geo:wktLiteral .
- <>  geox:lowerLeft "POINT(138 -29.5)"^^geo:wktLiteral .
+ex:G99 a geo:Geometry ;
+  geox:asDGGS "R7430550 R7430551 R7430552"^^geox:dggsLiteral ;
+.
                     </pre>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.opengis.net/ont/geosparql#hasSerialization">geo:hasSerialization</a>
                 </td>
             </tr>
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="#Boundingbox">geox:BBox</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.opengis.net/ont/geosparql#Geometry">geo:Geometry</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
                 <th>Range(s)</th>
                 <td>
-                    <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="upper-right">
-        <h3>upper-right<sup title="datatype property" class="sup-dp">dp</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/geox#upperRight</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    position of upper-right corner of box, expressed as a POINT. 
-                </td>
-            </tr>
-            <tr>
-                <th>Example</th>
-                <td>
-                    <pre>
-                      
-<>      geox:upperRight "POINT(155 -9)"^^geo:wktLiteral .
-<>      geox:upperRight "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(155 -9)"^^geo:wktLiteral .
-                    </pre>
-                </td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="#Boundingbox">geox:BBox</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://linked.data.gov.au/def/geox#dggsLiteral">geox:dggsLiteral</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
     </div>
 </section>
-  
-  <section id="namedindividuals">
+
+
+<section id="namedindividuals">
     <h2>Named Individuals <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <ul class="hlist">
         <li><a href="#0000-0002-3884-3420">0000-0002-3884-3420</a></li>
@@ -1017,7 +969,7 @@ The CRS should be denoted by a URI Reference to a CRS definition, e.g. https://w
             </tr>
             <dt>Classes(s)</dt>
             <dd>
-                <a href="https://schema.org/Person">sdo:Person</a><br/>
+                <a href="http://schema.org/Person">sdo:Person</a><br/>
             </dd>
         </table>
     </div>
@@ -1035,21 +987,27 @@ The CRS should be denoted by a URI Reference to a CRS definition, e.g. https://w
             </tr>
             <dt>Classes(s)</dt>
             <dd>
-                <a href="https://schema.org/Person">sdo:Person</a><br/>
+                <a href="http://schema.org/Person">sdo:Person</a><br/>
             </dd>
         </table>
     </div>
 </section>
-  
-  <section id="namespaces">
+
+<section id="namespaces">
     <h2>Namespaces <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <dl>
         <dt><em>default (:)</em></dt>
         <dd><code>http://linked.data.gov.au/def/geox#</code></dd>
+        <dt>auspix</dt>
+        <dd><code>http://pid.geoscience.gov.au/dggs/ausPIX/</code></dd>
         <dt>data</dt>
         <dd><code>http://linked.data.gov.au/def/datatype/</code></dd>
+        <dt>dc</dt>
+        <dd><code>http://purl.org/dc/elements/1.1/</code></dd>
         <dt>dcterms</dt>
         <dd><code>http://purl.org/dc/terms/</code></dd>
+        <dt>doap</dt>
+        <dd><code>http://usefulinc.com/ns/doap#</code></dd>
         <dt>geo</dt>
         <dd><code>http://www.opengis.net/ont/geosparql#</code></dd>
         <dt>geox</dt>
@@ -1063,26 +1021,32 @@ The CRS should be denoted by a URI Reference to a CRS definition, e.g. https://w
         <dt>rdfs</dt>
         <dd><code>http://www.w3.org/2000/01/rdf-schema#</code></dd>
         <dt>sdo</dt>
+        <dd><code>http://schema.org/</code></dd>
+        <dt>sdo1</dt>
         <dd><code>https://schema.org/</code></dd>
+        <dt>sf</dt>
+        <dd><code>http://www.opengis.net/ont/sf#</code></dd>
         <dt>skos</dt>
         <dd><code>http://www.w3.org/2004/02/skos/core#</code></dd>
+        <dt>sosa</dt>
+        <dd><code>http://www.w3.org/ns/sosa/</code></dd>
         <dt>xml</dt>
         <dd><code>http://www.w3.org/XML/1998/namespace</code></dd>
         <dt>xsd</dt>
         <dd><code>http://www.w3.org/2001/XMLSchema#</code></dd>
     </dl>
 </section>
-  <section id="legend">
-      <h2>Legend</h2>
-      <table class="entity">
-          <tr><td><sup class="sup-c" title="Classes">c</sup></td><td>Classes</td></tr>
-          <tr><td><sup class="sup-op" title="Object Properties">op</sup></td><td>Object Properties</td></tr>
-          <tr><td><sup class="sup-fp" title="Functional Properties">fp</sup></td><td>Functional Properties</td></tr>
-          <tr><td><sup class="sup-dp" title="Data Properties">dp</sup></td><td>Data Properties</td></tr>
-          <tr><td><sup class="sup-ap" title="Annotation Properties">dp</sup></td><td>Annotation Properties</td></tr>
-          <tr><td><sup class="sup-p" title="Properties">p</sup></td><td>Properties</td></tr>
-          <tr><td><sup class="sup-ni" title="Named Individuals">ni</sup></td><td>Named Individuals</td></tr>
-      </table>
-  </section>
+<section id="legend">
+    <h2>Legend</h2>
+    <table class="entity">
+        <tr><td><sup class="sup-c" title="Classes">c</sup></td><td>Classes</td></tr>
+        <tr><td><sup class="sup-op" title="Object Properties">op</sup></td><td>Object Properties</td></tr>
+        <tr><td><sup class="sup-fp" title="Functional Properties">fp</sup></td><td>Functional Properties</td></tr>
+        <tr><td><sup class="sup-dp" title="Data Properties">dp</sup></td><td>Data Properties</td></tr>
+        <tr><td><sup class="sup-ap" title="Annotation Properties">dp</sup></td><td>Annotation Properties</td></tr>
+        <tr><td><sup class="sup-p" title="Properties">p</sup></td><td>Properties</td></tr>
+        <tr><td><sup class="sup-ni" title="Named Individuals">ni</sup></td><td>Named Individuals</td></tr>
+    </table>
+</section>
 </body>
 </html>

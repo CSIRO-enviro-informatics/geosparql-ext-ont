@@ -3,6 +3,7 @@
 # imports: http://www.opengis.net/ont/geosparql
 # prefix: geox
 
+@prefix auspix: <http://pid.geoscience.gov.au/dggs/ausPIX/> .
 @prefix data: <http://linked.data.gov.au/def/datatype/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
@@ -29,6 +30,7 @@
   rdfs:seeAlso <https://github.com/CSIRO-enviro-informatics/geosparql-ext-ont> ;
   owl:imports <http://linked.data.gov.au/def/datatype> ;
   owl:imports <http://www.opengis.net/ont/geosparql> ;
+  skos:changeNote "Added support for DGGS encoding of geometry" ;
   owl:versionIRI <http://linked.data.gov.au/def/geox/1.3> ;
   skos:changeNote "Added BBox" ;
   skos:changeNote "This iteration uses the AGLDWG data-types vocabulary for quantities. " ;
@@ -75,14 +77,47 @@ geox:SpatialMeasure
       owl:onProperty geox:inCRS ;
     ] ;
   skos:definition "Scalar quantity computed or defined within a specified coordinate reference system" ;
+  skos:example """auspix:R7430551
+  rdf:type geo:Feature ;
+  geox:hasArea [
+       rdf:type geox:SpatialMeasure ;
+       data:uncertainty 1.5 ;
+       data:unit <http://qudt.org/vocab/unit/M2> ;
+       data:value 17793623.0 ;
+     ] ;
+.""" ;
+.
+geox:asDGGS
+  a owl:DatatypeProperty ;
+  dc:created "2020-05-27"^^xsd:date ;
+  dc:description "The serialization of a geometry as a list of DGGS cells"@en ;
+  rdfs:domain geo:Geometry ;
+  rdfs:label "asDGGS"@en ;
+  rdfs:range geox:dggsLiteral ;
+  rdfs:subPropertyOf geo:hasSerialization ;
   skos:example """
-ex:Area20858M2 
-      rdf:type geox:SpatialMeasure ;
-      data:value 4185791.9328826475 ;
-      geox:inCRS <http://www.opengis.net/def/crs/EPSG/0/3857> ;
+ex:G99 a geo:Geometry ;
+  geox:asDGGS \"R7430550 R7430551 R7430552\"^^dggsLiteral ;
+.""" ;
 .
-""" ;
-.
+geox:dggsLiteral
+  a rdfs:Datatype ;
+  dc:date "2020-05-27"^^xsd:date ;
+  dc:description "A serialization of a geometry object, as a list of rHealPIX cell identifiers."@en ;
+  rdfs:label "DGGS Literal"@en ;
+  owl:equivalentClass [
+      a rdfs:Datatype ;
+      owl:onDatatype xsd:string ;
+      owl:withRestrictions (
+          [
+            xsd:pattern "([N-S][0-8]+)( ([N-S][0-8]+))*" ;
+          ]
+        ) ;
+    ] ;
+  skos:example """
+ex:G99 a geo:Geometry ;
+  geox:asDGGS \"R7430550 R7430551 R7430552\"^^dggsLiteral ;
+.""" ;
 geox:hasArea
   a owl:ObjectProperty ;
   rdfs:comment "The area of a spatial object, expressed as a scaled number" ;
@@ -162,7 +197,7 @@ geox:hasCentroid
   rdfs:range [
       a owl:Class ;
       owl:unionOf (
-          <http://www.opengis.net/ont/sf#Point>
+          sf:Point
           <http://www.opengis.net/ont/gml#Point>
         ) ;
     ] ;
@@ -295,6 +330,17 @@ geox:inCRS
   a owl:ObjectProperty ;
   rdfs:comment """Geometry, position or measure is defined or computed using this CRS. 
 The CRS should be denoted by a URI Reference to a CRS definition, e.g. https://www.opengis.net/def/crs/EPSG/0/4326""" ;
+  skos:example """
+auspix:R7430551
+  rdf:type geo:Feature ;
+  geox:hasArea [
+      rdf:type geox:SpatialMeasure ;
+      data:uncertainty 1.5 ;
+      data:unit <http://qudt.org/vocab/unit/M2> ;
+      data:value 17793623.0 ;
+      geox:inCRS <https://epsg.io/7844> ;
+    ] ;
+.""" ;
   rdfs:label "In Coordinate Reference System" ;
 .
 geox:isGeometryOf
@@ -304,6 +350,15 @@ geox:isGeometryOf
   rdfs:label "is geometry of" ;
   rdfs:range geo:Feature ;
   owl:inverseOf geo:hasGeometry ;
+  skos:definition "link from a geometry object to the feature(s) for which it is a geometry" ;
+  skos:example """
+ex:PR7430551
+  rdf:type sf:Polygon ;
+  geo:asWKT \"POLYGON((131.02880658436214 -25.331112553792963 , 131.06995884773661 -25.331112553792963  , 131.06995884773661 -25.36980468021464 , 131.02880658436214 -25.36980468021464 , 131.02880658436214 -25.331112553792963))\"^^geo:wktLiteral ;
+	geox:isGeometryOf auspix:R7430551 ;
+  rdfs:seeAlso <http://ec2-52-63-73-113.ap-southeast-2.compute.amazonaws.com/AusPIX-DGGS-dataset/ausPIX/R7430551> ;
+.
+""" ;
 .
 geox:lowerLeft
   a owl:DatatypeProperty ;
@@ -361,15 +416,16 @@ geox:upperRight
   a owl:NamedIndividual ;
   a sdo:Person ;
   sdo:affiliation [
-      sdo:identifier "https://surroundaustralia.com/"^^xsd:anyURI ;
+      sdo:url <https://surroundaustralia.com/> ;
       sdo:name "Surround Australia" ;
     ] ;
   sdo:email <mailto:nicholas.car@surroundaustralia.com> ;
-  sdo:identifier "https://orcid.org/0000-0002-8742-7730"^^xsd:anyURI ;
+  sdo:url <https://orcid.org/0000-0002-8742-7730> ;
   sdo:name "Nicholas J Car" ;
 .
 <https://ror.org/03qn8fb07>
   a sdo:Organization ;
+  a owl:NamedIndividual ;
   sdo:name "CSIRO" ;
   sdo:url <https://www.csiro.au> ;
 .

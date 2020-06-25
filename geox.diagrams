@@ -9,39 +9,26 @@
     <cd:nodes>
       <cd:URINode>
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >87</cd:height>
+        >75</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >281</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >38</cd:y>
+        >52</cd:y>
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >189</cd:x>
+        >46</cd:x>
         <cd:class rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
       </cd:URINode>
     </cd:nodes>
     <cd:nodes>
       <cd:URINode>
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >60</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >189</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >288</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >13</cd:x>
-        <cd:class rdf:resource="http://linked.data.gov.au/def/geox#BBox"/>
-      </cd:URINode>
-    </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >42</cd:height>
+        >52</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >191</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >496</cd:y>
+        >498</cd:y>
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >521</cd:x>
+        >378</cd:x>
         <cd:class rdf:resource="http://linked.data.gov.au/def/geox#SpatialMeasure"/>
       </cd:URINode>
     </cd:nodes>
@@ -52,22 +39,22 @@
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >337</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >210</cd:y>
+        >212</cd:y>
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >248</cd:x>
+        >105</cd:x>
         <cd:class rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
       </cd:URINode>
     </cd:nodes>
     <cd:nodes>
       <cd:URINode>
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >78</cd:height>
+        >92</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >247</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >476</cd:y>
+        >478</cd:y>
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >206</cd:x>
+        >63</cd:x>
         <cd:class rdf:resource="http://linked.data.gov.au/def/datatype/QuantitativeMeasure"/>
       </cd:URINode>
     </cd:nodes>
@@ -78,9 +65,9 @@
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >390</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >16</cd:y>
+        >18</cd:y>
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >778</cd:x>
+        >635</cd:x>
         <cd:class rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
       </cd:URINode>
     </cd:nodes>

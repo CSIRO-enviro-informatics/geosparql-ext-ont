@@ -1,14 +1,18 @@
 <?xml version="1.0"?>
 <rdf:RDF
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:dcterms="http://purl.org/dc/terms/"
-    xmlns:sdo="https://schema.org/"
-    xmlns:geox="http://linked.data.gov.au/def/geox#"
-    xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-    xmlns:geo="http://www.opengis.net/ont/geosparql#"
+    xmlns:doap="http://usefulinc.com/ns/doap#"
+    xmlns:sdo="http://schema.org/"
     xmlns:data="http://linked.data.gov.au/def/datatype/"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:geox="http://linked.data.gov.au/def/geox#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:sosa="http://www.w3.org/ns/sosa/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:geo="http://www.opengis.net/ont/geosparql#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
   xml:base="http://linked.data.gov.au/def/geox">
   <owl:Ontology rdf:about="">
@@ -21,49 +25,52 @@
     </dcterms:publisher>
     <rdfs:label xml:lang="en">GeoSPARQL Extensions Ontology</rdfs:label>
     <owl:imports rdf:resource="http://linked.data.gov.au/def/datatype"/>
-    <skos:changeNote>Added BBox</skos:changeNote>
     <dcterms:requires rdf:resource="http://linked.data.gov.au/def/datatype"/>
     <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
     <dcterms:creator>
       <owl:NamedIndividual rdf:about="https://orcid.org/0000-0002-8742-7730">
-        <sdo:affiliation rdf:parseType="Resource">
-          <sdo:name>Surround Australia</sdo:name>
-          <sdo:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-          >https://surroundaustralia.com/</sdo:identifier>
+        <sdo:affiliation>
+          <sdo:Organization>
+            <sdo:name>Surround Australia</sdo:name>
+          </sdo:Organization>
         </sdo:affiliation>
+        <sdo:affiliation>
+          <sdo:Organization>
+            <sdo:url rdf:resource="https://surroundaustralia.com"/>
+            <sdo:name>SURROUND Australia Pty Ltd</sdo:name>
+          </sdo:Organization>
+        </sdo:affiliation>
+        <sdo:email rdf:resource="mailto:nicholas.car@surroundaustralia.com"/>
         <sdo:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
         >https://orcid.org/0000-0002-8742-7730</sdo:identifier>
-        <sdo:email rdf:resource="mailto:nicholas.car@surroundaustralia.com"/>
         <sdo:name>Nicholas J Car</sdo:name>
-        <rdf:type rdf:resource="https://schema.org/Person"/>
+        <rdf:type rdf:resource="http://schema.org/Person"/>
       </owl:NamedIndividual>
     </dcterms:creator>
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
     >2019-01-08</dcterms:created>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
-    >2020-06-24</dcterms:modified>
     <dcterms:requires rdf:resource="http://www.opengis.net/ont/geosparql"/>
+    <sdo:codeRepository rdf:resource="https://github.com/CSIRO-enviro-informatics/geosparql-ext-ont"/>
     <dcterms:creator>
       <owl:NamedIndividual rdf:about="https://orcid.org/0000-0002-3884-3420">
-        <sdo:affiliation rdf:parseType="Resource">
-          <sdo:name>CSIRO</sdo:name>
-          <sdo:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-          >http://catalogue.linked.data.gov.au/org/csiro</sdo:identifier>
-        </sdo:affiliation>
+        <sdo:email rdf:resource="mailto:simon.cox@csiro.au"/>
+        <sdo:affiliation rdf:resource="https://ror.org/03qn8fb07"/>
+        <sdo:subjectOf rdf:resource="https://people.csiro.au/C/S/simon-cox"/>
         <sdo:name>Simon J D Cox</sdo:name>
         <sdo:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
         >https://orcid.org/0000-0002-3884-3420</sdo:identifier>
-        <sdo:email rdf:resource="mailto:simon.cox@csiro.au"/>
-        <sdo:subjectOf rdf:resource="https://people.csiro.au/C/S/simon-cox"/>
-        <rdf:type rdf:resource="https://schema.org/Person"/>
+        <sdo:affiliation rdf:resource="http://catalogue.linked.data.gov.au/org/csiro"/>
+        <rdf:type rdf:resource="http://schema.org/Person"/>
       </owl:NamedIndividual>
     </dcterms:creator>
-    <owl:versionIRI rdf:resource="http://linked.data.gov.au/def/geox/1.3"/>
     <dcterms:requires rdf:resource="http://qudt.org/2.1/vocab/unit"/>
-    <sdo:codeRepository rdf:resource="https://github.com/CSIRO-enviro-informatics/geosparql-ext-ont"/>
     <rdfs:comment>An extension to [GeoSPARQL](http://www.opengeospatial.org/standards/geosparql) with new features for the representation of additional elements of feature geometry, such as spatial-resolution, length, area and volume. </rdfs:comment>
+    <owl:versionInfo xml:lang="en">Alpha version</owl:versionInfo>
+    <owl:versionIRI rdf:resource="http://linked.data.gov.au/def/geox/1.1"/>
     <skos:editorialNote>The specific elements of this ontology have been created to facilitate use cases generated by the [LocI project](http://loci.cat).These elements will be submitted for consideration for future editions of the GeoSPARQL ontology.</skos:editorialNote>
     <skos:changeNote>This iteration uses the AGLDWG data-types vocabulary for quantities. </skos:changeNote>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2020-05-18</dcterms:modified>
   </owl:Ontology>
   <owl:Class rdf:ID="SpatialMeasure">
     <rdfs:subClassOf>
@@ -76,62 +83,17 @@
       </owl:Restriction>
     </rdfs:subClassOf>
     <skos:definition>Scalar quantity computed or defined within a specified coordinate reference system</skos:definition>
-    <skos:example>&#xD;
-ex:Area20858M2 &#xD;
-      rdf:type geox:SpatialMeasure ;&#xD;
-      data:value 4185791.9328826475 ;&#xD;
-      geox:inCRS &lt;http://www.opengis.net/def/crs/EPSG/0/3857&gt; ;&#xD;
-.&#xD;
-</skos:example>
     <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/datatype/QuantitativeMeasure"/>
     <rdfs:label>Spatial measure</rdfs:label>
   </owl:Class>
-  <owl:Class rdf:ID="BBox">
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty>
-          <owl:DatatypeProperty rdf:ID="upperRight"/>
-        </owl:onProperty>
-        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
-        >1</owl:cardinality>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty>
-          <owl:DatatypeProperty rdf:ID="lowerLeft"/>
-        </owl:onProperty>
-        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
-        >1</owl:cardinality>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <skos:example>&#xD;
-ex:BB99&#xD;
-      rdf:type geox:BBox ;&#xD;
-      geox:lowerLeft "&lt;http://www.opengis.net/def/crs/OGC/1.3/CRS84&gt; POINT(138 -29.5)"^^geo:wktLiteral ;&#xD;
-      geox:upperRight "&lt;http://www.opengis.net/def/crs/OGC/1.3/CRS84&gt; POINT(155 -9)"^^geo:wktLiteral ;&#xD;
-.&#xD;
-&#xD;
-ex:BB88&#xD;
-      rdf:type geox:BBox ;&#xD;
-      geox:lowerLeft "{\"type\":\"Point\",\"coordinates\":[138, -29.179266]}"^^rdf:JSON ;&#xD;
-      geox:upperRight "{\"type\":\"Point\",\"coordinates\":[153.577908, -8.998516]}"^^rdf:JSON ;&#xD;
-.</skos:example>
-    <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
-    <rdfs:label>Bounding box</rdfs:label>
-    <rdfs:comment>The two corners shodul be specified using the same CRS. &#xD;
-&#xD;
-The edges/faces of the box align with the axes of the CRS used for the corners.</rdfs:comment>
-  </owl:Class>
   <owl:ObjectProperty rdf:ID="hasResolution">
-    <skos:usageNote>This is only to be used for geoGeometry objects. If you want to talk about the precision of things like area, that's regular QUDT business.</skos:usageNote>
-    <skos:example>&#xD;
-my:image456&#xD;
+    <skos:example>my:image456&#xD;
   :hasResolution [&#xD;
     data:unit &lt;http://qudt.org/vocab/unit/M&gt; ;&#xD;
     data:value 30.0 ;&#xD;
   ] ;&#xD;
 .</skos:example>
+    <skos:usageNote>This is only to be used for geoGeometry objects. If you want to talk about the precision of things like area, that's regular QUDT business.</skos:usageNote>
     <skos:definition>The spatial resolution of the Geometry object, expressed as a linear measurement.</skos:definition>
     <skos:altLabel>spatial resolution</skos:altLabel>
     <rdfs:range rdf:resource="http://linked.data.gov.au/def/datatype/QuantitativeMeasure"/>
@@ -139,19 +101,12 @@ my:image456&#xD;
     <rdfs:domain rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:ID="hasArea">
-    <skos:example>&#xD;
-auspix:R7430551&#xD;
-  rdf:type geo:Feature ;&#xD;
-  geox:hasArea [&#xD;
-      data:uncertainty 1.5 ;&#xD;
-      data:unit &lt;http://qudt.org/vocab/unit/M2&gt; ;&#xD;
-      data:value 17793623.0 ;&#xD;
-    ] ;&#xD;
-  geo:hasGeometry [&#xD;
-    rdf:type sf:Polygon ;&#xD;
-    geo:asWKT "POLYGON((131.02880658436214 -25.331112553792963 , 131.06995884773661 -25.331112553792963  , 131.06995884773661 -25.36980468021464 , 131.02880658436214 -25.36980468021464 , 131.02880658436214 -25.331112553792963))"^^geo:wktLiteral ;&#xD;
-    ] ;&#xD;
-  rdfs:seeAlso &lt;http://ec2-52-63-73-113.ap-southeast-2.compute.amazonaws.com/AusPIX-DGGS-dataset/ausPIX/R7430551&gt; ;&#xD;
+    <skos:example>my:plot456&#xD;
+  :hasArea [&#xD;
+    data:uncertainty 0.5 ;&#xD;
+    data:unit &lt;http://qudt.org/vocab/unit/M2&gt; ;&#xD;
+    data:value 63.9 ;&#xD;
+  ] ;&#xD;
 .</skos:example>
     <skos:definition>The area of a spatial object, expressed as a scaled number</skos:definition>
     <rdfs:range rdf:resource="#SpatialMeasure"/>
@@ -170,16 +125,15 @@ auspix:R7430551&#xD;
         <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/datatype/QuantitativeMeasure"/>
       </owl:Class>
     </rdfs:range>
-    <skos:definition>The volume of a spatial object in cubic-metres</skos:definition>
-    <rdfs:subPropertyOf>
-      <owl:ObjectProperty rdf:ID="hasVolume"/>
-    </rdfs:subPropertyOf>
-    <skos:example>&#xD;
-my:swimmingPool99&#xD;
+    <skos:example>my:swimmingPool99&#xD;
   :hasVolumeM3 [&#xD;
     data:value 3050.0 ;&#xD;
   ] ;&#xD;
 .</skos:example>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:ID="hasVolume"/>
+    </rdfs:subPropertyOf>
+    <skos:definition>The volume of a spatial object in cubic-metres</skos:definition>
     <rdfs:label>has volume in m3</rdfs:label>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:ID="hasAreaM2">
@@ -194,25 +148,17 @@ my:swimmingPool99&#xD;
         <rdfs:subClassOf rdf:resource="#SpatialMeasure"/>
       </owl:Class>
     </rdfs:range>
-    <skos:definition>The area of the spatial object in m^2</skos:definition>
-    <rdfs:subPropertyOf rdf:resource="#hasArea"/>
-    <skos:example>&#xD;
-auspix:R7430551&#xD;
-  rdf:type geo:Feature ;&#xD;
-  geox:hasAreaM2 [&#xD;
-      data:value 17793623.0 ;&#xD;
-    ] ;&#xD;
-  geo:hasGeometry [&#xD;
-    rdf:type sf:Polygon ;&#xD;
-    geo:asWKT "POLYGON((131.02880658436214 -25.331112553792963 , 131.06995884773661 -25.331112553792963  , 131.06995884773661 -25.36980468021464 , 131.02880658436214 -25.36980468021464 , 131.02880658436214 -25.331112553792963))"^^geo:wktLiteral ;&#xD;
+    <skos:example>my:plot456&#xD;
+  :hasAreaM2 [&#xD;
+    data:value 63.9 ;&#xD;
   ] ;&#xD;
-  rdfs:seeAlso &lt;http://ec2-52-63-73-113.ap-southeast-2.compute.amazonaws.com/AusPIX-DGGS-dataset/ausPIX/R7430551&gt; ;&#xD;
 .</skos:example>
+    <rdfs:subPropertyOf rdf:resource="#hasArea"/>
+    <skos:definition>The area of the spatial object in m^2</skos:definition>
     <rdfs:label>has area in m2</rdfs:label>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:ID="hasLength">
-    <skos:example>&#xD;
-my:road456&#xD;
+    <skos:example>my:road456&#xD;
   :hasLength [&#xD;
     data:uncertainty 5.0 ;&#xD;
     data:unit &lt;http://qudt.org/vocab/unit/M&gt; ;&#xD;
@@ -225,6 +171,15 @@ my:road456&#xD;
     <rdfs:domain rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:ID="hasResolutionM">
+    <skos:example>my:image456&#xD;
+  :hasResolutionM [&#xD;
+    data:value 30.0 ;&#xD;
+  ] ;&#xD;
+.</skos:example>
+    <rdfs:subPropertyOf rdf:resource="#hasResolution"/>
+    <skos:definition>The spatial resolution of the Geometry object, expressed as a linear distance in metres</skos:definition>
+    <rdfs:domain rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+    <skos:usageNote>This is only to be used for geoGeometry objects. If you want to talk about the precision of things like area, that's regular QUDT or DQV business</skos:usageNote>
     <rdfs:range>
       <owl:Class>
         <rdfs:subClassOf>
@@ -236,21 +191,11 @@ my:road456&#xD;
         <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/datatype/QuantitativeMeasure"/>
       </owl:Class>
     </rdfs:range>
-    <skos:example>&#xD;
-my:image456&#xD;
-  :hasResolutionM [&#xD;
-    data:value 30.0 ;&#xD;
-  ] ;&#xD;
-.</skos:example>
-    <skos:definition>The spatial resolution of the Geometry object, expressed as a linear distance in metres</skos:definition>
     <skos:altLabel>spatial resolution</skos:altLabel>
-    <rdfs:subPropertyOf rdf:resource="#hasResolution"/>
-    <skos:usageNote>This is only to be used for geoGeometry objects. If you want to talk about the precision of things like area, that's regular QUDT or DQV business</skos:usageNote>
     <rdfs:label>has spatial resolution in metres</rdfs:label>
-    <rdfs:domain rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="#inCRS">
-    <skos:definition>Geometry, position or measure is defined or computed using this CRS. &#xD;
+    <skos:definition>A position or measure is defined or computed using this CRS. &#xD;
 The CRS should be denoted by a URI Reference to a CRS definition, e.g. https://www.opengis.net/def/crs/EPSG/0/4326</skos:definition>
     <rdfs:label>In Coordinate Reference System</rdfs:label>
   </owl:ObjectProperty>
@@ -262,8 +207,7 @@ The CRS should be denoted by a URI Reference to a CRS definition, e.g. https://w
     <rdfs:domain rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="#hasVolume">
-    <skos:example>&#xD;
-my:swimmingPool99&#xD;
+    <skos:example>my:swimmingPool99&#xD;
   :hasVolume [&#xD;
     data:unit &lt;http://qudt.org/vocab/unit/M3&gt; ;&#xD;
     data:value 3050.0 ;&#xD;
@@ -275,29 +219,9 @@ my:swimmingPool99&#xD;
     <rdfs:domain rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:ID="hasCentroid">
-    <rdfs:range>
-      <owl:Class>
-        <owl:unionOf rdf:parseType="Collection">
-          <rdf:Description rdf:about="http://www.opengis.net/ont/sf#Point"/>
-          <rdf:Description rdf:about="http://www.opengis.net/ont/gml#Point"/>
-        </owl:unionOf>
-      </owl:Class>
-    </rdfs:range>
-    <skos:example>&#xD;
-auspix:R7430551 a geo:Feature ;&#xD;
-  geox:hasCentroid [&#xD;
-      rdf:type sf:Point ;&#xD;
-      geo:asWKT "POINT(131.0493827160494, -25.350457086495783)"^^geo:wktLiteral ;&#xD;
-    ] ;&#xD;
-  geo:hasGeometry [&#xD;
-    rdf:type sf:Polygon ;&#xD;
-    geo:asWKT "POLYGON((131.02880658436214 -25.331112553792963 , 131.06995884773661 -25.331112553792963  , 131.06995884773661 -25.36980468021464 , 131.02880658436214 -25.36980468021464 , 131.02880658436214 -25.331112553792963))"^^geo:wktLiteral ;&#xD;
-    ] ;&#xD;
-  rdfs:seeAlso &lt;http://ec2-52-63-73-113.ap-southeast-2.compute.amazonaws.com/AusPIX-DGGS-dataset/ausPIX/R7430551&gt; ;&#xD;
-.</skos:example>
-    <rdfs:subPropertyOf rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
-    <rdfs:label>has centroid</rdfs:label>
     <rdfs:comment>link to the geometric centroid, which is the arithmetic mean position of all the points in the 2-D figure</rdfs:comment>
+    <rdfs:label>has centroid</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:ID="hasLengthM">
     <rdfs:range>
@@ -311,73 +235,28 @@ auspix:R7430551 a geo:Feature ;&#xD;
         <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/datatype/QuantitativeMeasure"/>
       </owl:Class>
     </rdfs:range>
-    <skos:definition>The length of a spatial object in metres</skos:definition>
-    <rdfs:subPropertyOf rdf:resource="#hasLength"/>
-    <skos:example>&#xD;
-my:road456&#xD;
+    <skos:example>my:road456&#xD;
   :hasLengthM [&#xD;
     data:value 234.0 ;&#xD;
   ] ;&#xD;
 .</skos:example>
+    <rdfs:subPropertyOf rdf:resource="#hasLength"/>
+    <skos:definition>The length of a spatial object in metres</skos:definition>
     <rdfs:label>has length in m</rdfs:label>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:ID="hasBBox">
-    <skos:example>&#xD;
-auspix:R7430551 a geo:Feature ;&#xD;
-  geox:hasBBox [&#xD;
-      rdf:type geox:BBox ;&#xD;
-      geox:lowerLeft "&lt;http://www.opengis.net/def/crs/OGC/1.3/CRS84&gt; POINT(131.02880658436214 -25.36980468021464)"^^geo:wktLiteral ;&#xD;
-      geox:upperRight "&lt;http://www.opengis.net/def/crs/OGC/1.3/CRS84&gt; POINT(131.06995884773661 -25.331112553792963)"^^geo:wktLiteral ;&#xD;
-    ] ;&#xD;
-  geox:hasCentroid [&#xD;
-      rdf:type sf:Point ;&#xD;
-      geo:asWKT "POINT(131.0493827160494, -25.350457086495783)"^^geo:wktLiteral ;&#xD;
-    ] ;&#xD;
-  geo:hasGeometry [&#xD;
-    rdf:type sf:Polygon ;&#xD;
-    geo:asWKT "POLYGON((131.02880658436214 -25.331112553792963 , 131.06995884773661 -25.331112553792963  , 131.06995884773661 -25.36980468021464 , 131.02880658436214 -25.36980468021464 , 131.02880658436214 -25.331112553792963))"^^geo:wktLiteral ;&#xD;
-    ] ;&#xD;
-  rdfs:seeAlso &lt;http://ec2-52-63-73-113.ap-southeast-2.compute.amazonaws.com/AusPIX-DGGS-dataset/ausPIX/R7430551&gt; ;&#xD;
-.</skos:example>
-    <rdfs:subPropertyOf rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
-    <rdfs:range rdf:resource="#BBox"/>
-    <rdfs:label>has bounding box</rdfs:label>
-    <rdfs:comment>the bounding box or envelope of the feature</rdfs:comment>
-  </owl:ObjectProperty>
-  <owl:DatatypeProperty rdf:about="#upperRight">
-    <skos:example>&#xD;
-&lt;&gt;      geox:upperRight "POINT(155 -9)"^^geo:wktLiteral .&#xD;
-&#xD;
-&lt;&gt;      geox:upperRight "&lt;http://www.opengis.net/def/crs/OGC/1.3/CRS84&gt; POINT(155 -9)"^^geo:wktLiteral .&#xD;
-</skos:example>
-    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-    <rdfs:label>upper-right</rdfs:label>
-    <rdfs:domain rdf:resource="#BBox"/>
-    <rdfs:comment>position of upper-right corner of box, expressed as a POINT. </rdfs:comment>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="#lowerLeft">
-    <skos:example>&#xD;
- &lt;&gt;  geox:lowerLeft "&lt;http://www.opengis.net/def/crs/OGC/1.3/CRS84&gt; POINT(138 -29.5)"^^geo:wktLiteral .&#xD;
-&#xD;
- &lt;&gt;  geox:lowerLeft "POINT(138 -29.5)"^^geo:wktLiteral .</skos:example>
-    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-    <rdfs:label>lower-left</rdfs:label>
-    <rdfs:domain rdf:resource="#BBox"/>
-    <rdfs:comment>position of lower-left corner of box, expressed as a POINT. </rdfs:comment>
-  </owl:DatatypeProperty>
   <owl:DeprecatedProperty rdf:ID="transitiveSfOverlap">
     <rdfs:comment>The domain object overlaps (geo:sfOverlaps) the range object by virtue of both objects containing (geo:sfContains) an intermediary object.</rdfs:comment>
     <rdfs:domain rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
     <skos:editorialNote>This property is not needed - it is not a true sub-property, it is a rule to infer overlap from the existence of a common contained feature ... it is actually more like a record of the _provenance_ of an sfOverlaps property. That information would be better managed as part of a linking statement. </skos:editorialNote>
-    <owl:propertyChainAxiom rdf:parseType="Collection">
-      <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#sfContains"/>
-      <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#sfWithin"/>
-    </owl:propertyChainAxiom>
     <skos:altLabel>proportional overlap</skos:altLabel>
     <rdfs:subPropertyOf rdf:resource="http://www.opengis.net/ont/geosparql#sfOverlaps"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:prefLabel>transitive Simple Features overlaps</rdfs:prefLabel>
     <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#sfContains"/>
+      <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#sfWithin"/>
+    </owl:propertyChainAxiom>
     <skos:usageNote>if ex:A geo:sfContains ex:X and ex:B geo:sfContains :ex:X, using the declaration of geo:sfWithin in this ontology with an owl:inverseOf to geo:sfOverlaps, we can interpret the second triple as ex:X geo:sfWithin :B and then ex:A geo:sf:Overlaps ex:B with proportionally, being contained in the relative areas of A, B &amp; X</skos:usageNote>
     <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
     >true</owl:deprecated>
