@@ -90,7 +90,7 @@ geox:SpatialMeasure
 geox:asDGGS
   a owl:DatatypeProperty ;
   dcterms:created "2020-05-27"^^xsd:date ;
-  dcterms:description "The serialization of a geometry as a list of DGGS cells"@en ;
+  rdfs:comment "The serialization of a geometry as a list of DGGS cells"@en ;
   rdfs:domain geo:Geometry ;
   rdfs:label "asDGGS"@en ;
   rdfs:range geox:dggsLiteral ;

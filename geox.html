@@ -965,12 +965,18 @@ ex:PR7430551
                 <td><code>http://linked.data.gov.au/def/geox#asDGGS</code></td>
             </tr>
             <tr>
+                <th>Description</th>
+                <td>
+                    The serialization of a geometry as a list of DGGS cell identifiers
+                </td>
+            </tr>
+            <tr>
                 <th>Example</th>
                 <td>
                     <pre>
                       
 ex:G99 a geo:Geometry ;
-  geox:asDGGS "R7430550 R7430551 R7430552"^^dggsLiteral ;
+  geox:asDGGS "R7430550 R7430551 R7430552"^^dggsLiteral ;     # rHealPIX identifiers
 .
                     </pre>
                 </td>
