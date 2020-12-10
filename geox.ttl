@@ -20,6 +20,7 @@
   dcterms:created "2019-01-08"^^xsd:date ;
   dcterms:creator <https://orcid.org/0000-0002-3884-3420> ;
   dcterms:creator <https://orcid.org/0000-0002-8742-7730> ;
+  dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
   dcterms:modified "2020-06-24"^^xsd:date ;
   dcterms:publisher <https://ror.org/03qn8fb07> ;
   dcterms:requires <http://linked.data.gov.au/def/datatype> ;
@@ -90,14 +91,14 @@ geox:SpatialMeasure
 geox:asDGGS
   a owl:DatatypeProperty ;
   dcterms:created "2020-05-27"^^xsd:date ;
-  rdfs:comment "The serialization of a geometry as a list of DGGS cells"@en ;
+  rdfs:comment "The serialization of a geometry as a list of DGGS cell identifiers"@aus ;
   rdfs:domain geo:Geometry ;
   rdfs:label "asDGGS"@en ;
   rdfs:range geox:dggsLiteral ;
   rdfs:subPropertyOf geo:hasSerialization ;
   skos:example """
 ex:G99 a geo:Geometry ;
-  geox:asDGGS \"R7430550 R7430551 R7430552\"^^dggsLiteral ;
+  geox:asDGGS \"R7430550 R7430551 R7430552\"^^dggsLiteral ;     # rHealPIX identifiers
 .""" ;
 .
 geox:dggsLiteral
